@@ -33,35 +33,35 @@ $default-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 /* ROBOTO FONT FACE */
 @font-face {
     font-family: 'Roboto-Regular';
-    src: url('../../font/Roboto-Regular-webfont.woff2') format('woff2'), url('../../font/Roboto-Regular-webfont.woff') format('woff');
+    src: url('../font/Roboto-Regular-webfont.woff2') format('woff2'), url('../font/Roboto-Regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Roboto-Black';
-    src: url('../../font/Roboto-Black-webfont.woff2') format('woff2'), url('../../font/Roboto-Black-webfont.woff') format('woff');
+    src: url('../font/Roboto-Black-webfont.woff2') format('woff2'), url('../font/Roboto-Black-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Roboto-Bold';
-    src: url('../../font/Roboto-Bold-webfont.woff2') format('woff2'), url('../../font/Roboto-Bold-webfont.woff') format('woff');
+    src: url('../font/Roboto-Bold-webfont.woff2') format('woff2'), url('../font/Roboto-Bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Roboto-Light';
-    src: url('../../font/Roboto-Light-webfont.woff2') format('woff2'), url('../../font/Roboto-Light-webfont.woff') format('woff');
+    src: url('../font/Roboto-Light-webfont.woff2') format('woff2'), url('../font/Roboto-Light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Roboto-Medium';
-    src: url('../../font/Roboto-Medium-webfont.woff2') format('woff2'), url('../../font/Roboto-Medium-webfont.woff') format('woff');
+    src: url('../font/Roboto-Medium-webfont.woff2') format('woff2'), url('../font/Roboto-Medium-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -69,14 +69,14 @@ $default-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 /* VAG ROUNDED FONT FACE */
 @font-face {
     font-family: 'Vag-Rounded-Bold';
-    src: url('../../font/vag_rounded_bold-webfont.woff2') format('woff2'), url('../../font/vag_rounded_bold-webfont.woff') format('woff');
+    src: url('../font/vag_rounded_bold-webfont.woff2') format('woff2'), url('../font/vag_rounded_bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Vag-Rounded-Light';
-    src: url('../../font/vag_rounded_light_ssi_light-webfont.woff2') format('woff2'), url('../../font/vag_rounded_light_ssi_light-webfont.woff') format('woff');
+    src: url('../font/vag_rounded_light_ssi_light-webfont.woff2') format('woff2'), url('../font/vag_rounded_light_ssi_light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

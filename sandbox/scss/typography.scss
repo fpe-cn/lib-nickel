@@ -1,0 +1,31 @@
+@import "../../assets/scss/common/typography";
+
+.roboto {
+    font-size:16px;
+    @extend %roboto-regular;
+
+    &.bold {
+        @extend %roboto-bold;
+    }
+
+    &.light {
+        @extend %roboto-light;
+    }
+
+    &.black {
+        @extend %roboto-black;
+    }
+
+    &.medium {
+        @extend %roboto-medium;
+    }
+}
+
+.vag-rounded {
+    font-size:16px;
+    @extend %vag-rounded-light;
+
+    &.bold {
+        @extend %vag-rounded-bold;
+    }
+}

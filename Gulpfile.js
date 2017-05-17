@@ -34,7 +34,7 @@ gulp.task('css', function () {
             debug: false
         }))
         .pipe(autoprefixer())
-        .pipe(gulp.dest('build/sandbox/css'))
+        .pipe(gulp.dest('build/sandbox/scss'))
 });
 
 gulp.task('html', function () {
@@ -188,5 +188,8 @@ gulp.task('build', function(cb) {
     runSequence('clean', 'compile', cb);
 });
 
-gulp.task('work', ['img', 'css', 'font', 'sprite', 'js-watchify', 'html', 'webserver', 'watch']);
+//gulp.task('work', ['img', 'scss', 'font', 'sprite', 'js-watchify', 'html', 'webserver', 'watch']);
+gulp.task('work', function(cb) {
+    runSequence(['font', 'css', 'html'], ['webserver', 'watch'], cb)
+});
 gulp.task('default', ['work']);
