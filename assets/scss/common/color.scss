@@ -1,0 +1,24 @@
+// Site Web
+$color-orange: #f57528; // Main Color
+$color-orange--light: #fdbd39; // Main Color Light
+$color-orange--dark: #be5a1e; // Main Color Dark
+//$color-peach: #ee6723;
+
+// Base
+$color-grey: #969696;
+$color-grey--light: #cccccc;
+$color-grey--dark: #333333;
+$color-grey--darker: #666666;
+$color-grey-box-shadow : #bbbbbb;
+
+// Validation
+$color-red: #d93f2b; // Erreur
+$color-red-light: lighten($color-red, 30%); // Background Error
+
+$color-green: #94ba1e; // Success
+$color-green--light: lighten($color-green, 30%); // Background Success
+
+// Clavier boutons
+$color-yellow: #fecf33; // Clavier bouton corriger (numeric)
+$color-cherry: #cc0044; // Clavier bouton corriger (global)
+$color-green--flash: #00cc38; // Clavier bouton Valider

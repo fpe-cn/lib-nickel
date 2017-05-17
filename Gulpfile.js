@@ -34,7 +34,7 @@ gulp.task('css', function () {
             debug: false
         }))
         .pipe(autoprefixer())
-        .pipe(gulp.dest('build/sandbox/scss'))
+        .pipe(gulp.dest('build/sandbox/css'))
 });
 
 gulp.task('html', function () {

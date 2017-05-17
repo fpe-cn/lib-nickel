@@ -1,0 +1,64 @@
+@import "../../assets/scss/common/color";
+
+.kawa-colors {
+    margin: 15px -10px 20px;
+    overflow: hidden;
+}
+
+.kawa-colors-list {
+    padding-left: 0;
+    list-style: none;
+}
+
+.kawa-colors li {
+    float: left;
+    display:table;
+    width: 25%;
+    height: 115px;
+    padding: 10px;
+    font-size: 10px;
+    text-align: center;
+    border: 1px solid #FFFFFF;
+}
+
+.kawa-colors li>span {
+    text-align: center;
+    word-wrap: break-word;
+    font-size: 15px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.dark {color: black;}
+.light {color: white;}
+
+.yellow {  background-color: $color-yellow;  }
+
+.orange {
+    background-color: $color-orange;
+    &-light {  background-color: $color-orange--light;  }
+    &-dark {  background-color: $color-orange--dark;  }
+}
+
+.grey {
+    background-color: $color-grey;
+    &-light {  background-color: $color-grey--light;  }
+    &-dark {  background-color: $color-grey--dark;  }
+    &-darker {  background-color: $color-grey--darker;  }
+    &-box-shadow {  background-color: $color-grey-box-shadow;  }
+}
+
+.red {
+    background-color: $color-red;
+    &-light {
+        background-color: $color-red-light;
+    }
+}
+
+.cherry {  background-color: $color-cherry;  }
+
+.green {
+    background-color: $color-green;
+    &-light {  background-color: $color-green--light;  }
+    &-flash {  background-color: $color-green--flash;  }
+}
