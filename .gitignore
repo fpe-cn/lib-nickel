@@ -1,0 +1,22 @@
+# WINDOWS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# MAC
+.DS_Store
+
+# Sass
+.sass-cache
+
+# Tools
+node_modules
+dist
+bower_components
+
+# ignored files
+build
+tmp
+
+# Intellij
+.idea
