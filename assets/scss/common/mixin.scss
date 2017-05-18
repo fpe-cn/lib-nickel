@@ -2,14 +2,14 @@
  * Mixin Polymer Modules
  * src: https://toaster.co/articles/how-we-integrate-sass-with-polymer-in-production
  * Sass ne supporte pas les mixins Polymer "--ma-variable: { }"
- * Exemple : @include css-mixin(‘--mixin-name:’, ‘{
+ * Exemple : @include css-mixin(‘--mixin-name:’, (
  *      display: block;
- *  }’);
+ *  ));
  */
 @mixin css-mixin($name-as-a-string, $map) {
-    #{$name-as-a-string} {
+    #{$name-as-a-string}: {
         @each $prop, $val in $map {
             #{$prop} : $val;
         }
-    }
+    };
 }
