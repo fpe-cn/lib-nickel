@@ -1,3 +1,4 @@
+$basePathTypography: "../../" !default;
 
 /* Typography
 ----------------------------------------- */
@@ -69,15 +70,7 @@ $default-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 /* VAG ROUNDED FONT FACE */
 @font-face {
-    font-family: 'Vag-Rounded-Bold';
     src: url($basePathTypography + 'font/vag_rounded_bold-webfont.woff2') format('woff2'), url($basePathTypography + 'font/vag_rounded_bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Vag-Rounded-Light';
-    src: url($basePathTypography + 'font/vag_rounded_light_ssi_light-webfont.woff2') format('woff2'), url($basePathTypography + 'font/vag_rounded_light_ssi_light-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

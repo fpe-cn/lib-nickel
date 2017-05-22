@@ -1,0 +1,122 @@
+@font-face {
+    font-family: "Lib-Nickel-Icon";
+    src: url('../font/Lib-Nickel-Icon.woff') format('woff'),
+    url('../font/Lib-Nickel-Icon.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon:before {
+                     display: inline-block;
+                     font-family: "Lib-Nickel-Icon";
+                     font-style: normal;
+                     font-weight: normal;
+                     line-height: 1;
+                     vertical-align: top;
+                     -webkit-font-smoothing: antialiased;
+                     -moz-osx-font-smoothing: grayscale;
+                 }
+
+.icon-lg {
+                     font-size: 2.3333333333333333rem;
+                     line-height: 0.75rem;
+                     vertical-align: -15%;
+                 }
+.icon-2x { font-size: 2rem; }
+.icon-3x { font-size: 3rem; }
+.icon-4x { font-size: 4rem; }
+.icon-5x { font-size: 5rem; }
+.icon-fw {
+                     width: 1.2857142857142858rem;
+                     text-align: center;
+                 }
+
+.icon-arrow-bottom-light:before { content: "\EA01" }
+.icon-arrow-left-light:before { content: "\EA02" }
+.icon-arrow-left:before { content: "\EA03" }
+.icon-arrow-next:before { content: "\EA04" }
+.icon-arrow-prev:before { content: "\EA05" }
+.icon-arrow-right-circle:before { content: "\EA06" }
+.icon-arrow-right-light:before { content: "\EA07" }
+.icon-arrow-right:before { content: "\EA08" }
+.icon-arrow-top-light:before { content: "\EA09" }
+.icon-bag-2:before { content: "\EA0A" }
+.icon-bag:before { content: "\EA0B" }
+.icon-balance:before { content: "\EA0C" }
+.icon-calendar:before { content: "\EA0D" }
+.icon-card-bank:before { content: "\EA0E" }
+.icon-card-id:before { content: "\EA0F" }
+.icon-card-replace:before { content: "\EA10" }
+.icon-check-around:before { content: "\EA11" }
+.icon-check-square:before { content: "\EA12" }
+.icon-check:before { content: "\EA13" }
+.icon-close-sign:before { content: "\EA14" }
+.icon-close:before { content: "\EA15" }
+.icon-code:before { content: "\EA16" }
+.icon-confetti:before { content: "\EA17" }
+.icon-file:before { content: "\EA18" }
+.icon-network:before { content: "\EA19" }
+.icon-pen-2:before { content: "\EA1A" }
+.icon-pen:before { content: "\EA1B" }
+.icon-question-circle:before { content: "\EA1C" }
+.icon-question-sign:before { content: "\EA1D" }
+.icon-question:before { content: "\EA1E" }
+.icon-smiley-angry:before { content: "\EA1F" }
+.icon-smiley-bad-circle:before { content: "\EA20" }
+.icon-smiley-bad-sign:before { content: "\EA21" }
+.icon-smiley-happy-circle:before { content: "\EA22" }
+.icon-smiley-happy-sign:before { content: "\EA23" }
+.icon-square:before { content: "\EA24" }
+.icon-student:before { content: "\EA25" }
+.icon-ticket-2:before { content: "\EA26" }
+.icon-ticket:before { content: "\EA27" }
+.icon-user-add:before { content: "\EA28" }
+.icon-user-multi:before { content: "\EA29" }
+.icon-user:before { content: "\EA2A" }
+
+
+/*
+ * mixins
+ */
+@mixin icon-arrow-bottom-light() { content: "\EA01" }
+@mixin icon-arrow-left-light() { content: "\EA02" }
+@mixin icon-arrow-left() { content: "\EA03" }
+@mixin icon-arrow-next() { content: "\EA04" }
+@mixin icon-arrow-prev() { content: "\EA05" }
+@mixin icon-arrow-right-circle() { content: "\EA06" }
+@mixin icon-arrow-right-light() { content: "\EA07" }
+@mixin icon-arrow-right() { content: "\EA08" }
+@mixin icon-arrow-top-light() { content: "\EA09" }
+@mixin icon-bag-2() { content: "\EA0A" }
+@mixin icon-bag() { content: "\EA0B" }
+@mixin icon-balance() { content: "\EA0C" }
+@mixin icon-calendar() { content: "\EA0D" }
+@mixin icon-card-bank() { content: "\EA0E" }
+@mixin icon-card-id() { content: "\EA0F" }
+@mixin icon-card-replace() { content: "\EA10" }
+@mixin icon-check-around() { content: "\EA11" }
+@mixin icon-check-square() { content: "\EA12" }
+@mixin icon-check() { content: "\EA13" }
+@mixin icon-close-sign() { content: "\EA14" }
+@mixin icon-close() { content: "\EA15" }
+@mixin icon-code() { content: "\EA16" }
+@mixin icon-confetti() { content: "\EA17" }
+@mixin icon-file() { content: "\EA18" }
+@mixin icon-network() { content: "\EA19" }
+@mixin icon-pen-2() { content: "\EA1A" }
+@mixin icon-pen() { content: "\EA1B" }
+@mixin icon-question-circle() { content: "\EA1C" }
+@mixin icon-question-sign() { content: "\EA1D" }
+@mixin icon-question() { content: "\EA1E" }
+@mixin icon-smiley-angry() { content: "\EA1F" }
+@mixin icon-smiley-bad-circle() { content: "\EA20" }
+@mixin icon-smiley-bad-sign() { content: "\EA21" }
+@mixin icon-smiley-happy-circle() { content: "\EA22" }
+@mixin icon-smiley-happy-sign() { content: "\EA23" }
+@mixin icon-square() { content: "\EA24" }
+@mixin icon-student() { content: "\EA25" }
+@mixin icon-ticket-2() { content: "\EA26" }
+@mixin icon-ticket() { content: "\EA27" }
+@mixin icon-user-add() { content: "\EA28" }
+@mixin icon-user-multi() { content: "\EA29" }
+@mixin icon-user() { content: "\EA2A" }

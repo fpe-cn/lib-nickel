@@ -111,31 +111,27 @@ gulp.task('font', function () {
 });
 
 gulp.task('fonticon', function () {
-    return buildFontIcon({name: 'Lib-Nickel-Icon', scssFile: '_fonticon.scss'}, [
-        'assets/svg/**/*.svg'
-    ]);
-});
-
-var buildFontIcon = function(options, src) {
-    return gulp.src(src)
+    return gulp.src([
+        './assets/svg/**.svg'
+    ])
         .pipe(iconfont({
-            fontName: options.name,
+            fontName: 'Lib-Nickel-Icon',
             normalize: true,
-            formats: ['ttf', 'eot', 'woff', 'woff2']
+            formats: ['woff', 'woff2']
         }))
         .on('glyphs', function (glyphs) {
-            gulp.src('assets/svg/_fonticon.scss.template')
+            gulp.src('./assets/scss/common/_fonticon.scss.template')
                 .pipe(consolidate('lodash', {
                     glyphs: glyphs,
-                    fontName: options.name,
+                    fontName: 'Lib-Nickel-Icon',
                     fontPath: '../font/',
-                    className: options.className || 'icon'
+                    className: 'icon'
                 }))
-                .pipe(rename(options.scssFile))
-                .pipe(gulp.dest('assets/scss/'));
+                .pipe(rename('fonticon.scss'))
+                .pipe(gulp.dest('assets/scss/common/'));
         })
         .pipe(gulp.dest('assets/font/'))
-};
+});
 
 /*
  * WatchTask
@@ -190,6 +186,6 @@ gulp.task('build', function(cb) {
 
 //gulp.task('work', ['img', 'scss', 'font', 'sprite', 'js-watchify', 'html', 'webserver', 'watch']);
 gulp.task('work', function(cb) {
-    runSequence(['font', 'css', 'html'], ['webserver', 'watch'], cb)
+    runSequence(['fonticon'], ['font', 'css', 'html'], ['webserver', 'watch'], cb)
 });
 gulp.task('default', ['work']);

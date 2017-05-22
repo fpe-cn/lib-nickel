@@ -1,0 +1,69 @@
+@import "../../assets/scss/common/fonticon";
+
+.clearfix {
+    clear: both;
+}
+
+/* Icons */
+.kawa-icons {
+    margin: 15px -10px 20px;
+    overflow: hidden;
+
+    .kawa-icons-list {
+        padding-left: 0;
+        list-style: none;
+
+        li {
+            float: left;
+            width: 25%;
+            height: 115px;
+            padding: 10px;
+            font-size: 10px;
+            line-height: 1.4;
+            text-align: center;
+            background-color: #F4F4F4;
+            border: 1px solid #FFFFFF;
+
+            &:hover {
+                color: #FFFFFF;
+                background-color: #563d7c;
+            }
+
+            &.item-lg {
+                width: 25%;
+            }
+
+            .icon, .icon-amp {
+                display: inline-block;
+                margin-top: 5px;
+                margin-bottom: 10px;
+                font-size: 30px;
+                line-height: 30px;
+                color: #444444;
+            }
+
+            .icon-class {
+                display: block;
+                text-align: center;
+                word-wrap: break-word;
+            }
+        }
+    }
+}
+
+svg {
+    height: 30px;
+}
+
+@media (min-width: 768px) {
+    .kawa-icons {
+        margin-right: 0;
+        margin-left: 0;
+
+        .kawa-icons-list li {
+            width: 12.5%;
+            font-size: 12px;
+        }
+    }
+
+}
