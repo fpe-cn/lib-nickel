@@ -2,57 +2,6 @@
 /* Typography
 ----------------------------------------- */
 
-/* ROBOTO FONT FACE */
-@font-face {
-    font-family: 'Roboto-Regular';
-    src: url($basePathTypography + 'font/Roboto-Regular-webfont.woff2') format('woff2'), url($basePathTypography + 'font/Roboto-Regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Roboto-Black';
-    src: url($basePathTypography + 'font/Roboto-Black-webfont.woff2') format('woff2'), url($basePathTypography + 'font/Roboto-Black-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Roboto-Bold';
-    src: url($basePathTypography + 'font/Roboto-Bold-webfont.woff2') format('woff2'), url($basePathTypography + 'font/Roboto-Bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Roboto-Light';
-    src: url($basePathTypography + 'font/Roboto-Light-webfont.woff2') format('woff2'), url($basePathTypography + 'font/Roboto-Light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Roboto-Medium';
-    src: url($basePathTypography + 'font/Roboto-Medium-webfont.woff2') format('woff2'), url($basePathTypography + 'font/Roboto-Medium-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* VAG ROUNDED FONT FACE */
-@font-face {
-    font-family: 'Vag-Rounded-Bold';
-    src: url($basePathTypography + 'font/vag_rounded_bold-webfont.woff2') format('woff2'), url($basePathTypography + 'font/vag_rounded_bold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Vag-Rounded-Light';
-    src: url($basePathTypography + 'font/vag_rounded_light_ssi_light-webfont.woff2') format('woff2'), url($basePathTypography + 'font/vag_rounded_light_ssi_light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 @mixin mqr-subpixel-antialiased {
     -webkit-font-smoothing: antialiased;
 
@@ -72,11 +21,48 @@
 
 $default-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-%roboto-regular {  font-family: "Roboto-Regular";  }
-%roboto-black {  font-family: "Roboto-Black";  }
-%roboto-bold {  font-family: "Roboto-Bold";  }
-%roboto-light {  font-family: "Roboto-Light";  }
-%roboto-medium {  font-family: "Roboto-Medium";  }
+/* ROBOTO FONT FACE */
+%roboto-regular {
+    font-family: 'Roboto-Regular';
+    src: url($basePathTypography + 'font/Roboto-Regular-webfont.woff2') format('woff2'), url($basePathTypography + 'font/Roboto-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+%roboto-black {
+    font-family: 'Roboto-Black';
+    src: url($basePathTypography + 'font/Roboto-Black-webfont.woff2') format('woff2'), url($basePathTypography + 'font/Roboto-Black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+%roboto-bold {
+    font-family: 'Roboto-Bold';
+    src: url($basePathTypography + 'font/Roboto-Bold-webfont.woff2') format('woff2'), url($basePathTypography + 'font/Roboto-Bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+%roboto-light {
+    font-family: 'Roboto-Light';
+    src: url($basePathTypography + 'font/Roboto-Light-webfont.woff2') format('woff2'), url($basePathTypography + 'font/Roboto-Light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+%roboto-medium {
+    font-family: 'Roboto-Medium';
+    src: url($basePathTypography + 'font/Roboto-Medium-webfont.woff2') format('woff2'), url($basePathTypography + 'font/Roboto-Medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
-%vag-rounded-bold {  font-family: "Vag-Rounded-Bold";  }
-%vag-rounded-light {  font-family: "Vag-Rounded-Light";  }
+/* VAG ROUNDED FONT FACE */
+%vag-rounded-bold {
+    font-family: 'Vag-Rounded-Bold';
+    src: url($basePathTypography + 'font/vag_rounded_bold-webfont.woff2') format('woff2'), url($basePathTypography + 'font/vag_rounded_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+%vag-rounded-light {
+    font-family: 'Vag-Rounded-Light';
+    src: url($basePathTypography + 'font/vag_rounded_light_ssi_light-webfont.woff2') format('woff2'), url($basePathTypography + 'font/vag_rounded_light_ssi_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
