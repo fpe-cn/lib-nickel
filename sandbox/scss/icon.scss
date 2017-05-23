@@ -27,6 +27,10 @@
             &:hover {
                 color: #FFFFFF;
                 background-color: #563d7c;
+
+                .icon:before {
+                    color:white;
+                }
             }
 
             &.item-lg {

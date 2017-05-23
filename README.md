@@ -11,3 +11,10 @@ Recense tous les éléments front réutilisables d'un projet à l'autre.
 - Base
 - Validation
 - Clavier
+
+**Fonticon**
+- Divers
+- Modules
+- Flèches
+- Navigation
+- Smileys
