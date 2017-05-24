@@ -42,6 +42,7 @@
 
 .grey {
     background-color: $color-grey;
+    &-bg-table {  background-color: $color-grey--bg-table; }
     &-light {  background-color: $color-grey--light;  }
     &-dark {  background-color: $color-grey--dark;  }
     &-darker {  background-color: $color-grey--darker;  }
