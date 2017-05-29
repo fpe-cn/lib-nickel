@@ -124,7 +124,7 @@ gulp.task('fonticon', function () {
                 .pipe(consolidate('lodash', {
                     glyphs: glyphs,
                     fontName: 'Lib-Nickel-Icon',
-                    fontPath: '../font/',
+                    fontPath: 'font/',
                     className: 'icon'
                 }))
                 .pipe(rename('fonticon.scss'))

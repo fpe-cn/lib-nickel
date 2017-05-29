@@ -1,7 +1,9 @@
+$basePathTypography: "../../" !default;
+
 @font-face {
     font-family: "Lib-Nickel-Icon";
-    src: url('../font/Lib-Nickel-Icon.woff') format('woff'),
-    url('../font/Lib-Nickel-Icon.woff2') format('woff2');
+    src: url($basePathTypography + 'font/Lib-Nickel-Icon.woff') format('woff'),
+    url($basePathTypography + 'font/Lib-Nickel-Icon.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }

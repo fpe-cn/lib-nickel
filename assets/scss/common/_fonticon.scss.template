@@ -1,7 +1,9 @@
+$basePathTypography: "../../" !default;
+
 @font-face {
     font-family: "<%= fontName %>";
-    src: url('<%= fontPath %><%= fontName %>.woff') format('woff'),
-    url('<%= fontPath %><%= fontName %>.woff2') format('woff2');
+    src: url($basePathTypography + '<%= fontPath %><%= fontName %>.woff') format('woff'),
+    url($basePathTypography + '<%= fontPath %><%= fontName %>.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
