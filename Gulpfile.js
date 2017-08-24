@@ -112,7 +112,8 @@ gulp.task('font', function () {
 
 gulp.task('fonticon', function () {
     return gulp.src([
-        './assets/svg/**.svg'
+        './assets/svg/**.svg',
+        './assets/svg/social/**.svg'
     ])
         .pipe(iconfont({
             fontName: 'Lib-Nickel-Icon',
