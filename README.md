@@ -25,3 +25,6 @@ Direction le wiki pour [lancer le projet en local](http://bit.ly/2qLj49Y)
 
 **2017/08/24 : V1.0**
 - Mise en prod v1.0
+
+**2017/09/20 : V2.0**
+- Mise en prod v2.0
