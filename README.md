@@ -20,3 +20,8 @@ Direction le wiki pour [lancer le projet en local](http://bit.ly/2qLj49Y)
 - Flèches
 - Navigation
 - Smileys
+
+# Hisorique des versions
+
+**2017/08/24 : V1.0**
+Mise en prod v1.0
