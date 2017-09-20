@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <title>Référenciel sandbox</title>
+
+    <link rel="stylesheet" href="../css/referenciel.css">
+    <link rel="stylesheet" href="../../../node_modules/prismjs/themes/prism.css">
+</head>
+<body class="theme-lib">
+
+<%- include('module/header.html', {active: 'referenciel'}) %>
+
+<div class="container-fluid">
+    <div class="row">
+        <main class="offset-md-1 col-md-8">
+            <section id="title">
+                <div class="lib-title">Titres</div>
+
+                <div class="module">
+                    <form class="code-example">
+                        <div class="col-md-12">
+                            <%- include('../../assets/html/titles/title-26.html') %>
+                            <%- include('../../assets/html/titles/title-24.html') %>
+                        </div>
+                    </form>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" role="tab" href="#cn-titles-html">HTML</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="cn-titles-html" role="tabpanel" class="tab-pane active">
+                            <figure class="highlight">
+                            <pre><code class="language-markup">
+<%= include('../../assets/html/titles/title-26.html') %>
+<%= include('../../assets/html/titles/title-24.html') %>
+                            </code></pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="text">
+                <div class="lib-title">Textes</div>
+
+                <div class="module">
+                    <form class="code-example">
+                        <div class="col-md-12">
+                            <%- include('../../assets/html/texts/text-default.html') %>
+                            <%- include('../../assets/html/texts/text-small.html') %>
+                            <%- include('../../assets/html/texts/text-divider.html') %>
+                        </div>
+                    </form>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" role="tab" href="#cn-texts-html">HTML</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="cn-texts-html" role="tabpanel" class="tab-pane active">
+                            <figure class="highlight">
+                            <pre><code class="language-markup">
+<%= include('../../assets/html/texts/text-default.html') %>
+<%= include('../../assets/html/texts/text-small.html') %>
+<%= include('../../assets/html/texts/text-divider.html') %>
+                            </code></pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="link">
+                <div class="lib-title">Liens</div>
+
+                <div class="module">
+                    <form class="code-example">
+                        <div class="col-md-12">
+                            <%- include('../../assets/html/links/links.html') %>
+                        </div>
+                    </form>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" role="tab" href="#cn-links-html">HTML</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="cn-links-html" role="tabpanel" class="tab-pane active">
+                            <figure class="highlight">
+                            <pre><code class="language-markup">
+<%= include('../../assets/html/links/links.html') %>
+                            </code></pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="button">
+                <div class="lib-title">Boutons</div>
+
+                <div class="module">
+                    <form class="code-example">
+                        <div class="col-md-12">
+                            <%- include('../../assets/html/buttons/buttons.html') %>
+                        </div>
+                    </form>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" role="tab" href="#cn-buttons-html">HTML</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="cn-buttons-html" role="tabpanel" class="tab-pane active">
+                            <figure class="highlight">
+                            <pre><code class="language-markup">
+<%= include('../../assets/html/buttons/buttons.html') %>
+                            </code></pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="table">
+                <div class="lib-title">Tableaux</div>
+
+                <div class="module">
+                    <form class="code-example">
+                        <div class="col-md-12">
+                            <%- include('../../assets/html/tables/table-default.html') %>
+                        </div>
+                    </form>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" role="tab" href="#cn-tables-html">HTML</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="cn-tables-html" role="tabpanel" class="tab-pane active">
+                            <figure class="highlight">
+                            <pre><code class="language-markup">
+<%= include('../../assets/html/tables/table-default.html') %>
+                            </code></pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="content">
+                <div class="lib-title">Contenus</div>
+
+                <div class="module">
+                    <form class="code-example">
+                        <div class="col-md-12">
+                            <%- include('../../assets/html/contents/contents.html') %>
+                        </div>
+                    </form>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" role="tab" href="#cn-contents-html">HTML</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="cn-contents-html" role="tabpanel" class="tab-pane active">
+                            <figure class="highlight">
+                            <pre><code class="language-markup">
+<%= include('../../assets/html/contents/contents.html') %>
+                            </code></pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="form">
+                <div class="lib-title">Eléments de formulaire</div>
+
+                <div class="module">
+                    <form class="code-example">
+                        <div class="col-md-12">
+                            <%# include('../../assets/html/contents/contents.html') %>
+                        </div>
+                    </form>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" role="tab" href="#cn-forms-html">HTML</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="cn-forms-html" role="tabpanel" class="tab-pane active">
+                            <figure class="highlight">
+                            <pre><code class="language-markup">
+<%# include('../../assets/html/contents/contents.html') %>
+                            </code></pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="service">
+                <div class="lib-title">Etat des services</div>
+
+                <div class="module">
+                    <form class="code-example">
+                        <div class="col-md-12">
+                            <%- include('../../assets/html/services/services.html') %>
+                        </div>
+                    </form>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" role="tab" href="#cn-services-html">HTML</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="cn-services-html" role="tabpanel" class="tab-pane active">
+                            <figure class="highlight">
+                            <pre><code class="language-markup">
+<%= include('../../assets/html/services/services.html') %>
+                            </code></pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="tabs">
+                <div class="lib-title">Onglets</div>
+
+                <div class="module">
+                    <form class="code-example">
+                        <div class="col-md-12">
+                            <%# include('../../assets/html/contents/contents.html') %>
+                        </div>
+                    </form>
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" role="tab" href="#cn-tabs-html">HTML</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="cn-tabs-html" role="tabpanel" class="tab-pane active">
+                            <figure class="highlight">
+                            <pre><code class="language-markup">
+<%# include('../../assets/html/contents/contents.html') %>
+                            </code></pre>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div class="offset-md-1 col-md-2 sidenav-sticky">
+            <nav class="sidenav">
+                <div class="title-sidenav">Composants</div>
+                <ul class="nav flex-column">
+                    <li class="nav-item active">
+                        <a href="#title" class="nav-link">Titres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#text" class="nav-link">Textes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#link" class="nav-link">Liens</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#button" class="nav-link">Boutons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#table" class="nav-link">Tableaux</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#content" class="nav-link">Contenus</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#form" class="nav-link">Eléments de formulaire</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#service" class="nav-link">Etat des services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#tabs" class="nav-link">Onglets</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="grid-helper"></div>
+
+<script src="../js/default.js"></script>
+</body>
+</html>

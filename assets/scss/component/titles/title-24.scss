@@ -1,0 +1,10 @@
+.cn-title-24 {
+    color:$color-grey--dark;
+    font-size:24px;
+    margin-bottom:20px;
+
+    &.divider {
+        padding-bottom:20px;
+        border-bottom:1px solid $color-grey--light;
+    }
+}

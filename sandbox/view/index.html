@@ -5,21 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
     <title>Index sandbox</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/index.css">
 </head>
 <body>
 
 <%- include('module/header.html', {active: 'home'}) %>
 
-<div class="container">
-    Compte Nickel library
+<div class="container-fluid">
+    <div class="row">
+        <main class="offset-md-1 col-md-8">
+            Compte Nickel library
+        </main>
+    </div>
 </div>
 
 
 <div class="grid-helper"></div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="../js/default.js"></script>
 </body>
 </html>

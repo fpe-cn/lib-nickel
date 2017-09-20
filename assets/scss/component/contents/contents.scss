@@ -1,0 +1,28 @@
+.cn-content {
+    width:100%;
+    border-radius:7px;
+    padding:30px 20px;
+    margin-bottom:20px;
+
+    &.center {
+        text-align:center;
+    }
+
+    &.right {
+        text-align:right;
+    }
+
+    &.grey {
+        background-color:$color-grey--lighter;
+    }
+
+    &.orange {
+        background-color:$color-compte-nickel;
+        color:white;
+    }
+
+    &.grey-dark {
+        background-color:$color-grey--dark;
+        color:white;
+    }
+}

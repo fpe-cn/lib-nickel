@@ -5,40 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
     <title>Icons sandbox</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <link rel="stylesheet" href="../css/icon.css">
 </head>
 
 <%
 var sections = [
-{id: 'common', title: 'Communes', groups : [
-    {id:'various', title: 'Divers', icons: ['bag', 'bag-2', 'card-bank', 'card-bank-2', 'card-id', 'card-replace', 'check-square', 'check'
-        ,'check-circle', 'code', 'confetti', 'file', 'network', 'pen', 'pen-2', 'question', 'question-2', 'question-circle'
-        , 'question-sign', 'square', 'ampoule', 'clock', 'gears', 'eye', 'bad', 'good', 'nickel', 'lock', 'search', 'similar'
-        , 'star']},
-    {id:'module', title:'Modules', icons: ['balance', 'calendar', 'check-around', 'student', 'ticket', 'ticket-2', 'card-map'
-        , 'compte', 'flag']},
-    {id:'arrow', title: 'Flèches', iconPrefix: '-arrow', icons: ['left', 'right', 'left-light', 'right-light', 'top-light'
-        , 'bottom-light', 'right-circle', 'next', 'prev', 'double']},
-    {id:'discussion', title:'Discussion', icons: ['bubble', 'bubble-2']},
-    {id:'nav', title: 'Navigation', icons: ['close', 'close-2', 'close-sign', 'logout', 'user', 'user-multi', 'user-add'
-        , 'user-happy']},
-    {id:'smiley', title: 'Smileys', icons: ['smiley-angry', 'smiley-bad-sign', 'smiley-bad-circle', 'smiley-bad-2-circle'
-        , 'smiley-happy-sign', 'smiley-happy-circle']},
-    {id: 'social', title: 'Socials', icons: ['facebook-sign', 'twitter-sign', 'linkedin-sign']}
-]}
+{id:'various', title: 'Divers', icons: ['bag', 'bag-2', 'card-bank', 'card-bank-2', 'card-id', 'card-replace', 'check-square', 'check'
+    ,'check-circle', 'code', 'confetti', 'file', 'network', 'pen', 'pen-2', 'question', 'question-2', 'question-circle'
+    , 'question-sign', 'square', 'ampoule', 'clock', 'gears', 'eye', 'bad', 'good', 'nickel', 'lock', 'search', 'similar'
+    , 'star']},
+{id:'module', title:'Modules', icons: ['balance', 'calendar', 'check-around', 'student', 'ticket', 'ticket-2', 'card-map'
+    , 'compte', 'flag']},
+{id:'arrow', title: 'Flèches', iconPrefix: '-arrow', icons: ['left', 'right', 'left-light', 'right-light', 'top-light'
+    , 'bottom-light', 'right-circle', 'next', 'prev', 'double']},
+{id:'discussion', title:'Discussion', icons: ['bubble', 'bubble-2']},
+{id:'nav', title: 'Navigation', icons: ['close', 'close-2', 'close-sign', 'logout', 'user', 'user-multi', 'user-add'
+    , 'user-happy']},
+{id:'smiley', title: 'Smileys', icons: ['smiley-angry', 'smiley-bad-sign', 'smiley-bad-circle', 'smiley-bad-2-circle'
+    , 'smiley-happy-sign', 'smiley-happy-circle']},
+{id: 'social', title: 'Socials', icons: ['facebook-sign', 'twitter-sign', 'linkedin-sign']}
 ];
 %>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<body class="theme-lib">
 
 <%- include('module/header.html', {active: 'icon'}) %>
 
-<div class="container kawa">
+<div class="container-fluid">
     <div class="row">
         <!--Main Content -->
-        <div class="col-md-9">
+        <main class="offset-md-1 col-md-8">
             <div class="alert alert-info" role="alert">
                 Règles de construction des svg pour les fonts :
                 <ul>
@@ -55,71 +51,56 @@ var sections = [
 
             <div class="alert alert-info" role="alert">Il est possible de jouer sur la tailler de l'icône avec <b>icon-lg</b> et <b>icon-2x</b> à <b>icon-5x</b></div>
 
-            <section id="common-icon" class="group col-md-12">
+
                 <%
                 sections.forEach(function(section) {
                 %>
-                <div id="<%= section.id %>" class="subgroup col-md-12">
-                    <% if (section.title) { %><h1 class="kawa-h1"><%= section.title %></h1><% } %>
-                    <% if (section.text) { %><p><%= section.text %></p><% } %>
-                    <%
-                    section.groups.forEach(function(group) {
-                    %>
-                    <div class="kawa-icons">
-                        <h2 class="kawa-h2" id="<%= section.id %>-<%= group.id %>" class="kawa-h3"><%= group.title %></h2>
-                        <ul class="kawa-icons-list">
+                <section id="<%= section.id %>" class="cf">
+                    <div class="lib-title"><%= section.title %></div>
+                    <div class="module">
+                        <ul class="cn-icons-list">
                             <%
-                            group.icons.forEach(function(icon) {
+                            section.icons.forEach(function(icon) {
                             %>
                             <li>
-                                <span class="<%= group.iconClass ? group.iconClass : 'icon' %> icon<%= group.iconPrefix %>-<%=icon%>"></span>
-                                <span class="icon-class"><%= group.iconClass ? group.iconClass : 'icon' %> icon<%= group.iconPrefix %>-<%=icon%></span>
+                                <span class="<%= section.iconClass ? section.iconClass : 'icon' %> icon<%= section.iconPrefix %>-<%=icon%>"></span>
+                                <span class="icon-class"><%= section.iconClass ? section.iconClass : 'icon' %> icon<%= section.iconPrefix %>-<%=icon%></span>
                             </li>
                             <%
                             });
                             %>
                         </ul>
                     </div>
+                </section>
+                <%
+                });
+                %>
+
+        </main>
+
+        <!--Nav Bar -->
+        <div class="offset-md-1 col-md-2 sidenav-sticky">
+            <nav class="sidenav">
+                <div class="title-sidenav">Composants</div>
+                <ul class="nav flex-column">
+                    <%
+                    sections.forEach(function(section) {
+                    %>
+                    <li class="nav-item">
+                        <a href="#<%= section.id %>" class="nav-link"><%= section.title %></a>
+                    </li>
                     <%
                     });
                     %>
-                </div>
-                <%
-                });
-                %>
-            </section>
+                </ul>
+            </nav>
         </div>
-
-        <!--Nav Bar -->
-        <nav class="col-md-3 scroll-sidebar navbar">
-            <ul id="sidebar" class="nav nav-stacked fixed">
-                <%
-                sections.forEach(function(section) {
-                %>
-                <li>
-                    <a href="#<%= section.id %>"><%= section.title %></a>
-                    <ul class="nav nav-stacked">
-                        <%
-                        section.groups.forEach(function(group) {
-                        %>
-                        <li><a href="#<%= section.id %>-<%= group.id %>"><%= group.title %></a></li>
-                        <%
-                        });
-                        %>
-                    </ul>
-                </li>
-                <%
-                });
-                %>
-            </ul>
-        </nav>
     </div>
 </div>
 
 <div class="grid-helper"></div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="../js/default.js"></script>
 </body>
 
 

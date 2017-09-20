@@ -1,57 +1,58 @@
-$basePathTypography: "../";
-@import "../../assets/scss/common/fonticon";
+@import "../../assets/scss/common/config-bootstrap-grid";
 
-.clearfix {
-    clear: both;
-}
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/bootstrap-grid";
+
+$basePathTypography: "../";
+@import "../../assets/scss/common/all";
+@import "../../assets/scss/component/all";
+
+@import "layout/layout";
+
+@import "module/header";
 
 /* Icons */
-.kawa-icons {
-    margin: 15px -10px 20px;
-    overflow: hidden;
+.cn-icons-list {
+    padding-left: 0;
+    list-style: none;
 
-    .kawa-icons-list {
-        padding-left: 0;
-        list-style: none;
+    li {
+        float: left;
+        width: 20%;
+        height: 115px;
+        padding: 10px;
+        font-size: 10px;
+        line-height: 1.4;
+        text-align: center;
+        background-color: $color-grey-input-disabled;
+        border:1px solid $color-grey--lighter;
 
-        li {
-            float: left;
+        &:hover {
+            color: white;
+            background-color: $color-compte-nickel--light;
+
+            .icon:before {
+                color:white;
+            }
+        }
+
+        &.item-lg {
             width: 25%;
-            height: 115px;
-            padding: 10px;
-            font-size: 10px;
-            line-height: 1.4;
+        }
+
+        .icon, .icon-amp {
+            display: inline-block;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            font-size: 30px;
+            line-height: 30px;
+            color: $color-grey--dark;
+        }
+
+        .icon-class {
+            display: block;
             text-align: center;
-            background-color: #F4F4F4;
-            border: 1px solid #FFFFFF;
-
-            &:hover {
-                color: #FFFFFF;
-                background-color: #563d7c;
-
-                .icon:before {
-                    color:white;
-                }
-            }
-
-            &.item-lg {
-                width: 25%;
-            }
-
-            .icon, .icon-amp {
-                display: inline-block;
-                margin-top: 5px;
-                margin-bottom: 10px;
-                font-size: 30px;
-                line-height: 30px;
-                color: #444444;
-            }
-
-            .icon-class {
-                display: block;
-                text-align: center;
-                word-wrap: break-word;
-            }
+            word-wrap: break-word;
         }
     }
 }
@@ -61,11 +62,11 @@ svg {
 }
 
 @media (min-width: 768px) {
-    .kawa-icons {
+    .cn-icons {
         margin-right: 0;
         margin-left: 0;
 
-        .kawa-icons-list li {
+        .cn-icons-list li {
             width: 12.5%;
             font-size: 12px;
         }

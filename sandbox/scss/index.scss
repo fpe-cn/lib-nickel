@@ -1,0 +1,12 @@
+@import "../../assets/scss/common/config-bootstrap-grid";
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/bootstrap-grid";
+
+$basePathTypography: "../";
+@import "../../assets/scss/common/all";
+@import "../../assets/scss/component/all";
+
+@import "layout/layout";
+
+@import "module/header";

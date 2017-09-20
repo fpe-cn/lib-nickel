@@ -5,70 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
     <title>Typography sandbox</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/typography.css">
 </head>
-<body>
+<body class="theme-lib">
 
 <%- include('module/header.html', {active: 'typography'}) %>
 
-<div class="container">
-    <h2>Roboto</h2>
+<div class="container-fluid">
 
     <div class="row">
-        <div class="col-sm-12 col-md-4 roboto">
-            Roboto regular <br/>
-            abcdefghijklmnopqrstuvwxyz <br/>
-            ABCDEFGHIJKLMNOPQRSTUVWXYZ <br/>
-            0123456789
-        </div>
-        <div class="col-sm-12 col-md-4 roboto light">
-            Roboto light <br/>
-            abcdefghijklmnopqrstuvwxyz <br/>
-            ABCDEFGHIJKLMNOPQRSTUVWXYZ <br/>
-            0123456789
-        </div>
-        <div class="col-sm-12 col-md-4 roboto bold">
-            Roboto bold <br/>
-            abcdefghijklmnopqrstuvwxyz <br/>
-            ABCDEFGHIJKLMNOPQRSTUVWXYZ <br/>
-            0123456789
-        </div>
-        <div class="col-sm-12 col-md-4 roboto black">
-            Roboto black <br/>
-            abcdefghijklmnopqrstuvwxyz <br/>
-            ABCDEFGHIJKLMNOPQRSTUVWXYZ <br/>
-            0123456789
-        </div>
-        <div class="col-sm-12 col-md-4 roboto medium">
-            Roboto medium <br/>
-            abcdefghijklmnopqrstuvwxyz <br/>
-            ABCDEFGHIJKLMNOPQRSTUVWXYZ <br/>
-            0123456789
-        </div>
-    </div>
-
-    <h2>Vag Rounded</h2>
-
-    <div class="row">
-        <div class="col-sm-12 col-md-4 vag-rounded">
-            Vag Rounded light <br/>
-            abcdefghijklmnopqrstuvwxyz <br/>
-            ABCDEFGHIJKLMNOPQRSTUVWXYZ <br/>
-            0123456789
-        </div>
-        <div class="col-sm-12 col-md-4 vag-rounded bold">
-            Vag Rounded bold <br/>
-            abcdefghijklmnopqrstuvwxyz <br/>
-            ABCDEFGHIJKLMNOPQRSTUVWXYZ <br/>
-            0123456789
+        <main class="offset-md-1 col-md-8">
+            <section id="roboto" class="cf">
+                <div class="lib-title">Roboto</div>
+                <div class="module">
+                    <div class="roboto">
+                        Roboto regular <br/>
+                        abcdefghijklmnopqrstuvwxyz <br/>
+                        ABCDEFGHIJKLMNOPQRSTUVWXYZ <br/>
+                        0123456789
+                    </div>
+                    <div class="roboto light">
+                        Roboto light <br/>
+                        abcdefghijklmnopqrstuvwxyz <br/>
+                        ABCDEFGHIJKLMNOPQRSTUVWXYZ <br/>
+                        0123456789
+                    </div>
+                    <div class="roboto bold">
+                        Roboto bold <br/>
+                        abcdefghijklmnopqrstuvwxyz <br/>
+                        ABCDEFGHIJKLMNOPQRSTUVWXYZ <br/>
+                        0123456789
+                    </div>
+                    <div class="roboto black">
+                        Roboto black <br/>
+                        abcdefghijklmnopqrstuvwxyz <br/>
+                        ABCDEFGHIJKLMNOPQRSTUVWXYZ <br/>
+                        0123456789
+                    </div>
+                    <div class="roboto medium">
+                        Roboto medium <br/>
+                        abcdefghijklmnopqrstuvwxyz <br/>
+                        ABCDEFGHIJKLMNOPQRSTUVWXYZ <br/>
+                        0123456789
+                    </div>
+                </div>
+            </section>
+            <section id="vag" class="cf">
+                <div class="lib-title">Vag Rounded</div>
+                <div class="module">
+                    <div class="vag-rounded">
+                        Vag Rounded light <br/>
+                        abcdefghijklmnopqrstuvwxyz <br/>
+                        ABCDEFGHIJKLMNOPQRSTUVWXYZ <br/>
+                        0123456789
+                    </div>
+                    <div class="vag-rounded bold">
+                        Vag Rounded bold <br/>
+                        abcdefghijklmnopqrstuvwxyz <br/>
+                        ABCDEFGHIJKLMNOPQRSTUVWXYZ <br/>
+                        0123456789
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div class="offset-md-1 col-md-2 sidenav-sticky">
+            <nav class="sidenav">
+                <div class="title-sidenav">Composants</div>
+                <ul class="nav flex-column">
+                    <li class="nav-item active">
+                        <a href="#roboto" class="nav-link">Roboto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#vag" class="nav-link">Vag Rounded</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </div>
 </div>
 
 <div class="grid-helper"></div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="../js/default.js"></script>
 </body>
 </html>

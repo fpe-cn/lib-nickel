@@ -1,0 +1,59 @@
+.cn-button {
+  height:50px;
+  width:280px;
+  text-align:center;
+  border-radius:25px;
+  border:0;
+
+  &-default {
+    background-color:$color-grey--dark;
+    color:white;
+  }
+
+  &-orange,
+  &-submit {
+    background-color:$color-compte-nickel;
+    color:white;
+  }
+
+  &.icon-right {
+    position:relative;
+
+    .icon {
+      position:absolute;
+      right:20px;
+
+      &:before {
+        vertical-align:text-top;
+      }
+    }
+  }
+
+  &.icon-left {
+    position:relative;
+
+    .icon {
+      position:absolute;
+      left:20px;
+
+      &:before {
+        vertical-align:text-top;
+      }
+    }
+  }
+
+  &.icon-only {
+    width:auto;
+    padding:0 20px;
+
+    .icon {
+      display:block;
+      font-size:40px;
+      height:40px;
+
+      &:before {
+        vertical-align:text-top;
+      }
+    }
+  }
+}

@@ -1,0 +1,144 @@
+.cn-link-default {
+  color:$color-grey--dark;
+  text-decoration:underline;
+
+  &:hover {
+    color:$color-compte-nickel;
+    text-decoration: none;
+  }
+}
+
+.cn-link-inverse {
+  color: $color-compte-nickel;
+
+  &:hover {
+    color:$color-grey--dark;
+    text-decoration: none;
+  }
+}
+
+.cn-link-list {
+  color:$color-grey--dark;
+
+  &:hover {
+    color:$color-compte-nickel;
+  }
+}
+
+.cn-link-orange {
+  color: $color-compte-nickel;
+
+  &:hover {
+    color: $color-compte-nickel;
+  }
+}
+
+.cn-link-grey {
+  color: $color-grey--dark;
+
+  &:hover {
+    color: $color-grey--dark;
+  }
+}
+
+.cn-link-button-default {
+  display:inline-block;
+  border:1px solid $color-grey--dark;
+  border-radius:20px;
+  height:40px;
+  line-height:36px;
+  padding:0 20px;
+  color:$color-grey--dark;
+  font-size:16px;
+
+
+  &:hover {
+    background-color:$color-grey--dark;
+    color:white;
+    text-decoration:none;
+  }
+
+  .icon {
+    margin-right:10px;
+
+    &:before {
+      vertical-align:text-top;
+    }
+  }
+
+  &-inverse {
+    display:inline-block;
+    border:1px solid $color-grey--dark;
+    border-radius:20px;
+    height:40px;
+    line-height:36px;
+    padding:0 20px;
+    background-color:$color-grey--dark;
+    color:white;
+
+    &:hover {
+      background-color:transparent;
+      color:$color-grey--dark;
+      text-decoration:none;
+    }
+
+    .icon {
+      margin-right:10px;
+
+      &:before {
+        vertical-align:text-top;
+      }
+    }
+  }
+}
+
+.cn-link-button-orange {
+  display:inline-block;
+  border:1px solid $color-compte-nickel;
+  border-radius:20px;
+  height:40px;
+  line-height:36px;
+  padding:0 20px;
+  color: $color-compte-nickel;
+  font-size:16px;
+
+
+  &:hover {
+    background-color:$color-compte-nickel;
+    color:white;
+    text-decoration:none;
+  }
+
+  .icon {
+    margin-right:10px;
+
+    &:before {
+      vertical-align:text-top;
+    }
+  }
+
+  &-inverse {
+    display:inline-block;
+    border:1px solid $color-compte-nickel;
+    border-radius:20px;
+    height:40px;
+    line-height:36px;
+    padding:0 20px;
+    background-color:$color-compte-nickel;
+    color:white;
+
+    &:hover {
+      background-color:transparent;
+      color:$color-compte-nickel;
+      text-decoration:none;
+    }
+
+    .icon {
+      margin-right:10px;
+
+      &:before {
+        vertical-align:text-top;
+      }
+    }
+  }
+}

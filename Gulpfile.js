@@ -139,9 +139,10 @@ gulp.task('fonticon', function () {
  */
 
 gulp.task('watch', function () {
-    gulp.watch(['sandbox/**/*.html', 'assets/**/*.html'], ['html']);
+    gulp.watch(['sandbox/**/*.html', 'assets/html/**/*.html'], ['html']);
     gulp.watch('sandbox/img/**', ['img']);
     gulp.watch(['sandbox/**/*.scss', 'assets/**/*.scss'], ['css']);
+    gulp.watch(['sandbox/**/*.js', 'assets/**/*.js'], ['js']);
 });
 
 /*
@@ -187,6 +188,6 @@ gulp.task('build', function(cb) {
 
 //gulp.task('work', ['img', 'scss', 'font', 'sprite', 'js-watchify', 'html', 'webserver', 'watch']);
 gulp.task('work', function(cb) {
-    runSequence(['fonticon'], ['font', 'css', 'html'], ['webserver', 'watch'], cb)
+    runSequence(['fonticon'], ['font', 'css', 'js', 'html'], ['webserver', 'watch'], cb)
 });
 gulp.task('default', ['work']);

@@ -1,0 +1,108 @@
+.cn-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid $color-grey--darkest;
+    border-radius: 7px;
+    width: 100%;
+    margin-top: 20px;
+
+    &.w400 {
+        max-width: 400px;
+    }
+
+    &.w600 {
+        max-width: 600px;
+    }
+
+    &.w800 {
+        max-width: 800px;
+    }
+
+    thead {
+        th {
+            padding: 15px;
+            color: $color-compte-nickel;
+            @extend %vag-rounded-bold;
+            border-right: 1px solid $color-grey--darkest;
+            text-align: center;
+
+            &:last-child {
+                border-right-width: 0;
+            }
+        }
+    }
+
+    &.head-sign {
+        border-width: 0;
+
+        thead {
+            th {
+                background-color: $color-compte-nickel;
+                color: white;
+
+                &:first-child {
+                    border-top-left-radius: 7px;
+                    border-left-width: 0;
+                }
+                &:last-child {
+                    border-top-right-radius: 7px;
+                    border-right-width: 0;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    border: 1px solid $color-grey--light;
+                    border-top-width: 0;
+                    border-left-width: 0;
+                    padding: 20px;
+
+                    &:first-child {
+                        border-left-width: 1px;
+                    }
+
+                    &.orange {
+                        color: $color-compte-nickel;
+                    }
+                }
+
+                &:last-child {
+                    td {
+                        &:first-child {
+                            border-bottom-left-radius: 7px;
+                        }
+                        &:last-child {
+                            border-bottom-right-radius: 7px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    tbody {
+        &.odd-even {
+            tr {
+                padding: 10px 0;
+
+                &:nth-child(odd) {
+                    background-color: $color-grey--lighter;
+                }
+
+                td {
+                    padding: 10px;
+                    text-align: center;
+                    font-size: 18px;
+                    color: $color-grey--dark;
+                    border-right: 1px solid $color-grey--darkest;
+
+                    &:last-child {
+                        border-right-width: 0;
+                    }
+                }
+            }
+        }
+    }
+}

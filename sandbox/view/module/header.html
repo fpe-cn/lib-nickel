@@ -1,12 +1,27 @@
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
+<nav class="navbar navbar-toggleable-md navbar-light">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#"></a>
 
-        <ul class="nav navbar-nav">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-            <li class="<%= locals.active == 'index' ? 'active' : '' %>"><a href="index.html">Home</a></li>
-            <li class="<%= locals.active == 'typography' ? 'active' : '' %>"><a href="typography.html">Typographie</a></li>
-            <li class="<%= locals.active == 'color' ? 'active' : '' %>"><a href="color.html">Colors</a></li>
-            <li class="<%= locals.active == 'icon' ? 'active' : '' %>"><a href="icon.html">Icons</a></li>
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item <%= locals.active == 'home' ? 'active' : '' %>">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item <%= locals.active == 'typography' ? 'active' : '' %>">
+                <a class="nav-link" href="typography.html">Typographie</a>
+            </li>
+            <li class="nav-item <%= locals.active == 'color' ? 'active' : '' %>">
+                <a class="nav-link" href="color.html">Couleurs</a>
+            </li>
+            <li class="nav-item <%= locals.active == 'icon' ? 'active' : '' %>">
+                <a class="nav-link" href="icon.html">Icons</a>
+            </li>
+            <li class="nav-item <%= locals.active == 'referenciel' ? 'active' : '' %>">
+                <a class="nav-link" href="referenciel.html">Référenciel</a>
+            </li>
         </ul>
     </div>
 </nav>
