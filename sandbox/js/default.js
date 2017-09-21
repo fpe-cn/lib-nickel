@@ -1,5 +1,5 @@
 window.jQuery = require('jquery')
 window.Tether = require('tether')
-window.Popper = require('popper.js').default
+window.Popper = require('popper.js/dist/umd/popper')
 require('bootstrap')
 require('prismjs')
