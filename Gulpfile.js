@@ -180,10 +180,10 @@ gulp.task('clean', function (cb) {
     del(['build'], cb);
 });
 
-gulp.task('compile', ['img', 'css', 'font', 'sprite', 'js', 'html']);
+gulp.task('compile', ['font', 'css', 'js', 'html']);
 
 gulp.task('build', function(cb) {
-    runSequence('clean', 'compile', cb);
+    runSequence('clean', ['fonticon'], 'compile', ['webserver', 'watch'], cb);
 });
 
 //gulp.task('work', ['img', 'scss', 'font', 'sprite', 'js-watchify', 'html', 'webserver', 'watch']);

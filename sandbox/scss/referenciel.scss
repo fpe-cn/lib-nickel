@@ -34,6 +34,11 @@ $basePathTypography: "../";
     .code-example {
         @extend %vag-rounded-light;
     }
+
+    & > .tab-content {
+        padding:0;
+        margin:0;
+    }
 }
 
 .nav-tabs .nav-item:first-child {
@@ -52,4 +57,9 @@ button {
 
 table {
     margin-bottom:30px;
+}
+
+.size-fix {
+    max-height:400px;
+    overflow:scroll;
 }
