@@ -10,7 +10,7 @@ Desktop.ini
 .sass-cache
 
 # Tools
-node_modules
+node_modules/
 dist
 bower_components
 
