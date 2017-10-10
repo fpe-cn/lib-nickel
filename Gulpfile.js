@@ -46,6 +46,10 @@ gulp.task('html', function () {
         })
         .pipe(gulp.dest('build/sandbox'));
 });
+gulp.task('img-sandbox', function () {
+    return gulp.src(['sandbox/img/**'])
+        .pipe(gulp.dest('build/sandbox/img'));
+});
 
 gulp.task('js', function (done) {
     bundleAllJsFile(done, {watchify: false});
@@ -180,14 +184,13 @@ gulp.task('clean', function (cb) {
     del(['build'], cb);
 });
 
-gulp.task('compile', ['font', 'css', 'js', 'html']);
+gulp.task('compile', ['font', 'css', 'js', 'html', 'img-sandbox']);
 
 gulp.task('build', function(cb) {
     runSequence('clean', ['fonticon'], 'compile', ['webserver', 'watch'], cb);
 });
 
-//gulp.task('work', ['img', 'scss', 'font', 'sprite', 'js-watchify', 'html', 'webserver', 'watch']);
 gulp.task('work', function(cb) {
-    runSequence(['fonticon'], ['font', 'css', 'js', 'html'], ['webserver', 'watch'], cb)
+    runSequence(['font', 'css', 'js', 'html', 'img-sandbox'], ['webserver', 'watch'], cb)
 });
 gulp.task('default', ['work']);

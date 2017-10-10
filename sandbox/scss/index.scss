@@ -10,3 +10,22 @@ $basePathTypography: "../";
 @import "layout/layout";
 
 @import "module/header";
+
+main {
+    text-align:center;
+
+    h2 {
+        color:$color-compte-nickel--light;
+        text-shadow:0 1px white;
+    }
+
+    h2, p {
+        margin-bottom:40px;
+    }
+
+    img {
+        border:2px solid $color-compte-nickel--light;
+        border-radius:5px;
+        box-shadow: 1px 1px 8px 0 $color-grey--light;
+    }
+}
