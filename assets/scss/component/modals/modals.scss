@@ -1,0 +1,29 @@
+@import "../buttons/buttons";
+
+.modal {
+    .modal-dialog {
+        .modal-content {
+            border-radius:15px;
+
+            .modal-header {
+                position:relative;
+                justify-content: center;
+
+                .modal-title {
+                    text-align:center;
+                    color:$color-compte-nickel;
+                }
+
+                .close {
+                    position:absolute;
+                    top:5px;
+                    right:10px;
+                }
+            }
+
+            .modal-footer {
+                justify-content: center;
+            }
+        }
+    }
+}
