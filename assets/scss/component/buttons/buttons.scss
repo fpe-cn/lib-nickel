@@ -1,72 +1,72 @@
 .cn-button {
-  height:50px;
-  width:280px;
-  text-align:center;
-  border-radius:25px;
-  border:0;
-  outline:0;
+    height: 50px;
+    width: 280px;
+    text-align: center;
+    border-radius: 25px;
+    border: 0;
+    outline: 0;
 
-  &:focus {
-    outline:0;
-  }
-
-  &-default {
-    background-color:$color-grey--dark;
-    color:white;
-  }
-
-  &-orange,
-  &-submit {
-    background-color:$color-compte-nickel;
-    color:white;
-  }
-
-  &-modal-orange {
-    background-color:transparent;
-
-    .icon {
-      color:$color-compte-nickel;
+    &:focus {
+        outline: 0;
     }
-  }
 
-  &.icon-right {
-    position:relative;
-
-    .icon {
-      position:absolute;
-      right:20px;
-
-      &:before {
-        vertical-align:text-top;
-      }
+    &-default {
+        background-color: $color-grey--dark;
+        color: white;
     }
-  }
 
-  &.icon-left {
-    position:relative;
-
-    .icon {
-      position:absolute;
-      left:20px;
-
-      &:before {
-        vertical-align:text-top;
-      }
+    &-orange,
+    &-submit {
+        background-color: $color-compte-nickel;
+        color: white;
     }
-  }
 
-  &.icon-only {
-    width:auto;
-    padding:0 20px;
+    &-modal-orange {
+        background-color: transparent;
 
-    .icon {
-      display:block;
-      font-size:40px;
-      height:40px;
-
-      &:before {
-        vertical-align:text-top;
-      }
+        .icon {
+            color: $color-compte-nickel;
+        }
     }
-  }
+
+    &.icon-right {
+        position: relative;
+
+        .icon {
+            position: absolute;
+            right: 20px;
+
+            &:before {
+                vertical-align: text-top;
+            }
+        }
+    }
+
+    &.icon-left {
+        position: relative;
+
+        .icon {
+            position: absolute;
+            left: 20px;
+
+            &:before {
+                vertical-align: text-top;
+            }
+        }
+    }
+
+    &.icon-only {
+        width: auto;
+        padding: 0 20px;
+
+        .icon {
+            display: block;
+            font-size: 40px;
+            height: 40px;
+
+            &:before {
+                vertical-align: text-top;
+            }
+        }
+    }
 }
