@@ -76,3 +76,9 @@
     &-light {  background-color: $color-green--light;  }
     &-flash {  background-color: $color-green--flash;  }
 }
+
+.social {
+    &-facebook { background-color: $color-facebook; }
+    &-twitter { background-color: $color-twitter; }
+    &-linkedin { background-color: $color-linkedin; }
+}

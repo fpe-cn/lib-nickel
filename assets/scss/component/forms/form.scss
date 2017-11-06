@@ -20,6 +20,10 @@
             }
         }
 
+        &.textarea .input-group .input-group-addon {
+            height:auto;
+        }
+
         input.form-control {
             height:50px;
 
@@ -35,20 +39,110 @@
                 }
             }
         }
+
+        textarea.form-control {
+            resize: none;
+
+            &:focus {
+                border-color:$color-compte-nickel;
+            }
+        }
+
+        &.copy-to-clipboard {
+
+            .input-group {
+
+                .form-control {
+                    height:auto;
+                    flex-wrap:wrap;
+                    text-align:center;
+
+                    label, input {
+                        display:block;
+                        flex:1 100%;
+                        font-size:16px;
+                        line-height:24px;
+                    }
+
+                    label {
+                        color:$color-compte-nickel;
+                    }
+
+                    input {
+                        border-width:0;
+                        color: $color-grey--dark;
+                        text-transform:uppercase;
+                        text-align:center;
+                    }
+                }
+
+                .input-group-addon {
+                    flex-wrap: wrap;
+                    height:auto;
+                    cursor:pointer;
+
+                    span { font-size:9px; align-self:flex-start; }
+                    .icon { font-size:10px; align-self:flex-end; margin-bottom:5px; }
+
+                    span, .icon {
+                        flex:1 100%;
+                    }
+                }
+            }
+        }
     }
 
     .custom-control {
-        .custom-control-input {
-            & ~ .custom-control-indicator {
-                border:2px solid $color-compte-nickel;
-                background-color:white;
+        display:block;
+        cursor:pointer;
+
+        &.checkbox-square {
+            .custom-control-input {
+                & ~ .custom-control-indicator {
+                    border:2px solid $color-compte-nickel;
+                    background-color:white;
+                }
+                &:checked ~ .custom-control-indicator {
+                    background-color:$color-compte-nickel;
+                    background-size:70%;
+                }
+                &:focus ~ .custom-control-indicator {
+                    box-shadow: none;
+                }
             }
-            &:checked ~ .custom-control-indicator {
-                background-color:$color-compte-nickel;
-                background-size:70%;
-            }
-            &:focus ~ .custom-control-indicator {
-                box-shadow: none;
+        }
+
+        &.checkbox-circle {
+            width:35px;
+            height:35px;
+            border:1px solid $color-compte-nickel;
+            border-radius:20px;
+            padding:0;
+
+            .custom-control-input {
+                & ~ .custom-control-indicator {
+                    background-color:transparent;
+                    width:21px;
+                    height:21px;
+                    line-height:21px;
+                    text-align:center;
+                    border-radius:12px;
+                    top:6px;
+                    left:6px;
+                }
+                &:checked ~ .custom-control-indicator {
+                    background-color:$color-compte-nickel;
+
+                    &:before {
+                        content:"\EA1B";
+                        font-family: Lib-Nickel-Icon;
+                        font-size:8px;
+                        color:white;
+                    }
+                }
+                &:focus ~ .custom-control-indicator {
+                    box-shadow: none;
+                }
             }
         }
     }
