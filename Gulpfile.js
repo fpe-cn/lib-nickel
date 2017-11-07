@@ -165,18 +165,8 @@ gulp.task('webserver', function () {
 });
 
 /*
- * Tests
+ * Tests : npm test
  */
-
-gulp.task('test', function () {
-    return gulp.src(['test/**/*-test.js', 'test/**/*-test.es6'])
-        .pipe(mocha({compilers: {
-            js: babelRegister
-        }}))
-        .once('end', function () {
-            process.exit();
-        });
-});
 
 // CUSTOM TASKS :
 
