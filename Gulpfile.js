@@ -15,14 +15,13 @@ var source = require('vinyl-source-stream');
 var glob = require('glob');
 var eventStream = require('event-stream');
 var watchify = require('watchify');
-var mocha = require('gulp-mocha');
 var _ = require('lodash');
 var flatten = require('gulp-flatten');
 var gutil = require('gulp-util');
 var ejs = require('gulp-ejs');
 var replace = require('gulp-replace');
 var babelify = require('babelify');
-var babelRegister = require('babel-register');
+var run = require('gulp-run');
 
 gulp.task('css', function () {
     return gulp.src('sandbox/scss/*.scss')
@@ -164,6 +163,10 @@ gulp.task('webserver', function () {
         }))
 });
 
+gulp.task('run-test', function() {
+    return run('npm test').exec();
+})
+
 /*
  * Tests : npm test
  */
@@ -181,6 +184,6 @@ gulp.task('build', function(cb) {
 });
 
 gulp.task('work', function(cb) {
-    runSequence(['font', 'css', 'js', 'html', 'img-sandbox'], ['webserver', 'watch'], cb)
+    runSequence('run-test', ['font', 'css', 'js', 'html', 'img-sandbox'], ['webserver', 'watch'], cb)
 });
 gulp.task('default', ['work']);
