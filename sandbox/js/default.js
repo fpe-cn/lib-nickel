@@ -1,7 +1,7 @@
-window.jQuery = require('jquery')
-window.Tether = require('tether')
-window.Popper = require('popper.js/dist/umd/popper')
+global.jQuery = require('jquery')
+global.Tether = require('tether')
+global.Popper = require('popper.js/dist/umd/popper')
 require('bootstrap')
 require('prismjs')
 
-//require('../../assets/js/copyToClipboard').init();
+require('../../assets/js/copyToClipboard').init()
