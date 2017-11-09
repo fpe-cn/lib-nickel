@@ -1,4 +1,4 @@
-var dom = require('../../assets/js/dom');
+var dom = require('./dom');
 
 module.exports.init = function () {
     dom('[data-role="copy-to-clipboard"]').on('click', (e) => {
