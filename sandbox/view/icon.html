@@ -10,17 +10,19 @@
 
 <%
 var sections = [
-{id:'various', title: 'Divers', icons: ['bag', 'bag-2', 'card-bank', 'card-bank-2', 'card-id', 'card-replace', 'check-square', 'check'
-    ,'check-circle', 'code', 'confetti', 'file', 'network', 'pen', 'pen-2', 'question', 'question-2', 'question-circle'
-    , 'question-sign', 'square', 'ampoule', 'clock', 'gears', 'eye', 'bad', 'good', 'nickel', 'lock', 'search', 'similar'
-    , 'star']},
+{id:'various', title: 'Divers', icons: ['bag', 'bag-2', 'card-bank', 'card-bank-2', 'card-bank-back', 'card-bank-2-full', 'card-id', 'card-replace', 'check-square', 'check', 'check-sign'
+    ,'check-circle', 'code', 'code-2', 'confetti', 'file', 'file-2', 'network', 'pen', 'pen-2', 'question', 'question-2', 'question-circle'
+    , 'question-sign', 'square', 'ampoule', 'clock', 'gears', 'eye', 'eye-full', 'bad', 'good', 'nickel', 'nickel-closed', 'wave', 'lock', 'search', 'similar'
+    , 'star', 'add-sign', 'add-circle', 'etc', 'etc-full', 'caddy', 'alert', 'tabac', 'tabac-empty', 'devices', 'funnel', 'debit', 'credit']},
 {id:'module', title:'Modules', icons: ['balance', 'calendar', 'check-around', 'student', 'ticket', 'ticket-2', 'card-map'
-    , 'compte', 'flag']},
+    , 'compte', 'compte-full', 'flag']},
+{id:'categories', title:'Catégories', icons: ['shopping', 'cutlery', 'allocations', 'piece', 'monument', 'home', 'kite', 'multimedia'
+    , 'bolt', 'distributor', 'wage-slip', 'plane']},
 {id:'arrow', title: 'Flèches', iconPrefix: '-arrow', icons: ['left', 'right', 'left-light', 'right-light', 'top-light'
-    , 'bottom-light', 'right-circle', 'next', 'prev', 'double']},
+    , 'bottom-light', 'right-circle', 'next', 'prev', 'double', 'double-full', 'double-wisp']},
 {id:'discussion', title:'Discussion', icons: ['bubble', 'bubble-2']},
-{id:'nav', title: 'Navigation', icons: ['close', 'close-2', 'close-sign', 'logout', 'user', 'user-multi', 'user-add'
-    , 'user-happy']},
+{id:'nav', title: 'Navigation', icons: ['close', 'close-2', 'close-circle', 'close-sign', 'logout', 'user', 'user-multi', 'user-add'
+    , 'user-happy', 'user-circle', 'user-smile']},
 {id:'smiley', title: 'Smileys', icons: ['smiley-angry', 'smiley-bad-sign', 'smiley-bad-circle', 'smiley-bad-2-circle'
     , 'smiley-happy-sign', 'smiley-happy-circle']},
 {id: 'social', title: 'Socials', icons: ['facebook-sign', 'twitter-sign', 'linkedin-sign']}
@@ -43,6 +45,7 @@ var sections = [
                 </ul>
                 La nomenclature :
                 <ul>
+                    <li>-full : icone pleine</li>
                     <li>-square : le carré plein avec les bords arrondis</li>
                     <li>-sign : le cercle plein</li>
                     <li>-circle : le cercle</li>
