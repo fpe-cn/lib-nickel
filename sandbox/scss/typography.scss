@@ -43,4 +43,7 @@ $basePathTypography: "../";
     &.bold {
         @extend %vag-rounded-bold;
     }
+    &.thin {
+        @extend %vag-rounded-thin;
+    }
 }
