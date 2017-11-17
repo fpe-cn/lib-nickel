@@ -28,3 +28,6 @@ Direction le wiki pour [lancer le projet en local](http://bit.ly/2qLj49Y)
 
 **2017/09/20 : V2.0**
 - Mise en prod v2.0
+
+**2017/11/17 : V2.1.1**
+- Mise en prod v2.1.1
