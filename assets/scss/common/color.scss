@@ -18,7 +18,7 @@ $color-grey-input-disabled: #e6e6e6;
 
 // Validation
 $color-red: #d93f2b; // Erreur
-$color-red-light: #d93f2b; // Background Error
+$color-red-light: rgba(217, 63, 43, 0.1); // Background Error
 
 $color-green: #94ba1e; // Success
 $color-green--light: lighten($color-green, 30%); // Background Success
