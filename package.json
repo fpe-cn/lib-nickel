@@ -52,6 +52,7 @@
     "gulp-replace": "^0.5.4",
     "gulp-run": "^1.7.1",
     "gulp-sass": "^2.3.2",
+    "gulp-util": "^3.0.8",
     "gulp-webserver": "^0.9.1",
     "gulp.spritesmith": "^6.2.1",
     "jest": "^21.2.1",
