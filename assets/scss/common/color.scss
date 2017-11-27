@@ -3,18 +3,13 @@ $color-compte-nickel: #f57528; // Main Color
 $color-compte-nickel--light: #fdbd39; // Main Color Light
 $color-compte-nickel--dark: #be5a1e; // Main Color Dark
 $color-compte-nickel--darker: #FF6000; // Main Color Dark
-//$color-peach: #ee6723;
 
 // Base
-$color-grey: #969696;
-$color-grey--lighter: #f2f2f2;
-$color-grey--light: #cccccc;
-$color-grey--dark: #333333;
-$color-grey--darker: #666666;
-$color-grey--darkest: #999999;
-$color-grey-box-shadow : #bbbbbb;
-$color-grey-disabled: $color-grey--light;
-$color-grey-input-disabled: #e6e6e6;
+$color-grey--lighter: #f2f2f2; // background
+$color-grey--light: #cccccc; // borders
+$color-grey : #bbbbbb; // box-shadow + disabled
+$color-grey--darker: #666666; // texts fields
+$color-grey--dark: #333333; // texts
 
 // Validation
 $color-red: #d93f2b; // Erreur
