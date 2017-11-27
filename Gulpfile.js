@@ -22,6 +22,8 @@ var ejs = require('gulp-ejs');
 var replace = require('gulp-replace');
 var babelify = require('babelify');
 var run = require('gulp-run');
+var bump = require('gulp-bump');
+var git = require('gulp-git');
 
 gulp.task('css', function () {
     return gulp.src('sandbox/scss/*.scss')
@@ -167,6 +169,26 @@ gulp.task('run-test', function() {
     return run('npm test').exec();
 })
 
+// version: 1.0.0
+gulp.task('bump-major', function () {
+    return gulp.src('./package.json')
+        .pipe(bump({type: 'major'}))
+        .pipe(gulp.dest('./'));
+});
+
+// version: 0.1.0
+gulp.task('bump-minor', function () {
+    return gulp.src('./package.json')
+        .pipe(bump({type: 'minor'}))
+        .pipe(gulp.dest('./'));
+});
+
+// version: 0.0.1
+gulp.task('bump', function () {
+    return gulp.src('./package.json')
+        .pipe(bump({type: 'patch'}))
+        .pipe(gulp.dest('./'));
+});
 /*
  * Tests : npm test
  */
