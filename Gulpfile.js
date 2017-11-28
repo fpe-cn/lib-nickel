@@ -211,7 +211,7 @@ gulp.task('github-release', function(done) {
         type: "oauth",
         token: process.env['GITHUB_TOKEN_LIB_NICKEL']
     }, {
-        preset: 'lib-nickel'
+        preset: ''
     }, done);
 });
 
