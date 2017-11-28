@@ -22,9 +22,6 @@ var ejs = require('gulp-ejs');
 var replace = require('gulp-replace');
 var babelify = require('babelify');
 var run = require('gulp-run');
-var bump = require('gulp-bump');
-var git = require('gulp-git');
-var fs = require('fs');
 
 gulp.task('css', function () {
     return gulp.src('sandbox/scss/*.scss')
@@ -203,6 +200,11 @@ gulp.task('default', ['work']);
 
 
 /** AUTOMATE RELEASE **/
+var bump = require('gulp-bump');
+var git = require('gulp-git');
+var fs = require('fs');
+var conventionalGithubReleaser = require('conventional-github-releaser');
+
 gulp.task('github-release', function(done) {
     conventionalGithubReleaser({
         type: "oauth",
