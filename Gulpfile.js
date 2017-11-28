@@ -208,7 +208,7 @@ var conventionalGithubReleaser = require('conventional-github-releaser');
 gulp.task('github-release', function(done) {
     conventionalGithubReleaser({
         type: "oauth",
-        token: '22349c1d12523e9eba7fe288249cb2e84ba414f9' // change this to your own GitHub token or use an environment variable
+        token: process.env.GITHUB_TOKEN_LIB_NICKEL // change this to your own GitHub token or use an environment variable
     }, {
         preset: 'lib-nickel' // Or to any other commit message convention you use.
     }, done);
