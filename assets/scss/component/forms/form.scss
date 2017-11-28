@@ -1,0 +1,273 @@
+.cn-form {
+    .form-group {
+        label {
+            color:$color-compte-nickel;
+            font-size:16px;
+            line-height:16px;
+            margin-bottom:6px;
+        }
+
+        .input-group {
+            .input-group-addon {
+                height:50px;
+                width:50px;
+                font-size:18px;
+                font-family: Arial;
+                background-color:$color-compte-nickel;
+                color:white;
+                justify-content: center;
+                border-color:$color-compte-nickel;
+            }
+        }
+
+        &.textarea .input-group .input-group-addon {
+            height:auto;
+        }
+
+        input.form-control {
+            height:50px;
+
+            &:focus {
+                border-color:$color-compte-nickel;
+            }
+
+            &[type="search"] {
+                -webkit-appearance: searchfield;
+
+                &::-webkit-search-cancel-button {
+                    -webkit-appearance: searchfield-cancel-button;
+                }
+            }
+        }
+
+        textarea.form-control {
+            resize: none;
+
+            &:focus {
+                border-color:$color-compte-nickel;
+            }
+        }
+
+        &.copy-to-clipboard {
+
+            .input-group {
+
+                .form-control {
+                    height:auto;
+                    flex-wrap:wrap;
+                    text-align:center;
+
+                    label, input {
+                        display:block;
+                        flex:1 100%;
+                        font-size:16px;
+                        line-height:24px;
+                    }
+
+                    label {
+                        color:$color-compte-nickel;
+                    }
+
+                    input {
+                        border-width:0;
+                        color: $color-grey--dark;
+                        text-transform:uppercase;
+                        text-align:center;
+                    }
+                }
+
+                .input-group-addon {
+                    flex-wrap: wrap;
+                    height:auto;
+                    cursor:pointer;
+
+                    span { font-size:9px; align-self:flex-start; }
+                    .icon { font-size:10px; align-self:flex-end; margin-bottom:5px; }
+
+                    span, .icon {
+                        flex:1 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .custom-control {
+        display:block;
+        cursor:pointer;
+
+        &.checkbox-square {
+            .custom-control-input {
+                & ~ .custom-control-indicator {
+                    border:2px solid $color-compte-nickel;
+                    background-color:white;
+                }
+                &:checked ~ .custom-control-indicator {
+                    background-color:$color-compte-nickel;
+                    background-size:70%;
+                }
+                &:focus ~ .custom-control-indicator {
+                    box-shadow: none;
+                }
+            }
+        }
+
+        &.checkbox-circle {
+            width:35px;
+            height:35px;
+            border:1px solid $color-compte-nickel;
+            border-radius:20px;
+            padding:0;
+
+            .custom-control-input {
+                & ~ .custom-control-indicator {
+                    background-color:transparent;
+                    width:21px;
+                    height:21px;
+                    line-height:21px;
+                    text-align:center;
+                    border-radius:12px;
+                    top:6px;
+                    left:6px;
+                }
+                &:checked ~ .custom-control-indicator {
+                    background-color:$color-compte-nickel;
+
+                    &:before {
+                        content:"\EA1B";
+                        font-family: Lib-Nickel-Icon;
+                        font-size:8px;
+                        color:white;
+                    }
+                }
+                &:focus ~ .custom-control-indicator {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+    .cn-switch-radio {
+        .cn-toggle {
+            position: absolute;
+            margin-left: -9999px;
+            visibility: hidden;
+
+            & + label {
+                display: block;
+                position: relative;
+                cursor: pointer;
+                outline: none;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+
+                padding: 2px;
+                width: 50px;
+                height: 24px;
+                background-color: $color-compte-nickel;
+                -webkit-border-radius: 60px;
+                -moz-border-radius: 60px;
+                -ms-border-radius: 60px;
+                -o-border-radius: 60px;
+                border-radius: 60px;
+                -webkit-transition: background 0.4s;
+                -moz-transition: background 0.4s;
+                -o-transition: background 0.4s;
+                transition: background 0.4s;
+
+                &:before,
+                &:after {
+                    display: block;
+                    position: absolute;
+                    content:"";
+                }
+
+                &:before {
+                    top: 1px;
+                    left: 1px;
+                    bottom: 1px;
+                    right: 1px;
+                    background-color: white;
+                    -webkit-border-radius: 60px;
+                    -moz-border-radius: 60px;
+                    -ms-border-radius: 60px;
+                    -o-border-radius: 60px;
+                    border-radius: 60px;
+                    -webkit-transition: background 0.4s;
+                    -moz-transition: background 0.4s;
+                    -o-transition: background 0.4s;
+                    transition: background 0.4s;
+                }
+
+                &:after {
+                    top: 4px;
+                    left: 4px;
+                    bottom: 4px;
+                    width: 16px;
+                    background-color: $color-compte-nickel;
+                    -webkit-border-radius: 52px;
+                    -moz-border-radius: 52px;
+                    -ms-border-radius: 52px;
+                    -o-border-radius: 52px;
+                    border-radius: 52px;
+                    -webkit-transition: margin 0.4s, background 0.4s;
+                    -moz-transition: margin 0.4s, background 0.4s;
+                    -o-transition: margin 0.4s, background 0.4s;
+                    transition: margin 0.4s, background 0.4s;
+                }
+
+                .cn-toggle-text {
+                    font-size: 12px;
+
+                    &:after,
+                    &:before {
+                        display:block;
+                        position:absolute;
+                    }
+
+                    &:before {
+                        right:7px;
+                        top:3px; bottom:3px;
+                        content:"non";
+                    }
+
+                    &:after {
+                        left:7px;
+                        top:3px; bottom:3px;
+                        content:"oui";
+                        display:none;
+                    }
+                }
+            }
+
+            &:checked + label {
+                background-color: $color-compte-nickel;
+
+                &:after {
+                    background-color:$color-compte-nickel;
+                }
+                &:before {
+                    margin-left: 25px;
+                    background-color: white;
+                    top: 4px;
+                    left: 4px;
+                    bottom: 4px;
+                    right: 4px;
+                }
+
+                .cn-toggle-text {
+                    &:after {
+                        display:block;
+                        z-index: 100;
+                        color:white;
+                    }
+                    &:before {
+                        display:none;
+                    }
+                }
+            }
+        }
+    }
+}

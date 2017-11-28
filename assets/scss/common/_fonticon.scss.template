@@ -1,0 +1,43 @@
+$basePathTypography: "../../" !default;
+
+@font-face {
+    font-family: "<%= fontName %>";
+    src: url($basePathTypography + '<%= fontPath %><%= fontName %>.woff') format('woff'),
+    url($basePathTypography + '<%= fontPath %><%= fontName %>.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.<%= className %>:before {
+     display: inline-block;
+     font-family: "<%= fontName %>";
+     font-style: normal;
+     font-weight: normal;
+     line-height: 1;
+     vertical-align: top;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+ }
+
+.<%= className %>-lg {
+     font-size: 2.3333333333333333rem;
+     line-height: 0.75rem;
+     vertical-align: -15%;
+ }
+.<%= className %>-2x { font-size: 2rem; }
+.<%= className %>-3x { font-size: 3rem; }
+.<%= className %>-4x { font-size: 4rem; }
+.<%= className %>-5x { font-size: 5rem; }
+.<%= className %>-fw {
+     width: 1.2857142857142858rem;
+     text-align: center;
+ }
+
+<% _.each(glyphs, function(glyph) { %>.<%= className %>-<%= glyph.name %>:before { content: "\<%= glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase() %>" }
+<% }); %>
+
+/*
+ * mixins
+ */
+<% _.each(glyphs, function(glyph) { %>@mixin <%= className %>-<%= glyph.name %>() { content: "\<%= glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase() %>" }
+<% }); %>

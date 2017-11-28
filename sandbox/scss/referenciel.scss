@@ -1,0 +1,65 @@
+@import "../../assets/scss/common/config-bootstrap-grid";
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/bootstrap-grid";
+
+$basePathTypography: "../";
+@import "../../assets/scss/common/all";
+@import "../../assets/scss/component/all";
+
+@import "layout/layout";
+
+@import "module/header";
+
+
+.module {
+    position:relative;
+    border:1px solid $color-grey--light;
+    border-top-width:0;
+    padding:50px 0 0;
+    margin-bottom: 30px;
+
+    &:after {
+        content:"Exemple";
+        position:absolute;
+        top:15px;
+        left:15px;
+        font-size: 12px;
+        font-weight: bold;
+        color: $color-grey--dark;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .code-example {
+        @extend %vag-rounded-light;
+    }
+
+    & > .tab-content {
+        padding:0;
+        margin:0;
+    }
+}
+
+.nav-tabs .nav-item:first-child {
+    margin-left:20px;
+}
+
+pre {
+    font-size:12px;
+}
+
+#link [class*="cn-link-"],
+button {
+    display:inline-block;
+    margin:10px 20px;
+}
+
+table {
+    margin-bottom:30px;
+}
+
+.size-fix {
+    max-height:400px;
+    overflow:scroll;
+}

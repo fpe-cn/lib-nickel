@@ -1,0 +1,81 @@
+@import "../../assets/scss/common/config-bootstrap-grid";
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/bootstrap-grid";
+
+@import "../../assets/scss/common/all";
+@import "../../assets/scss/component/all";
+
+@import "layout/layout";
+
+@import "module/header";
+
+.cn-colors {
+    margin: 15px -10px 20px;
+    overflow: hidden;
+}
+
+.cn-colors-list {
+    padding-left: 0;
+    list-style: none;
+
+    li {
+        float: left;
+        display:table;
+        width: 20%;
+        height: 115px;
+        padding: 10px;
+        font-size: 10px;
+        text-align: center;
+        border: 1px solid #FFFFFF;
+
+        span {
+            text-align: center;
+            word-wrap: break-word;
+            font-size: 15px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+}
+
+.dark {color: black;}
+.light {color: white;}
+
+.yellow {  background-color: $color-yellow;  }
+
+.compte-nickel {
+    background-color: $color-compte-nickel;
+    &-light {  background-color: $color-compte-nickel--light;  }
+    &-dark {  background-color: $color-compte-nickel--dark;  }
+    &-darker {  background-color: $color-compte-nickel--darker;  }
+}
+
+.grey {
+    background-color: $color-grey;
+    &-lighter {  background-color: $color-grey--lighter; }
+    &-light {  background-color: $color-grey--light;  }
+    &-dark {  background-color: $color-grey--dark;  }
+    &-darker {  background-color: $color-grey--darker;  }
+}
+
+.red {
+    background-color: $color-red;
+    &-light {
+        background-color: $color-red-light;
+    }
+}
+
+.cherry {  background-color: $color-cherry;  }
+
+.green {
+    background-color: $color-green;
+    &-light {  background-color: $color-green--light;  }
+    &-flash {  background-color: $color-green--flash;  }
+}
+
+.social {
+    &-facebook { background-color: $color-facebook; }
+    &-twitter { background-color: $color-twitter; }
+    &-linkedin { background-color: $color-linkedin; }
+}

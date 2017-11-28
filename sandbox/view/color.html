@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <title>Colors sandbox</title>
+
+    <link rel="stylesheet" href="../css/color.css">
+</head>
+
+<body class="theme-lib">
+
+<%- include('module/header.html', {active: 'color'}) %>
+
+<div class="container-fluid">
+    <div class="row">
+        <!--Main Content -->
+        <main class="col-md-8 ml-md-auto">
+            <section id="siteweb" class="cf">
+                <div class="lib-title">Site Web</div>
+                <div class="module">
+                    <ul class="cn-colors-list">
+                        <li class="compte-nickel dark"><span>Compte Nickel <br />(#f57528)</span></li>
+                        <li class="compte-nickel-light dark"><span>Compte Nickel Light <br />(#fdbd39)</span></li>
+                        <li class="compte-nickel-dark dark"><span>Compte Nickel Dark <br />(#be5a1e)</span></li>
+                        <li class="compte-nickel-darker dark"><span>Compte Nickel Darker <br />(#ff6000)</span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="base" class="cf">
+                <div class="lib-title">Base</div>
+                <div class="module">
+                    <ul class="cn-colors-list">
+                        <li class="grey-lighter dark"><span>Grey Lighter <br />(#f2f2f2)</span></li>
+                        <li class="grey-light dark"><span>Grey Light <br />(#cccccc)</span></li>
+                        <li class="grey dark"><span>Grey <br />(#bbbbbb)</span></li>
+                        <li class="grey-darker light"><span>Grey Darker <br />(#666666)</span></li>
+                        <li class="grey-dark light"><span>Grey Dark <br />(#333333)</span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="validation" class="cf">
+                <div class="lib-title">Validation</div>
+                <div class="module">
+                    <ul class="cn-colors-list">
+                        <li class="red light"><span>Red <br />(#d93f2b)</span></li>
+                        <li class="red-light dark"><span>Red Light <br />(#d93f2b)</span></li>
+
+                        <li class="green light"><span>Green (#94ba1e)</span></li>
+                        <li class="green-light dark"><span>Green Light <br />(lighten(#94ba1e, 30%))</span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="keyboard" class="cf">
+                <div class="lib-title">Clavier</div>
+                <div class="module">
+                    <ul class="cn-colors-list">
+                        <li class="yellow dark"><span>Yellow <br />(#fecf33)</span></li>
+                        <li class="cherry light"><span>Cherry <br />(#cc0044)</span></li>
+                        <li class="green-flash dark"><span>Green Flash <br />(#00cc38)</span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="socials" class="cf">
+                <div class="lib-title">Réseaux Sociaux</div>
+                <div class="module">
+                    <ul class="cn-colors-list">
+                        <li class="social-facebook light"><span>Facebook <br />(#3B5998)</span></li>
+                        <li class="social-twitter light"><span>Twitter <br />(#55ACEE)</span></li>
+                        <li class="social-linkedin light"><span>LinkedIn <br />(#007BB6)</span></li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+        <div class="col-md-2 ml-md-auto sidenav-sticky">
+            <nav class="sidenav">
+                <div class="title-sidenav">Composants</div>
+                <ul class="nav flex-column">
+                    <li class="nav-item active">
+                        <a href="#siteweb" class="nav-link">Site Web</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#base" class="nav-link">Base</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#validation" class="nav-link">Validation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#keyboard" class="nav-link">Clavier</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="grid-helper"></div>
+
+<script src="../js/default.js"></script>
+</body>
+</html>
