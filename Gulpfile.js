@@ -209,7 +209,7 @@ var envs = require('envs');
 gulp.task('github-release', function(done) {
     conventionalGithubReleaser({
         type: "oauth",
-        token: envs('GITHUB_TOKEN_LIB_NICKEL')
+        token: process.env['GITHUB_TOKEN_LIB_NICKEL']
     }, {
         preset: 'lib-nickel'
     }, done);
@@ -248,7 +248,6 @@ gulp.task('create-new-tag', function (cb) {
 });
 
 gulp.task('release', function (callback) {
-    console.log(envs('GITHUB_TOKEN_LIB_NICKEL'), process.env['GITHUB_TOKEN_LIB_NICKEL']);
     runSequence(
         'bump-version',
         'commit-changes',
