@@ -204,7 +204,6 @@ var bump = require('gulp-bump');
 var git = require('gulp-git');
 var fs = require('fs');
 var conventionalGithubReleaser = require('conventional-github-releaser');
-var envs = require('envs');
 
 gulp.task('github-release', function(done) {
     conventionalGithubReleaser({
@@ -241,8 +240,6 @@ gulp.task('create-new-tag', function (cb) {
     });
 
     function getPackageJsonVersion () {
-        // We parse the json file instead of using require because require caches
-        // multiple calls so the version number won't be updated
         return JSON.parse(fs.readFileSync('./package.json', 'utf8')).version;
     };
 });
