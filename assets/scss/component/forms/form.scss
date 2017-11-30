@@ -110,6 +110,10 @@
                     box-shadow: none;
                 }
             }
+
+            .custom-control-description {
+                color:$color-grey--darker;
+            }
         }
 
         &.checkbox-circle {
