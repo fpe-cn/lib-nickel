@@ -9,6 +9,8 @@ var consolidate = require("gulp-consolidate");
 var rename = require('gulp-rename');
 var base64 = require('gulp-base64');
 var imagemin = require('gulp-imagemin');
+var streamify = require('gulp-streamify');
+var uglify = require('gulp-uglify-es').default;
 var spritesmith = require('gulp.spritesmith');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
@@ -94,6 +96,7 @@ var bundleJsFile = function(file, options) {
         var task = bundler.bundle()
             .on('error', gutil.log.bind(gutil, 'Browserify Error'))
             .pipe(source(file))
+            .pipe(streamify(uglify())).on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
             .pipe(flatten());
 
         return task.pipe(gulp.dest('build/sandbox/js'));

@@ -6,6 +6,3 @@ require('bootstrap')
 require('prismjs')
 
 require('../../assets/js/copyToClipboard').init()
-
-
-//
