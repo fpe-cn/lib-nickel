@@ -77,4 +77,14 @@
             }
         }
     }
+
+    &.disabled,
+    &[disabled],
+    &:disabled {
+        cursor: not-allowed;
+        background: $color-grey;
+        border-color: $color-grey;
+        color:white;
+        box-shadow: none;
+    }
 }
