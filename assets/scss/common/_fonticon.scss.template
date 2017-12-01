@@ -8,13 +8,14 @@ $basePathTypography: "../../" !default;
     font-style: normal;
 }
 
-.<%= className %>:before {
+.<%= className %>:before,
+ .<%= className %>-a:after {
      display: inline-block;
      font-family: "<%= fontName %>";
      font-style: normal;
      font-weight: normal;
      line-height: 1;
-     vertical-align: top;
+     vertical-align: baseline;
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
  }
@@ -33,11 +34,5 @@ $basePathTypography: "../../" !default;
      text-align: center;
  }
 
-<% _.each(glyphs, function(glyph) { %>.<%= className %>-<%= glyph.name %>:before { content: "\<%= glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase() %>" }
-<% }); %>
-
-/*
- * mixins
- */
-<% _.each(glyphs, function(glyph) { %>@mixin <%= className %>-<%= glyph.name %>() { content: "\<%= glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase() %>" }
+<% _.each(glyphs, function(glyph) { %>.<%= className %>-<%= glyph.name %>:before, .<%= className %>-<%= glyph.name %>-a:after { content: "\<%= glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase() %>" }
 <% }); %>
