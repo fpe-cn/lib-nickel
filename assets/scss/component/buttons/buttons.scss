@@ -27,6 +27,12 @@
         color: white;
     }
 
+    &-border-grey {
+        border:1px solid $color-grey--dark;
+        color: $color-compte-nickel;
+        box-shadow: none;
+    }
+
     &-modal-orange {
         background-color: transparent;
         box-shadow:none;
