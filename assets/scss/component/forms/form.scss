@@ -26,9 +26,12 @@
 
         input.form-control {
             height:50px;
+            border-color:$color-grey;
+            color:$color-grey--darker;
 
             &:focus {
                 border-color:$color-compte-nickel;
+                box-shadow:none;
             }
 
             &[type="search"] {
@@ -38,13 +41,23 @@
                     -webkit-appearance: searchfield-cancel-button;
                 }
             }
+
+            &::placeholder {
+                color:$color-grey--light;
+            }
         }
 
         textarea.form-control {
             resize: none;
+            border-color:$color-grey;
 
             &:focus {
                 border-color:$color-compte-nickel;
+                box-shadow:none;
+            }
+
+            &::placeholder {
+                color:$color-grey--light;
             }
         }
 
@@ -56,6 +69,7 @@
                     height:auto;
                     flex-wrap:wrap;
                     text-align:center;
+                    border-color:$color-grey;
 
                     label, input {
                         display:block;
@@ -70,7 +84,7 @@
 
                     input {
                         border-width:0;
-                        color: $color-grey--dark;
+                        color: $color-grey--darker;
                         text-transform:uppercase;
                         text-align:center;
                     }
@@ -136,9 +150,9 @@
                 }
                 &:checked ~ .custom-control-indicator {
                     background-color:$color-compte-nickel;
+                    @extend .icon-check;
 
                     &:before {
-                        content:"\EA1B";
                         font-family: Lib-Nickel-Icon;
                         font-size:8px;
                         color:white;
@@ -162,23 +176,13 @@
                 position: relative;
                 cursor: pointer;
                 outline: none;
-                -webkit-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
                 user-select: none;
 
                 padding: 2px;
                 width: 50px;
                 height: 24px;
                 background-color: $color-compte-nickel;
-                -webkit-border-radius: 60px;
-                -moz-border-radius: 60px;
-                -ms-border-radius: 60px;
-                -o-border-radius: 60px;
                 border-radius: 60px;
-                -webkit-transition: background 0.4s;
-                -moz-transition: background 0.4s;
-                -o-transition: background 0.4s;
                 transition: background 0.4s;
 
                 &:before,
@@ -194,14 +198,7 @@
                     bottom: 1px;
                     right: 1px;
                     background-color: white;
-                    -webkit-border-radius: 60px;
-                    -moz-border-radius: 60px;
-                    -ms-border-radius: 60px;
-                    -o-border-radius: 60px;
                     border-radius: 60px;
-                    -webkit-transition: background 0.4s;
-                    -moz-transition: background 0.4s;
-                    -o-transition: background 0.4s;
                     transition: background 0.4s;
                 }
 
@@ -211,14 +208,7 @@
                     bottom: 4px;
                     width: 16px;
                     background-color: $color-compte-nickel;
-                    -webkit-border-radius: 52px;
-                    -moz-border-radius: 52px;
-                    -ms-border-radius: 52px;
-                    -o-border-radius: 52px;
                     border-radius: 52px;
-                    -webkit-transition: margin 0.4s, background 0.4s;
-                    -moz-transition: margin 0.4s, background 0.4s;
-                    -o-transition: margin 0.4s, background 0.4s;
                     transition: margin 0.4s, background 0.4s;
                 }
 
@@ -235,6 +225,7 @@
                         right:7px;
                         top:3px; bottom:3px;
                         content:"non";
+                        color:$color-grey--darker;
                     }
 
                     &:after {

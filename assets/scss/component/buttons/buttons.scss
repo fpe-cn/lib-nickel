@@ -5,9 +5,15 @@
     border-radius: 25px;
     border: 0;
     outline: 0;
+    box-shadow: 2px 2px 10px 0 $color-grey;
 
-    &:focus {
+    &:focus,
+    &:active {
         outline: 0;
+    }
+
+    &:active {
+        box-shadow: none;
     }
 
     &-default {
@@ -23,6 +29,7 @@
 
     &-modal-orange {
         background-color: transparent;
+        box-shadow:none;
 
         .icon {
             color: $color-compte-nickel;
@@ -37,7 +44,7 @@
             right: 20px;
 
             &:before {
-                vertical-align: text-top;
+                vertical-align: middle;
             }
         }
     }
@@ -50,7 +57,7 @@
             left: 20px;
 
             &:before {
-                vertical-align: text-top;
+                vertical-align: middle;
             }
         }
     }
@@ -58,6 +65,7 @@
     &.icon-only {
         width: auto;
         padding: 0 20px;
+        box-shadow: none;
 
         .icon {
             display: block;
