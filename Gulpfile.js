@@ -140,6 +140,110 @@ gulp.task('fonticon', function () {
         .pipe(gulp.dest('assets/font/'))
 });
 
+gulp.task('fonticon-hc', function () {
+    return gulp.src([
+        './assets/svg/ampoule.svg',
+        './assets/svg/arrow-bottom-light.svg',
+        './assets/svg/arrow-double.svg',
+        './assets/svg/arrow-left-light.svg',
+        './assets/svg/arrow-left.svg',
+        './assets/svg/arrow-next.svg',
+        './assets/svg/arrow-prev.svg',
+        './assets/svg/arrow-right-circle.svg',
+        './assets/svg/arrow-right-light.svg',
+        './assets/svg/arrow-right.svg',
+        './assets/svg/arrow-top-light.svg',
+        './assets/svg/bad.svg',
+        './assets/svg/bag-2.svg',
+        './assets/svg/bag.svg',
+        './assets/svg/balance.svg',
+        './assets/svg/bubble-2.svg',
+        './assets/svg/bubble.svg',
+        './assets/svg/calendar.svg',
+        './assets/svg/card-bank-2.svg',
+        './assets/svg/card-bank.svg',
+        './assets/svg/card-id.svg',
+        './assets/svg/card-map.svg',
+        './assets/svg/card-replace.svg',
+        './assets/svg/check-around.svg',
+        './assets/svg/check-circle.svg',
+        './assets/svg/check-square.svg',
+        './assets/svg/check.svg',
+        './assets/svg/clock.svg',
+        './assets/svg/close-2.svg',
+        './assets/svg/close-sign.svg',
+        './assets/svg/close.svg',
+        './assets/svg/code.svg',
+        './assets/svg/compte.svg',
+        './assets/svg/confetti.svg',
+        './assets/svg/eye.svg',
+        './assets/svg/file.svg',
+        './assets/svg/flag.svg',
+        './assets/svg/gears.svg',
+        './assets/svg/good.svg',
+        './assets/svg/lock.svg',
+        './assets/svg/logout.svg',
+        './assets/svg/network.svg',
+        './assets/svg/nickel.svg',
+        './assets/svg/pen-2.svg',
+        './assets/svg/pen.svg',
+        './assets/svg/question-2.svg',
+        './assets/svg/question-circle.svg',
+        './assets/svg/question-sign.svg',
+        './assets/svg/question.svg',
+        './assets/svg/search.svg',
+        './assets/svg/similar.svg',
+        './assets/svg/smiley-angry.svg',
+        './assets/svg/smiley-bad-2-circle.svg',
+        './assets/svg/smiley-bad-circle.svg',
+        './assets/svg/smiley-bad-sign.svg',
+        './assets/svg/smiley-happy-circle.svg',
+        './assets/svg/smiley-happy-sign.svg',
+        './assets/svg/social/facebook-sign.svg',
+        './assets/svg/social/linkedin-sign.svg',
+        './assets/svg/social/twitter-sign.svg',
+        './assets/svg/square.svg',
+        './assets/svg/star.svg',
+        './assets/svg/student.svg',
+        './assets/svg/ticket-2.svg',
+        './assets/svg/ticket.svg',
+        './assets/svg/user-add.svg',
+        './assets/svg/user-happy.svg',
+        './assets/svg/user-multi.svg',
+        './assets/svg/user.svg'
+    ])
+        .pipe(iconfont({
+            fontName: 'Lib-Nickel-Icon',
+            normalize: true,
+            formats: ['woff', 'woff2']
+        }))
+        .on('glyphs', function (glyphs) {
+            gulp.src('./assets/scss/common/_fonticon.scss.template')
+                .pipe(consolidate('lodash', {
+                    glyphs: glyphs,
+                    fontName: 'Lib-Nickel-Icon',
+                    fontPath: 'font/',
+                    className: 'icon'
+                }))
+                .pipe(rename('icons-faq.scss'))
+                .pipe(gulp.dest('sandbox/scss/faq/'));
+        })
+        .pipe(gulp.dest('assets/font/'))
+});
+
+gulp.task('css-hc', function () {
+    return gulp.src('sandbox/scss/faq/icons-faq.scss')
+        .pipe(sass({includePaths: ['./']}))
+        .pipe(base64({
+            baseDir: 'sandbox/scss/faq',
+            extensions: ['woff'],
+            maxImageSize: 500000,
+            debug: false
+        }))
+        .pipe(autoprefixer())
+        .pipe(gulp.dest('build/sandbox/css'))
+});
+
 /*
  * WatchTask
  */
