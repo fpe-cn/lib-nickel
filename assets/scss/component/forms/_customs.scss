@@ -1,0 +1,60 @@
+.cn-form {
+    .custom-control {
+        display:block;
+        cursor:pointer;
+
+        &.checkbox-square {
+            .custom-control-input {
+                & ~ .custom-control-indicator {
+                    border:2px solid $color-compte-nickel;
+                    background-color:white;
+                }
+                &:checked ~ .custom-control-indicator {
+                    background-color:$color-compte-nickel;
+                    background-size:70%;
+                }
+                &:focus ~ .custom-control-indicator {
+                    box-shadow: none;
+                }
+            }
+
+            .custom-control-description {
+                color:$color-grey--darker;
+            }
+        }
+
+        &.checkbox-circle {
+            width:35px;
+            height:35px;
+            border:1px solid $color-compte-nickel;
+            border-radius:20px;
+            padding:0;
+
+            .custom-control-input {
+                & ~ .custom-control-indicator {
+                    background-color:transparent;
+                    width:21px;
+                    height:21px;
+                    line-height:21px;
+                    text-align:center;
+                    border-radius:12px;
+                    top:6px;
+                    left:6px;
+                }
+                &:checked ~ .custom-control-indicator {
+                    background-color:$color-compte-nickel;
+                    @extend .icon-check;
+
+                    &:before {
+                        font-family: Lib-Nickel-Icon;
+                        font-size:8px;
+                        color:white;
+                    }
+                }
+                &:focus ~ .custom-control-indicator {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}

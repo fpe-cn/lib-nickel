@@ -1,0 +1,108 @@
+.cn-form {
+    .form-group {
+        label {
+            color:$color-compte-nickel;
+            font-size:16px;
+            line-height:16px;
+            margin-bottom:6px;
+        }
+
+        .input-group {
+            .input-group-addon {
+                height:50px;
+                width:50px;
+                font-size:18px;
+                font-family: Arial;
+                background-color:$color-compte-nickel;
+                color:white;
+                justify-content: center;
+                border-color:$color-compte-nickel;
+            }
+        }
+
+        &.textarea .input-group .input-group-addon {
+            height:auto;
+        }
+
+        input.form-control {
+            height:50px;
+            border-color:$color-grey;
+            color:$color-grey--darker;
+
+            &:focus {
+                border-color:$color-compte-nickel;
+                box-shadow:none;
+            }
+
+            &[type="search"] {
+                -webkit-appearance: searchfield;
+
+                &::-webkit-search-cancel-button {
+                    -webkit-appearance: searchfield-cancel-button;
+                }
+            }
+
+            &::placeholder {
+                color:$color-grey--light;
+            }
+        }
+
+        textarea.form-control {
+            resize: none;
+            border-color:$color-grey;
+
+            &:focus {
+                border-color:$color-compte-nickel;
+                box-shadow:none;
+            }
+
+            &::placeholder {
+                color:$color-grey--light;
+            }
+        }
+
+        &.copy-to-clipboard {
+
+            .input-group {
+
+                .form-control {
+                    height:auto;
+                    flex-wrap:wrap;
+                    text-align:center;
+                    border-color:$color-grey;
+
+                    label, input {
+                        display:block;
+                        flex:1 100%;
+                        font-size:16px;
+                        line-height:24px;
+                    }
+
+                    label {
+                        color:$color-compte-nickel;
+                    }
+
+                    input {
+                        border-width:0;
+                        color: $color-grey--darker;
+                        text-transform:uppercase;
+                        text-align:center;
+                    }
+                }
+
+                .input-group-addon {
+                    flex-wrap: wrap;
+                    height:auto;
+                    cursor:pointer;
+
+                    span { font-size:9px; align-self:flex-start; }
+                    .icon { font-size:10px; align-self:flex-end; margin-bottom:5px; }
+
+                    span, .icon {
+                        flex:1 100%;
+                    }
+                }
+            }
+        }
+    }
+}

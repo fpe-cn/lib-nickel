@@ -1,0 +1,105 @@
+$basePathTypography: "../../" !default;
+
+@font-face {
+    font-family: "Lib-Nickel-Icon";
+    src: url($basePathTypography + 'font/Lib-Nickel-Icon.woff') format('woff'),
+    url($basePathTypography + 'font/Lib-Nickel-Icon.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon:before,
+ .icon-a:after {
+     display: inline-block;
+     font-family: "Lib-Nickel-Icon";
+     font-style: normal;
+     font-weight: normal;
+     line-height: 1;
+     vertical-align: baseline;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+ }
+
+.icon-lg {
+     font-size: 2.3333333333333333rem;
+     line-height: 0.75rem;
+     vertical-align: -15%;
+ }
+.icon-2x { font-size: 2rem; }
+.icon-3x { font-size: 3rem; }
+.icon-4x { font-size: 4rem; }
+.icon-5x { font-size: 5rem; }
+.icon-fw {
+     width: 1.2857142857142858rem;
+     text-align: center;
+ }
+
+.icon-ampoule:before, .icon-ampoule-a:after { content: "\EA01" }
+.icon-arrow-bottom-light:before, .icon-arrow-bottom-light-a:after { content: "\EA02" }
+.icon-arrow-double:before, .icon-arrow-double-a:after { content: "\EA03" }
+.icon-arrow-left-light:before, .icon-arrow-left-light-a:after { content: "\EA04" }
+.icon-arrow-left:before, .icon-arrow-left-a:after { content: "\EA05" }
+.icon-arrow-next:before, .icon-arrow-next-a:after { content: "\EA06" }
+.icon-arrow-prev:before, .icon-arrow-prev-a:after { content: "\EA07" }
+.icon-arrow-right-circle:before, .icon-arrow-right-circle-a:after { content: "\EA08" }
+.icon-arrow-right-light:before, .icon-arrow-right-light-a:after { content: "\EA09" }
+.icon-arrow-right:before, .icon-arrow-right-a:after { content: "\EA0A" }
+.icon-arrow-top-light:before, .icon-arrow-top-light-a:after { content: "\EA0B" }
+.icon-bad:before, .icon-bad-a:after { content: "\EA0C" }
+.icon-bag-2:before, .icon-bag-2-a:after { content: "\EA0D" }
+.icon-bag:before, .icon-bag-a:after { content: "\EA0E" }
+.icon-balance:before, .icon-balance-a:after { content: "\EA0F" }
+.icon-bubble-2:before, .icon-bubble-2-a:after { content: "\EA10" }
+.icon-bubble:before, .icon-bubble-a:after { content: "\EA11" }
+.icon-calendar:before, .icon-calendar-a:after { content: "\EA12" }
+.icon-card-bank-2:before, .icon-card-bank-2-a:after { content: "\EA13" }
+.icon-card-bank:before, .icon-card-bank-a:after { content: "\EA14" }
+.icon-card-id:before, .icon-card-id-a:after { content: "\EA15" }
+.icon-card-map:before, .icon-card-map-a:after { content: "\EA16" }
+.icon-card-replace:before, .icon-card-replace-a:after { content: "\EA17" }
+.icon-check-around:before, .icon-check-around-a:after { content: "\EA18" }
+.icon-check-circle:before, .icon-check-circle-a:after { content: "\EA19" }
+.icon-check-square:before, .icon-check-square-a:after { content: "\EA1A" }
+.icon-check:before, .icon-check-a:after { content: "\EA1B" }
+.icon-clock:before, .icon-clock-a:after { content: "\EA1C" }
+.icon-close-2:before, .icon-close-2-a:after { content: "\EA1D" }
+.icon-close-sign:before, .icon-close-sign-a:after { content: "\EA1E" }
+.icon-close:before, .icon-close-a:after { content: "\EA1F" }
+.icon-code:before, .icon-code-a:after { content: "\EA20" }
+.icon-compte:before, .icon-compte-a:after { content: "\EA21" }
+.icon-confetti:before, .icon-confetti-a:after { content: "\EA22" }
+.icon-eye:before, .icon-eye-a:after { content: "\EA23" }
+.icon-file:before, .icon-file-a:after { content: "\EA24" }
+.icon-flag:before, .icon-flag-a:after { content: "\EA25" }
+.icon-gears:before, .icon-gears-a:after { content: "\EA26" }
+.icon-good:before, .icon-good-a:after { content: "\EA27" }
+.icon-lock:before, .icon-lock-a:after { content: "\EA28" }
+.icon-logout:before, .icon-logout-a:after { content: "\EA29" }
+.icon-network:before, .icon-network-a:after { content: "\EA2A" }
+.icon-nickel:before, .icon-nickel-a:after { content: "\EA2B" }
+.icon-pen-2:before, .icon-pen-2-a:after { content: "\EA2C" }
+.icon-pen:before, .icon-pen-a:after { content: "\EA2D" }
+.icon-question-2:before, .icon-question-2-a:after { content: "\EA2E" }
+.icon-question-circle:before, .icon-question-circle-a:after { content: "\EA2F" }
+.icon-question-sign:before, .icon-question-sign-a:after { content: "\EA30" }
+.icon-question:before, .icon-question-a:after { content: "\EA31" }
+.icon-search:before, .icon-search-a:after { content: "\EA32" }
+.icon-similar:before, .icon-similar-a:after { content: "\EA33" }
+.icon-smiley-angry:before, .icon-smiley-angry-a:after { content: "\EA34" }
+.icon-smiley-bad-2-circle:before, .icon-smiley-bad-2-circle-a:after { content: "\EA35" }
+.icon-smiley-bad-circle:before, .icon-smiley-bad-circle-a:after { content: "\EA36" }
+.icon-smiley-bad-sign:before, .icon-smiley-bad-sign-a:after { content: "\EA37" }
+.icon-smiley-happy-circle:before, .icon-smiley-happy-circle-a:after { content: "\EA38" }
+.icon-smiley-happy-sign:before, .icon-smiley-happy-sign-a:after { content: "\EA39" }
+.icon-facebook-sign:before, .icon-facebook-sign-a:after { content: "\EA3A" }
+.icon-linkedin-sign:before, .icon-linkedin-sign-a:after { content: "\EA3B" }
+.icon-twitter-sign:before, .icon-twitter-sign-a:after { content: "\EA3C" }
+.icon-square:before, .icon-square-a:after { content: "\EA3D" }
+.icon-star:before, .icon-star-a:after { content: "\EA3E" }
+.icon-student:before, .icon-student-a:after { content: "\EA3F" }
+.icon-ticket-2:before, .icon-ticket-2-a:after { content: "\EA40" }
+.icon-ticket:before, .icon-ticket-a:after { content: "\EA41" }
+.icon-user-add:before, .icon-user-add-a:after { content: "\EA42" }
+.icon-user-happy:before, .icon-user-happy-a:after { content: "\EA43" }
+.icon-user-multi:before, .icon-user-multi-a:after { content: "\EA44" }
+.icon-user:before, .icon-user-a:after { content: "\EA45" }
