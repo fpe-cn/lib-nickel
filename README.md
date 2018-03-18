@@ -21,7 +21,7 @@ Direction le wiki pour [lancer le projet en local](http://bit.ly/2qLj49Y)
 - Navigation
 - Smileys
 
-# Hisorique des versions
+# Historique des versions
 
 **2017/08/24 : V1.0**
 - Mise en prod v1.0
