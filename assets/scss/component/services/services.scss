@@ -12,7 +12,7 @@
         margin-top:2px;
         margin-right:10px;
 
-        border:1px solid $color-grey--light;
+        border:1px solid $color-grey;
         border-radius:9px;
 
         &:after {
@@ -26,7 +26,7 @@
         }
 
         &.danger:after {
-            background-color:$color-cherry;
+            background-color:$color-red;
         }
 
         &.warning:after {
@@ -34,7 +34,7 @@
         }
 
         &.success:after {
-            background-color:$color-green--flash;
+            background-color:$color-green;
         }
     }
 

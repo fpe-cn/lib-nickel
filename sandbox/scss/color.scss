@@ -46,17 +46,13 @@
 
 .compte-nickel {
     background-color: $color-compte-nickel;
-    &-light {  background-color: $color-compte-nickel--light;  }
     &-dark {  background-color: $color-compte-nickel--dark;  }
-    &-darker {  background-color: $color-compte-nickel--darker;  }
 }
 
 .grey {
     background-color: $color-grey;
-    &-lighter {  background-color: $color-grey--lighter; }
-    &-light {  background-color: $color-grey--light;  }
+    &-light {  background-color: $color-grey--light; }
     &-dark {  background-color: $color-grey--dark;  }
-    &-darker {  background-color: $color-grey--darker;  }
 }
 
 .red {
@@ -66,12 +62,9 @@
     }
 }
 
-.cherry {  background-color: $color-cherry;  }
-
 .green {
     background-color: $color-green;
     &-light {  background-color: $color-green--light;  }
-    &-flash {  background-color: $color-green--flash;  }
 }
 
 .social {

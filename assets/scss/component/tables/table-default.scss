@@ -1,7 +1,7 @@
 .cn-table {
     border-collapse: separate;
     border-spacing: 0;
-    border: 1px solid $color-grey--light;
+    border: 1px solid $color-grey;
     border-radius: 7px;
     width: 100%;
     margin-top: 20px;
@@ -23,7 +23,7 @@
             padding: 15px;
             color: $color-compte-nickel;
             @extend %vag-rounded-bold;
-            border-right: 1px solid $color-grey--light;
+            border-right: 1px solid $color-grey;
             text-align: center;
 
             &:last-child {
@@ -54,7 +54,7 @@
         tbody {
             tr {
                 td {
-                    border: 1px solid $color-grey--light;
+                    border: 1px solid $color-grey;
                     border-top-width: 0;
                     border-left-width: 0;
                     padding: 20px;
@@ -88,7 +88,7 @@
                 padding: 10px 0;
 
                 &:nth-child(odd) {
-                    background-color: $color-grey--lighter;
+                    background-color: $color-grey--light;
                 }
 
                 td {
@@ -96,7 +96,7 @@
                     text-align: center;
                     font-size: 18px;
                     color: $color-grey--dark;
-                    border-right: 1px solid $color-grey--light;
+                    border-right: 1px solid $color-grey;
 
                     &:last-child {
                         border-right-width: 0;

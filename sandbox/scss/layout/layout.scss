@@ -4,7 +4,7 @@ $basePathTypography: "../";
 @import "../../../assets/scss/common/typography";
 
 body.theme-lib {
-    background-color:$color-grey--lighter;
+    background-color:$color-grey--light;
     @extend %roboto-light;
 
     .navbar {
@@ -28,26 +28,26 @@ body.theme-lib {
         .title-sidenav {
             text-transform: uppercase;
             font-size:14px;
-            color:$color-grey--darker;
+            color:$color-grey--dark;
             padding:10px 15px;
         }
 
         .nav {
             .nav-item {
-                border-bottom:1px solid $color-grey--darker;
+                border-bottom:1px solid $color-grey--dark;
 
                 .nav-link {
                     font-size:14px;
                     color:$color-grey--light;
 
                     &:hover {
-                        color:$color-compte-nickel--light;
+                        color:$color-yellow;
                     }
                 }
 
                 &.active {
                     .nav-link {
-                        color:$color-compte-nickel--light;
+                        color:$color-yellow;
                     }
                 }
             }
@@ -60,7 +60,7 @@ body.theme-lib {
 
         .lib-title {
             background-color:$color-grey--dark;
-            color:$color-compte-nickel--light;
+            color:$color-yellow;
             border-top-left-radius: 4px;
             border-top-right-radius: 4px;
             padding:10px 20px;

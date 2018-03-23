@@ -16,10 +16,10 @@ $height-tabs: 70px !default;
             height:100%;
             line-height: $height-tabs;
             text-align:center;
-            color:$color-grey--darker;
+            color:$color-grey--dark;
             padding:0;
-            border-top:1px solid $color-grey--light;
-            border-bottom:1px solid $color-grey--light;
+            border-top:1px solid $color-grey;
+            border-bottom:1px solid $color-grey;
 
             span {
                 display:inline-block;
@@ -29,8 +29,8 @@ $height-tabs: 70px !default;
 
             &.active {
                 color:white;
-                background-image: linear-gradient($color-compte-nickel, $color-compte-nickel--darker);
-                border-color:$color-compte-nickel--darker;
+                background-image: linear-gradient($color-compte-nickel, $color-compte-nickel--dark);
+                border-color:$color-compte-nickel--dark;
 
                 &:after {
                     content:"";
@@ -38,7 +38,7 @@ $height-tabs: 70px !default;
                     height:0;
                     border-style:solid;
                     border-width:10px 7.5px 0 7.5px;
-                    border-color:$color-compte-nickel--darker transparent transparent transparent;
+                    border-color:$color-compte-nickel--dark transparent transparent transparent;
                     position:absolute;
                     bottom:-10px;
                     left:50%;

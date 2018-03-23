@@ -27,7 +27,7 @@
         input.form-control {
             height:50px;
             border-color:$color-grey;
-            color:$color-grey--darker;
+            color:$color-grey--dark;
 
             &:focus {
                 border-color:$color-compte-nickel;
@@ -43,7 +43,7 @@
             }
 
             &::placeholder {
-                color:$color-grey--light;
+                color:$color-grey;
             }
         }
 
@@ -57,7 +57,7 @@
             }
 
             &::placeholder {
-                color:$color-grey--light;
+                color:$color-grey;
             }
         }
 
@@ -84,7 +84,7 @@
 
                     input {
                         border-width:0;
-                        color: $color-grey--darker;
+                        color: $color-grey--dark;
                         text-transform:uppercase;
                         text-align:center;
                     }
@@ -126,7 +126,7 @@
             }
 
             .custom-control-description {
-                color:$color-grey--darker;
+                color:$color-grey--dark;
             }
         }
 
@@ -225,7 +225,7 @@
                         right:7px;
                         top:3px; bottom:3px;
                         content:"non";
-                        color:$color-grey--darker;
+                        color:$color-grey--dark;
                     }
 
                     &:after {

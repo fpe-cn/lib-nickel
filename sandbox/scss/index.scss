@@ -15,7 +15,7 @@ main {
     text-align:center;
 
     h2 {
-        color:$color-compte-nickel--light;
+        color:$color-compte-nickel;
         text-shadow:0 1px white;
     }
 
@@ -24,7 +24,7 @@ main {
     }
 
     img {
-        border:2px solid $color-compte-nickel--light;
+        border:2px solid $color-compte-nickel;
         border-radius:5px;
         box-shadow: 1px 1px 8px 0 $color-grey--light;
     }

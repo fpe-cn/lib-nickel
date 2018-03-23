@@ -1,27 +1,20 @@
 // Site Web
-$color-compte-nickel: #f57528; // Main Color
-$color-compte-nickel--light: #fdbd39; // Main Color Light
-$color-compte-nickel--dark: #be5a1e; // Main Color Dark
-$color-compte-nickel--darker: #FF6000; // Main Color Dark
+$color-compte-nickel: #FF4C0E; // Main Color
+$color-compte-nickel--dark: #ED4518; // Main Color Dark
 
 // Base
-$color-grey--lighter: #f2f2f2; // background
-$color-grey--light: #cccccc; // borders
-$color-grey : #bbbbbb; // box-shadow + disabled
-$color-grey--darker: #666666; // texts fields
-$color-grey--dark: #333333; // texts
+$color-grey--light: #f2f2f2; // background
+$color-grey : #bbbbbb; // borders + box-shadow + disabled
+$color-grey--dark: #666666; // texts fields
 
 // Validation
-$color-red: #d93f2b; // Erreur
-$color-red-light: rgba(217, 63, 43, 0.1); // Background Error
+$color-red: #DB1519; // Erreur
+$color-red-light: lighten($color-red, 30%); // Background Error
 
-$color-green: #94ba1e; // Success
+$color-green: #11AF11; // Success
 $color-green--light: lighten($color-green, 30%); // Background Success
 
-// Clavier boutons
-$color-yellow: #fecf33; // Clavier bouton corriger (numeric)
-$color-cherry: #cc0044; // Clavier bouton corriger (global)
-$color-green--flash: #00cc38; // Clavier bouton Valider
+$color-yellow: #F9F040; // Clavier bouton corriger (numeric)
 
 // Réseaux Sociaux
 $color-facebook: #3B5998;
