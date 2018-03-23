@@ -5,7 +5,7 @@ $basePathTypography: "../";
 
 body.theme-lib {
     background-color:$color-grey--light;
-    @extend %roboto-light;
+    @extend %muller-narrow;
 
     .navbar {
         margin-bottom:0;

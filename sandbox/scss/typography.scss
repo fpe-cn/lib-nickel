@@ -13,37 +13,15 @@ $basePathTypography: "../";
 
 .module > div {
     padding:10px 20px;
-}
+    @extend %muller-narrow;
 
-.roboto {
-    font-size:16px;
-    @extend %roboto-regular;
-
-    &.bold {
-        @extend %roboto-bold;
-    }
-
-    &.light {
-        @extend %roboto-light;
-    }
-
-    &.black {
-        @extend %roboto-black;
-    }
-
-    &.medium {
-        @extend %roboto-medium;
-    }
-}
-
-.vag-rounded {
-    font-size:16px;
-    @extend %vag-rounded-light;
-
-    &.bold {
-        @extend %vag-rounded-bold;
-    }
-    &.thin {
-        @extend %vag-rounded-thin;
-    }
+    &.black { @extend %muller-narrow-black; }
+    &.bold { @extend %muller-narrow-bold; }
+    &.extrabold { @extend %muller-narrow-extrabold; }
+    &.hairline { @extend %muller-narrow-hairline; }
+    &.heavy { @extend %muller-narrow-heavy; }
+    &.light { @extend %muller-narrow-light; }
+    &.medium { @extend %muller-narrow-medium; }
+    &.thin { @extend %muller-narrow-thin; }
+    &.ultralight { @extend %muller-narrow-ultralight; }
 }
