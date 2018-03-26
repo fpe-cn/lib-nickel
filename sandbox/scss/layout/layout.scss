@@ -5,16 +5,11 @@ $basePathTypography: "../";
 
 body.theme-lib {
     background-color:$color-grey--light;
-    @extend %muller-narrow;
+    @include font-medium;
 
     .navbar {
         margin-bottom:0;
         background-color:white;
-    }
-
-    .sidenav-sticky,
-    main {
-        padding-top:30px;
     }
 
     .sidenav-sticky {

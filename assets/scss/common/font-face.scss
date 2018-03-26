@@ -1,30 +1,9 @@
 $basePathTypography: "../../" !default;
 
 @font-face {
-    font-family: 'Muller Narrow Bold';
-    src: url($basePathTypography + 'font/MullerNarrow-BoldItalic.woff2') format('woff2');
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
     font-family: 'Muller Narrow';
     src: url($basePathTypography + 'font/MullerNarrow-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Muller Narrow Hairline';
-    src: url($basePathTypography + 'font/MullerNarrow-Hairline.woff2') format('woff2');
-    font-weight: 200;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Muller Narrow';
-    src: url($basePathTypography + 'font/MullerNarrow-Thin.woff2') format('woff2');
-    font-weight: 100;
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -36,13 +15,6 @@ $basePathTypography: "../../" !default;
 }
 
 @font-face {
-    font-family: 'Muller Narrow UltraLight';
-    src: url($basePathTypography + 'font/MullerNarrow-UltraLightItalic.woff2') format('woff2');
-    font-weight: 200;
-    font-style: italic;
-}
-
-@font-face {
     font-family: 'Muller Narrow';
     src: url($basePathTypography + 'font/MullerNarrow-Light.woff2') format('woff2');
     font-weight: 300;
@@ -50,92 +22,8 @@ $basePathTypography: "../../" !default;
 }
 
 @font-face {
-    font-family: 'Muller Narrow Medium';
-    src: url($basePathTypography + 'font/MullerNarrow-MediumItalic.woff2') format('woff2');
-    font-weight: 500;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Muller Narrow Heavy';
-    src: url($basePathTypography + 'font/MullerNarrow-HeavyItalic.woff2') format('woff2');
-    font-weight: 800;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Muller Narrow Black';
-    src: url($basePathTypography + 'font/MullerNarrow-BlackItalic.woff2') format('woff2');
-    font-weight: 900;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Muller Narrow';
-    src: url($basePathTypography + 'font/MullerNarrow-RegularItalic.woff2') format('woff2');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Muller Narrow';
-    src: url($basePathTypography + 'font/MullerNarrow-Black.woff2') format('woff2');
-    font-weight: 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Muller Narrow ExtraBold';
-    src: url($basePathTypography + 'font/MullerNarrow-ExtraBoldItalic.woff2') format('woff2');
-    font-weight: 800;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Muller Narrow Thin';
-    src: url($basePathTypography + 'font/MullerNarrow-ThinItalic.woff2') format('woff2');
-    font-weight: 100;
-    font-style: italic;
-}
-
-@font-face {
     font-family: 'Muller Narrow';
     src: url($basePathTypography + 'font/MullerNarrow-ExtraBold.woff2') format('woff2');
     font-weight: 800;
     font-style: normal;
-}
-
-@font-face {
-    font-family: 'Muller Narrow';
-    src: url($basePathTypography + 'font/MullerNarrow-Bold.woff2') format('woff2');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Muller Narrow Light';
-    src: url($basePathTypography + 'font/MullerNarrow-LightItalic.woff2') format('woff2');
-    font-weight: 300;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Muller Narrow';
-    src: url($basePathTypography + 'font/MullerNarrow-Heavy.woff2') format('woff2');
-    font-weight: 800;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Muller Narrow';
-    src: url($basePathTypography + 'font/MullerNarrow-UltraLight.woff2') format('woff2');
-    font-weight: 200;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Muller Narrow Hairline';
-    src: url($basePathTypography + 'font/MullerNarrow-HairlineItalic.woff2') format('woff2');
-    font-weight: 200;
-    font-style: italic;
 }

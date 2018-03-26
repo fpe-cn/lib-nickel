@@ -12,16 +12,9 @@ $basePathTypography: "../";
 @import "module/header";
 
 .module > div {
-    padding:10px 20px;
-    @extend %muller-narrow;
+    padding:15px 20px;
 
-    &.black { @extend %muller-narrow-black; }
-    &.bold { @extend %muller-narrow-bold; }
-    &.extrabold { @extend %muller-narrow-extrabold; }
-    &.hairline { @extend %muller-narrow-hairline; }
-    &.heavy { @extend %muller-narrow-heavy; }
-    &.light { @extend %muller-narrow-light; }
-    &.medium { @extend %muller-narrow-medium; }
-    &.thin { @extend %muller-narrow-thin; }
-    &.ultralight { @extend %muller-narrow-ultralight; }
+    &.extrabold { @include font-bold; }
+    &.light { @include font-light; }
+    &.medium { @include font-medium; }
 }

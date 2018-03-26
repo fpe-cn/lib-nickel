@@ -20,13 +20,20 @@
 
 $default-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-%muller-narrow { font-family: "Muller Narrow" }
-%muller-narrow-black { font-family: "Muller Narrow Black" }
-%muller-narrow-bold { font-family: "Muller Narrow Bold" }
-%muller-narrow-extrabold { font-family: "Muller Narrow ExtraBold" }
-%muller-narrow-hairline { font-family: "Muller Narrow Hairline" }
-%muller-narrow-heavy { font-family: "Muller Narrow Heavy" }
-%muller-narrow-light { font-family: "Muller Narrow Light" }
-%muller-narrow-medium { font-family: "Muller Narrow Medium" }
-%muller-narrow-thin { font-family: "Muller Narrow Thin" }
-%muller-narrow-ultralight { font-family: "Muller Narrow UltraLight" }
+@mixin font-bold {
+    font-family: Muller Narrow;
+    font-weight: 800;
+    font-style: normal;
+}
+
+@mixin font-light {
+    font-family: Muller Narrow;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@mixin font-medium {
+    font-family: Muller Narrow;
+    font-weight: 500;
+    font-style: normal;
+}

@@ -14,7 +14,7 @@ $basePathTypography: "../";
 
 .module {
     position:relative;
-    border:1px solid $color-grey--light;
+    border:1px solid $color-grey;
     border-top-width:0;
     padding:50px 0 0;
     margin-bottom: 30px;
@@ -32,7 +32,7 @@ $basePathTypography: "../";
     }
 
     .code-example {
-        @extend %muller-narrow;
+        @include font-medium;
     }
 
     & > .tab-content {
