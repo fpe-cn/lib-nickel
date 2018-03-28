@@ -1,7 +1,10 @@
 .cn-text-default {
-  font-size:16px;
   color:$color-grey--dark;
   margin-bottom:20px;
+
+  b {
+    @include font-medium;
+  }
 
   .orange {
     color:$color-compte-nickel;

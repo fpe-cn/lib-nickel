@@ -22,7 +22,7 @@
         th {
             padding: 15px;
             color: $color-compte-nickel;
-            @include font-bold;
+            @include font-medium;
             border-right: 1px solid $color-grey;
             text-align: center;
 

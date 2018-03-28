@@ -24,16 +24,24 @@ $default-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-family: Muller Narrow;
     font-weight: 800;
     font-style: normal;
+    font-size:18px;
+    text-transform:uppercase;
 }
 
 @mixin font-light {
     font-family: Muller Narrow;
     font-weight: 300;
     font-style: normal;
+    font-size:18px;
 }
 
 @mixin font-medium {
     font-family: Muller Narrow;
     font-weight: 500;
     font-style: normal;
+    font-size:18px;
+}
+
+* {
+    @include font-light;
 }

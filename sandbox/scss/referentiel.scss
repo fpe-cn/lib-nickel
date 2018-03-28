@@ -11,7 +11,6 @@ $basePathTypography: "../";
 
 @import "module/header";
 
-
 .module {
     position:relative;
     border:1px solid $color-grey;
@@ -24,8 +23,8 @@ $basePathTypography: "../";
         position:absolute;
         top:15px;
         left:15px;
-        font-size: 12px;
-        font-weight: bold;
+        @include font-medium;
+        font-size:14px;
         color: $color-grey--dark;
         text-transform: uppercase;
         letter-spacing: 1px;
