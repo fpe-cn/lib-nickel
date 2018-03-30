@@ -1,20 +1,21 @@
 // Site Web
-$color-compte-nickel: #FF4C0E; // Main Color
-$color-compte-nickel--dark: #ED4518; // Main Color Dark
+$color-compte-nickel: #FF5F00; // Main Color
+$color-compte-nickel--light: lighten($color-compte-nickel, 30%);
+$color-compte-nickel--dark: #EA4E00; // Main Color Dark
 
-// Base
+// Gris
 $color-grey--light: #f2f2f2; // background
 $color-grey : #bbbbbb; // borders + box-shadow + disabled
 $color-grey--dark: #666666; // texts fields
 
 // Validation
-$color-red: #DB1519; // Erreur
+$color-red: #C9130A; // Erreur
 $color-red-light: lighten($color-red, 30%); // Background Error
 
-$color-green: #11AF11; // Success
+$color-green: #08B230; // Success
 $color-green--light: lighten($color-green, 30%); // Background Success
 
-$color-yellow: #F9F040; // Clavier bouton corriger (numeric)
+$color-yellow: #FCDB49; // Clavier bouton corriger (numeric)
 
 // Réseaux Sociaux
 $color-facebook: #3B5998;

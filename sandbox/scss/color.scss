@@ -47,6 +47,7 @@ $basePathTypography: "../";
 
 .compte-nickel {
     background-color: $color-compte-nickel;
+    &-light {  background-color: $color-compte-nickel--light;  }
     &-dark {  background-color: $color-compte-nickel--dark;  }
 }
 
