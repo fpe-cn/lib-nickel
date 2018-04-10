@@ -28,12 +28,25 @@ gulp.task('css', function () {
         .pipe(sass({includePaths: ['./']}))
         .pipe(base64({
             baseDir: 'assets/scss',
-            extensions: ['woff'],
+            extensions: ['woff2'],
             maxImageSize: 500000,
             debug: false
         }))
         .pipe(autoprefixer())
         .pipe(gulp.dest('build/sandbox/css'))
+});
+
+gulp.task('css-external', function () {
+    return gulp.src('sandbox/scss/external/*.scss')
+        .pipe(sass({includePaths: ['./']}))
+        .pipe(base64({
+            baseDir: 'assets/scss',
+            extensions: ['woff2'],
+            maxImageSize: 500000,
+            debug: false
+        }))
+        .pipe(autoprefixer())
+        .pipe(gulp.dest('build/sandbox/css/external'))
 });
 
 gulp.task('html', function () {
@@ -177,7 +190,7 @@ gulp.task('clean', function (cb) {
     del(['build'], cb);
 });
 
-gulp.task('compile', ['font', 'css', 'js', 'html', 'img-sandbox']);
+gulp.task('compile', ['font', 'css', 'css-external', 'js', 'html', 'img-sandbox']);
 
 gulp.task('build', function(cb) {
     runSequence('clean', ['fonticon'], 'compile', ['webserver', 'watch'], cb);
