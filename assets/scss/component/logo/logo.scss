@@ -1,0 +1,82 @@
+.logo {
+    display:flex;
+    align-items:stretch;
+    height:40px;
+    margin:0 10px;
+
+    @mixin borne {
+        height:70px;
+        margin:0 20px;
+    }
+    @include media-breakpoint-up(md) {
+        @include borne;
+    }
+    .device-borne & {
+        @include borne;
+    }
+
+    &.big {
+        height:170px;
+        overflow:hidden;
+        justify-content: center;
+
+        .icon {
+            &-logo-carotte {
+                font-size:100px;
+            }
+            &-logo-nickel {
+                font-size:226px;
+            }
+            &:before {
+                line-height:170px;
+                vertical-align:top;
+            }
+        }
+    }
+
+    .icon {
+        &-logo-carotte {
+            color:$color-compte-nickel;
+            font-size:25px;
+
+            @mixin borne {
+                font-size:30px;
+            }
+            @include media-breakpoint-up(md) {
+                @include borne;
+            }
+            .device-borne & {
+                @include borne;
+            }
+        }
+
+        &-logo-nickel {
+            font-size:60px;
+
+            @mixin borne {
+                font-size:70px;
+            }
+            @include media-breakpoint-up(md) {
+                @include borne;
+            }
+            .device-borne & {
+                @include borne;
+            }
+        }
+
+        &:before {
+            line-height:40px;
+            vertical-align:top;
+
+            @mixin borne {
+                line-height:70px;
+            }
+            @include media-breakpoint-up(md) {
+                @include borne;
+            }
+            .device-borne & {
+                @include borne;
+            }
+        }
+    }
+}
