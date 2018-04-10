@@ -40,8 +40,12 @@ $basePathTypography: "../";
     }
 }
 
-.nav-tabs .nav-item:first-child {
-    margin-left:20px;
+.nav-tabs .nav-item {
+    margin-left:5px;
+
+    &:first-child {
+        margin-left:20px;
+    }
 }
 
 pre {
