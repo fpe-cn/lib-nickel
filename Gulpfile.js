@@ -197,7 +197,7 @@ gulp.task('build', function(cb) {
 });
 
 gulp.task('work', function(cb) {
-    runSequence('run-test', ['font', 'css', 'js', 'html', 'img-sandbox'], ['webserver', 'watch'], cb)
+    runSequence('run-test', ['font', 'css', 'css-external', 'js', 'html', 'img-sandbox'], ['webserver', 'watch'], cb)
 });
 gulp.task('default', ['work']);
 
