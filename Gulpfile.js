@@ -295,7 +295,7 @@ gulp.task('commit-changes', function () {
 });
 
 gulp.task('push-changes', function (cb) {
-    git.push('origin', 'master', cb);
+    git.push('origin', 'new-identity', cb); // TODO repasser en master quand new-identity deviendra la branche principale
 });
 
 gulp.task('create-new-tag', function (cb) {
@@ -304,7 +304,7 @@ gulp.task('create-new-tag', function (cb) {
         if (error) {
             return cb(error);
         }
-        git.push('origin', 'master', {args: '--tags'}, cb);
+        git.push('origin', 'new-identity', {args: '--tags'}, cb); // TODO repasser en master quand new-identity deviendra la branche principale
     });
 
     function getPackageJsonVersion () {
