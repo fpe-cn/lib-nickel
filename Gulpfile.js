@@ -277,7 +277,7 @@ gulp.task('github-release', function(done) {
     conventionalGithubReleaser({
         type: "oauth",
         token: process.env['GITHUB_TOKEN_LIB_NICKEL'],
-        url: "https://api.github.com/"
+        url: "https://api.github.com/orgs/fpe-cn/"
     }, {
         preset: ''
     }, done);
