@@ -24,19 +24,19 @@
                             <%- include('../../assets/html/logo/logo.html') %>
                         </div>
                     </form>
-                    <ul class="nav nav-tabs nav-child" role="tablist">
-                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" role="tab" href="#cn-logo-html">HTML</a></li>
-                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" role="tab" href="#cn-logo-css">CSS</a></li>
+                    <ul class="nav nav-tabs nav-child" role="tablist" id="cn-logo-tab">
+                        <li class="nav-item"><a class="nav-link active" id="logo-tab-html" data-toggle="tab" role="tab" href="#cn-logo-html">HTML</a></li>
+                        <li class="nav-item"><a class="nav-link active" id="logo-tab-css" data-toggle="tab" role="tab" href="#cn-logo-css">CSS</a></li>
                     </ul>
                     <div class="tab-content">
-                        <div id="cn-logo-html" role="tabpanel" class="tab-pane active size-fix">
+                        <div id="cn-logo-html" role="tabpanel" class="tab-pane active size-fix" aria-labelledby="logo-tab-html">
                             <figure class="highlight">
                             <pre><code class="language-markup">
 <%= include('../../assets/html/logo/logo.html') %>
                             </code></pre>
                             </figure>
                         </div>
-                        <div id="cn-logo-css" role="tabpanel" class="tab-pane size-fix">
+                        <div id="cn-logo-css" role="tabpanel" class="tab-pane size-fix" aria-labelledby="logo-tab-css">
                             <figure class="highlight">
                             <pre><code class="language-css">
 <%= include('../../assets/scss/component/logo/logo.scss') %>

@@ -201,13 +201,68 @@ gulp.task('work', function(cb) {
 });
 gulp.task('default', ['work']);
 
+/* GENERATE FILES FOR APP MOBILE */
 
+var scssToJson = require('scss-to-json')
+var path = require('path')
+var file = require('gulp-file')
 
+gulp.task('scss-to-json-colors', function () {
+    var fileColors = scssToJson(path.resolve(__dirname, 'assets/scss/common/color.scss'))
+    var colors = JSON.stringify(fileColors)
+    colors = colors.replace(/\$color-/g, '') // suppression des $color-
+    colors = colors.replace(/-*(\w)(\w*)/g, (match, p1, p2) => { // ajout des majuscules et suppression des tirets
+        return p1.toUpperCase() + (p2 || "")
+    })
 
+    return file('colors.js', `export default Colors = ${colors}`, { src: true })
+        .pipe(gulp.dest('assets/app-mobile/'))
+})
 
+// TODO : voir s'il n'y a pas moyen de faire plus simple pour la fonticon
+gulp.task('create-fonticon', function () {
+    return gulp.src([
+        './assets/svg/**.svg',
+        './assets/svg/social/**.svg'
+    ]).pipe(iconfont({
+        fontName: 'Lib-Nickel-Icon',
+        normalize: true,
+        formats: ['woff', 'woff2']
+    })).on('glyphs', function (glyphs) {
+        gulp.src('./assets/scss/common/_fonticon-mobile.scss.template')
+            .pipe(consolidate('lodash', {
+                glyphs: glyphs,
+                fontName: 'Lib-Nickel-Icon',
+                fontPath: 'font/',
+                className: 'icon'
+            }))
+            .pipe(rename('fonticon-tmp.js'))
+            .pipe(gulp.dest('assets/app-mobile/'));
+    })
+})
+gulp.task('scss-to-json-fonticon', ['create-fonticon'], function () {
+    setTimeout(function () {
+        var fonticon = fs.readFileSync(path.resolve(__dirname, 'assets/app-mobile/fonticon-tmp.js'), 'utf8')
+        fonticon = fonticon.replace(/-*(\w)(\w*)/g, (match, p1, p2) => {
+            return p1.toUpperCase() + (p2 || "")
+        })
 
+        return file('fonticon.js', `export default Icons = { ${fonticon} }`, { src: true })
+            .pipe(gulp.dest('assets/app-mobile/'));
+    }, 200)
+})
 
+gulp.task('del-tmp', ['scss-to-json-fonticon'], function (cb) {
+    setTimeout(function () {
+        return del(['assets/app-mobile/fonticon-tmp.js'], cb)
+    }, 200)
+})
 
+gulp.task('generate-js-to-scss', function (cb) {
+    runSequence(['scss-to-json-colors'], 'del-tmp', cb)
+})
+
+/* END GENERATE FILES FOR APP MOBILE */
 
 
 
