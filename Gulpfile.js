@@ -274,10 +274,11 @@ var fs = require('fs');
 var conventionalGithubReleaser = require('conventional-github-releaser');
 
 gulp.task('github-release', function(done) {
+    console.log(process.env['GITHUB_TOKEN_LIB_NICKEL'])
     conventionalGithubReleaser({
         type: "oauth",
         token: process.env['GITHUB_TOKEN_LIB_NICKEL'],
-        url: "https://api.github.com/orgs/fpe-cn/"
+        url: "https://api.github.com/"
     }, {
         preset: ''
     }, done);
