@@ -276,7 +276,8 @@ var conventionalGithubReleaser = require('conventional-github-releaser');
 gulp.task('github-release', function(done) {
     conventionalGithubReleaser({
         type: "oauth",
-        token: process.env['GITHUB_TOKEN_LIB_NICKEL']
+        token: process.env['GITHUB_TOKEN_LIB_NICKEL'],
+        url: "https://api.github.com"
     }, {
         preset: ''
     }, done);
