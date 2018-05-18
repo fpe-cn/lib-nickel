@@ -225,14 +225,15 @@ gulp.task('create-fonticon', function () {
         './assets/svg/**.svg',
         './assets/svg/social/**.svg'
     ]).pipe(iconfont({
-        fontName: 'Lib-Nickel-Icon',
+        fontName: 'LibNickelIcon',
+        prependUnicode: true,
         normalize: true,
-        formats: ['woff', 'woff2']
+        formats: ['ttf']
     })).on('glyphs', function (glyphs) {
         gulp.src('./assets/scss/common/_fonticon-mobile.scss.template')
             .pipe(consolidate('lodash', {
                 glyphs: glyphs,
-                fontName: 'Lib-Nickel-Icon',
+                fontName: 'LibNickelIcon',
                 fontPath: 'font/',
                 className: 'icon'
             }))
