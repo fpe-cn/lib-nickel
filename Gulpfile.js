@@ -244,11 +244,13 @@ gulp.task('create-fonticon', function () {
 gulp.task('scss-to-json-fonticon', ['create-fonticon'], function () {
     setTimeout(function () {
         var fonticon = fs.readFileSync(path.resolve(__dirname, 'assets/app-mobile/fonticon-tmp.js'), 'utf8')
-        fonticon = fonticon.replace(/-*(\w)(\w*)/g, (match, p1, p2) => {
-            return p1.toUpperCase() + (p2 || "")
+        fonticon = fonticon.replace(/(.*)\s*:/g, (match, p1) => {
+            return match.replace(/-*(\w)(\w*)/g, (match, p1, p2) => {
+                return p1.toUpperCase() + (p2 || "")
+            })
         })
 
-        return file('fonticon.js', `export default Icons = { ${fonticon} }`, { src: true })
+        return file('fonticon.js', `export default Icons = {\n${fonticon}\n}`, { src: true })
             .pipe(gulp.dest('assets/app-mobile/'));
     }, 200)
 })
