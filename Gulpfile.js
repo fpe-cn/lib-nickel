@@ -255,7 +255,7 @@ gulp.task('scss-to-js-fonticon', ['create-fonticon'], function () {
     }, 200)
 })
 
-gulp.task('del-tmp', ['scss-to-json-fonticon'], function (cb) {
+gulp.task('del-tmp', ['scss-to-js-fonticon'], function (cb) {
     setTimeout(function () {
         return del(['assets/app-mobile/fonticon-tmp.js'], cb)
     }, 200)
