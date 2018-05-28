@@ -230,18 +230,18 @@ gulp.task('create-fonticon', function () {
         normalize: true,
         formats: ['ttf']
     })).on('glyphs', function (glyphs) {
-        gulp.src('./assets/scss/common/_fonticon-mobile.scss.template')
+        gulp.src('./assets/scss/common/_fonticon-mobile-2.scss.template')
             .pipe(consolidate('lodash', {
                 glyphs: glyphs,
                 fontName: 'LibNickelIcon',
                 fontPath: 'font/',
                 className: 'icon'
             }))
-            .pipe(rename('fonticon-tmp.js'))
+            .pipe(rename('NickelIcons.json'))
             .pipe(gulp.dest('assets/app-mobile/'));
     })
 })
-gulp.task('scss-to-json-fonticon', ['create-fonticon'], function () {
+/* gulp.task('scss-to-js-fonticon', ['create-fonticon'], function () {
     setTimeout(function () {
         var fonticon = fs.readFileSync(path.resolve(__dirname, 'assets/app-mobile/fonticon-tmp.js'), 'utf8')
         fonticon = fonticon.replace(/(.*)\s*:/g, (match, p1) => {
@@ -263,7 +263,7 @@ gulp.task('del-tmp', ['scss-to-json-fonticon'], function (cb) {
 
 gulp.task('generate-js-to-scss', function (cb) {
     runSequence(['scss-to-json-colors'], 'del-tmp', cb)
-})
+}) */
 
 /* END GENERATE FILES FOR APP MOBILE */
 
