@@ -134,7 +134,7 @@ gulp.task('fonticon', function () {
         .pipe(iconfont({
             fontName: 'Lib-Nickel-Icon',
             normalize: true,
-            formats: ['woff', 'woff2']
+            formats: ['woff', 'woff2', 'ttf']
         }))
         .on('glyphs', function (glyphs) {
             gulp.src('./assets/scss/common/_fonticon.scss.template')
@@ -226,7 +226,6 @@ gulp.task('create-fonticon', function () {
         './assets/svg/social/**.svg'
     ]).pipe(iconfont({
         fontName: 'LibNickelIcon',
-        prependUnicode: true,
         normalize: true,
         formats: ['ttf']
     })).on('glyphs', function (glyphs) {
@@ -262,7 +261,7 @@ gulp.task('del-tmp', ['scss-to-js-fonticon'], function (cb) {
 })
 
 gulp.task('generate-js-to-scss', function (cb) {
-    runSequence(['scss-to-json-colors'], 'del-tmp', cb)
+    runSequence(['scss-to-json-colors'], 'scss-to-js-fonticon', cb)
 })
 
 /* END GENERATE FILES FOR APP MOBILE */
