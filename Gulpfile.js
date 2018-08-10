@@ -215,7 +215,7 @@ gulp.task('scss-to-json-colors', function () {
         return p1.toUpperCase() + (p2 || "")
     })
 
-    return file('colors.js', `export default Colors = ${colors}`, { src: true })
+    return file('colors.js', `const Colors = ${colors}\nexport default Colors`, { src: true })
         .pipe(gulp.dest('assets/app-mobile/'))
 })
 
@@ -249,7 +249,7 @@ gulp.task('scss-to-js-fonticon', ['create-fonticon'], function () {
             })
         })
 
-        return file('fonticon.js', `export default Icons = {\n${fonticon}\n}`, { src: true })
+        return file('fonticon.js', `const Icons = {\n${fonticon}\n}\nexport default Icons`, { src: true })
             .pipe(gulp.dest('assets/app-mobile/'));
     }, 200)
 })

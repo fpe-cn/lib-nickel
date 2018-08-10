@@ -1,4 +1,4 @@
-export default Icons = {
+const Icons = {
 AchatInternet : "\uEA01",
 Achat : "\uEA02",
 AddCircle : "\uEA03",
@@ -110,3 +110,4 @@ User : "\uEA6C",
 WageSlip : "\uEA6D",
 Wave : "\uEA6E",
 }
+export default Icons
