@@ -19,7 +19,8 @@
   },
   "scripts": {
     "test": "jest",
-    "start": "gulp work"
+    "start": "gulp build",
+    "dev": "gulp work"
   },
   "devDependencies": {
     "@types/chai": "^4.0.6",
