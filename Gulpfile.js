@@ -193,7 +193,11 @@ gulp.task('clean', function (cb) {
 gulp.task('compile', ['font', 'css', 'css-external', 'js', 'html', 'img-sandbox']);
 
 gulp.task('build', function(cb) {
-    runSequence('clean', ['fonticon'], 'compile', ['webserver', 'watch'], cb);
+    runSequence('clean', ['fonticon'], 'compile', cb);
+});
+
+gulp.task('server', function (cb) {
+    runSequence(['webserver', 'watch'], cb)
 });
 
 gulp.task('work', function(cb) {
