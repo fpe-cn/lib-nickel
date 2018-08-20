@@ -19,7 +19,8 @@
   },
   "scripts": {
     "test": "jest",
-    "start": "gulp build",
+    "install": "gulp build",
+    "start": "gulp webserver",
     "dev": "gulp work"
   },
   "devDependencies": {
