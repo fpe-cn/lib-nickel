@@ -20,7 +20,7 @@
   "scripts": {
     "test": "jest",
     "install": "gulp build",
-    "start": "gulp webserver",
+    "start": "gulp server",
     "dev": "gulp work"
   },
   "devDependencies": {
