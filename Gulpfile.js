@@ -170,7 +170,7 @@ gulp.task('webserver', function () {
         .pipe(webserver({
             livereload: false,
             directoryListing: true,
-            port: 3000,
+            port: 8080,
             host: '0.0.0.0',
             open: '/build/sandbox/view/index.html'
         }))
@@ -194,10 +194,6 @@ gulp.task('compile', ['font', 'css', 'css-external', 'js', 'html', 'img-sandbox'
 
 gulp.task('build', function(cb) {
     runSequence('clean', ['fonticon'], 'compile', cb);
-});
-
-gulp.task('server', function (cb) {
-    runSequence(['webserver', 'watch'], cb)
 });
 
 gulp.task('work', function(cb) {
