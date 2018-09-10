@@ -114,12 +114,7 @@ export function styles () {
 export function faq () {
     return gulp.src(paths.faq.src)
         .pipe($.sass({includePaths: ['./']}))
-        .pipe($.base64({
-            baseDir: 'assets/scss',
-            extensions: ['woff2'],
-            maxImageSize: 500000,
-            debug: false
-        }))
+        .pipe($.base64())
         .pipe($.autoprefixer())
         .pipe(gulp.dest(paths.faq.dest))
 }
