@@ -53,7 +53,7 @@ const paths = {
     },
     faq: {
         src: 'assets/scss/common/fonticon.scss',
-        dest: 'build/sandbox/css/external'
+        dest: 'dist/css/external'
     },
     bump: {
         src: path.resolve(__dirname, './package.json'),
