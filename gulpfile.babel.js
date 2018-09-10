@@ -206,6 +206,7 @@ export function work(done) {
 gulp.task('clean', gulp.series(clean));
 gulp.task('compile', compile);
 gulp.task('build', build);
+gulp.task('webserver', gulp.series(server, watch));
 gulp.task('work', work);
 gulp.task('faq', faq);
 
