@@ -8,31 +8,34 @@ $basePathTypography: "../../" !default;
     font-style: normal;
 }
 
-.<%= className %>:before,
- .<%= className %>-a:after {
+.<%= cssClass %>:before,
+ .<%= cssClass %>-a:after {
      display: inline-block;
      font-family: "<%= fontName %>";
      font-style: normal;
+     font-variant: normal;
      font-weight: normal;
+     text-decoration: none;
+     text-transform: none;
      line-height: 1;
      vertical-align: baseline;
      -webkit-font-smoothing: antialiased;
      -moz-osx-font-smoothing: grayscale;
  }
 
-.<%= className %>-lg {
+.<%= cssClass %>-lg {
      font-size: 2.3333333333333333rem;
      line-height: 0.75rem;
      vertical-align: -15%;
  }
-.<%= className %>-2x { font-size: 2rem; }
-.<%= className %>-3x { font-size: 3rem; }
-.<%= className %>-4x { font-size: 4rem; }
-.<%= className %>-5x { font-size: 5rem; }
-.<%= className %>-fw {
+.<%= cssClass %>-2x { font-size: 2rem; }
+.<%= cssClass %>-3x { font-size: 3rem; }
+.<%= cssClass %>-4x { font-size: 4rem; }
+.<%= cssClass %>-5x { font-size: 5rem; }
+.<%= cssClass %>-fw {
      width: 1.2857142857142858rem;
      text-align: center;
  }
 
-<% _.each(glyphs, function(glyph) { %>.<%= className %>-<%= glyph.name %>:before, .<%= className %>-<%= glyph.name %>-a:after { content: "\<%= glyph.unicode[0].charCodeAt(0).toString(16).toUpperCase() %>" }
+<% _.each(glyphs, function(glyph) { %>.<%= cssClass %>-<%= glyph.fileName %>:before, .<%= cssClass %>-<%= glyph.fileName %>-a:after { content: "\<%= glyph.codePoint %>" }
 <% }); %>
