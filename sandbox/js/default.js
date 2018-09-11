@@ -11,3 +11,4 @@ jQuery('#cn-logo-tab a').on('click', function (e) {
 })
 
 require('../../assets/js/copyToClipboard').init()
+require('../../assets/js/toggler-menu').init()

@@ -4,8 +4,7 @@ $basePathTypography: "../";
 @import "../../../assets/scss/common/typography";
 
 body.theme-lib {
-    background-color:$color-grey--light;
-    @include font-medium;
+    font-weight: 300;
 
     .navbar {
         margin-bottom:0;
@@ -50,9 +49,6 @@ body.theme-lib {
     }
 
     section {
-        margin-bottom:40px;
-        background-color:white;
-
         .lib-title {
             background-color:$color-grey--dark;
             color:$color-yellow;

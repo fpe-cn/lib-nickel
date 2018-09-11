@@ -1,0 +1,158 @@
+@import "../logo/logo";
+@import "../titles/bloc-title";
+
+.header {
+    width: 100%;
+    background-color: white;
+
+    .wrapper-nav {
+        max-width: 1200px;
+        height: 60px;
+        margin: 0 auto;
+
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        @include media-breakpoint-up(lg) {
+            height: 80px;
+        }
+
+        .toggler {
+            display:inline-block;
+            height: 60px;
+            line-height: 60px;
+            margin-right: 15px;
+            outline: 0;
+
+            @include media-breakpoint-up(lg) {
+                display:none;
+            }
+
+            &.open {
+                .icon-a:after {
+                    transform: rotate(180deg);
+                }
+            }
+
+            .icon-a {
+                font-weight: 500;
+
+                &:after {
+                    color: $color-compte-nickel;
+                    font-size: 12px;
+                    margin-left: 5px;
+
+                    transition: transform 300ms ease;
+                }
+            }
+        }
+
+        .nav {
+            display:flex;
+
+            @include media-breakpoint-down(md) {
+                flex-direction: column;
+                height: 0;
+                transition: height 600ms ease, padding 600ms ease;
+                overflow:hidden;
+                background-color: $color-compte-nickel;
+                width: 100%;
+                position:relative;
+                z-index: 10;
+
+                .nav-item {
+                    display:block;
+                    width: inherit;
+                    padding: 0 20px;
+
+                    &:last-child {
+                        order: -1;
+
+                        .nav-link {
+                            justify-content: center;
+                            border-color: white;
+                            margin:0 auto 30px;
+                            width: 220px;
+                        }
+                    }
+
+                    .nav-link {
+                        align-items: center;
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        color:white;
+                        padding-left: 30px;
+                        padding-right: 30px;
+                        font-size: 18px;
+                        font-weight: 300;
+
+                        .icon {
+                            display:block;
+                            color: white;
+
+                            &:before {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                    &.active {
+                        .nav-link {
+                            background-color: white;
+                            border-radius: 100px;
+                            color: black;
+
+                            .icon {
+                                color: $color-compte-nickel;
+
+                                &:before {
+                                    vertical-align: middle;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.show {
+                height: calc(100vh - 60px);
+                padding: 36px 0;
+            }
+
+            &-item {
+                padding:0 20px;
+
+                &:last-child {
+                    .nav-link {
+                        padding-left: 40px;
+                        padding-right: 40px;
+                        border-radius: 100px;
+                        border: 1px solid $color-grey--dark;
+                        box-shadow: 0 0 1px 0px $color-grey--dark inset, 0 0 1px 0px $color-grey--dark;
+                    }
+                }
+
+                .nav-link {
+                    color: $color-grey--dark;
+                    font-size: 16px;
+                    font-weight: 500;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                }
+
+                .icon {
+                    display:none;
+                }
+
+                &.active {
+                    .nav-link {
+                        color: $color-compte-nickel;
+                    }
+                }
+            }
+        }
+    }
+}

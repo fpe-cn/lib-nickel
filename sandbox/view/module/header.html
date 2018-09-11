@@ -1,32 +1,51 @@
-<nav class="navbar navbar-expand-md navbar-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<header class="header">
+    <nav class="wrapper-nav">
+        <div class="logo">
+            <i class="icon icon-logo-carotte"></i>
+            <i class="icon icon-logo-nickel"></i>
+        </div>
 
-    <div class="logo">
-        <i class="icon icon-logo-carotte"></i>
-        <i class="icon icon-logo-nickel"></i>
-    </div>
+        <button class="toggler" type="button" data-role="toggler-main-nav">
+            <span class="icon-a icon-arrow-bottom-light-a">Menu</span>
+        </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-        <ul class="navbar-nav mr-auto">
+        <ul class="nav" data-role="nav-toggle">
             <li class="nav-item <%= locals.active == 'home' ? 'active' : '' %>">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.html">
+                    Home
+                    <i class="icon icon-arrow-right-light"></i>
+                </a>
             </li>
             <li class="nav-item <%= locals.active == 'typography' ? 'active' : '' %>">
-                <a class="nav-link" href="typography.html">Typographie</a>
+                <a class="nav-link" href="typography.html">
+                    Typographie
+                    <i class="icon icon-arrow-right-light"></i>
+                </a>
             </li>
             <li class="nav-item <%= locals.active == 'color' ? 'active' : '' %>">
-                <a class="nav-link" href="color.html">Couleurs</a>
+                <a class="nav-link" href="color.html">
+                    Couleurs
+                    <i class="icon icon-arrow-right-light"></i>
+                </a>
             </li>
             <li class="nav-item <%= locals.active == 'icon' ? 'active' : '' %>">
-                <a class="nav-link" href="icon.html">Icons</a>
+                <a class="nav-link" href="icon.html">
+                    Icons
+                    <i class="icon icon-arrow-right-light"></i>
+                </a>
             </li>
             <li class="nav-item <%= locals.active == 'referentiel' ? 'active' : '' %>">
-                <a class="nav-link" href="referentiel.html">Référentiel</a>
+                <a class="nav-link" href="referentiel.html">
+                    Référentiel
+                    <i class="icon icon-arrow-right-light"></i>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" target="_blank" href="https://www.compte-nickel.fr">Site Nickel</a>
             </li>
         </ul>
-    </div>
-</nav>
+    </nav>
+
+    <%- include('../../../assets/html/titles/bloc-title.html') %>
+</header>

@@ -1,0 +1,21 @@
+.header-title {
+    background-color: $color-compte-nickel;
+    padding: 30px 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    @include media-breakpoint-up(md) {
+        padding: 30px 0;
+    }
+
+    h1 {
+        font-size: 20px;
+        color: white;
+        font-weight: 500;
+
+        @include media-breakpoint-up(md) {
+            font-size: 25px;
+        }
+    }
+}

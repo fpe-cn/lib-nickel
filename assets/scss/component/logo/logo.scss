@@ -1,6 +1,7 @@
 .logo {
     display:flex;
     align-items:stretch;
+    position: relative;
     height:40px;
     margin:0 10px;
 
@@ -9,16 +10,39 @@
         margin:0 20px;
     }
     @include media-breakpoint-up(md) {
-        @include borne;
+        margin:0 20px;
+        height: 60px;
     }
     .device-borne & {
         @include borne;
+    }
+
+    &:before {
+        .theme-lib & {
+            content: 'LiB';
+            position:absolute;
+            top: 8px;
+            left: 36px;
+            font-size: 9px;
+            font-weight: 800;
+            letter-spacing: 2px;
+
+            @include media-breakpoint-down(sm) {
+                top: -2px;
+            }
+        }
     }
 
     &.big {
         height:170px;
         overflow:hidden;
         justify-content: center;
+
+        &:before {
+            .theme-lib & {
+                content: "";
+            }
+        }
 
         .icon {
             &-logo-carotte {
@@ -37,13 +61,10 @@
     .icon {
         &-logo-carotte {
             color:$color-compte-nickel;
-            font-size:25px;
+            font-size:36px;
 
             @mixin borne {
                 font-size:30px;
-            }
-            @include media-breakpoint-up(md) {
-                @include borne;
             }
             .device-borne & {
                 @include borne;
@@ -51,13 +72,10 @@
         }
 
         &-logo-nickel {
-            font-size:60px;
+            font-size:84px;
 
             @mixin borne {
                 font-size:70px;
-            }
-            @include media-breakpoint-up(md) {
-                @include borne;
             }
             .device-borne & {
                 @include borne;
@@ -72,7 +90,7 @@
                 line-height:70px;
             }
             @include media-breakpoint-up(md) {
-                @include borne;
+                line-height: 60px;
             }
             .device-borne & {
                 @include borne;
