@@ -53,12 +53,18 @@ $basePathTypography: "../";
             display: block;
             text-align: center;
             word-wrap: break-word;
+            font-size: 14px;
         }
     }
 }
 
 svg {
     height: 30px;
+}
+
+.alert {
+    margin-top: 30px;
+    margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
