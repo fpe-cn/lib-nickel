@@ -243,7 +243,7 @@ export function tag (cb) {
     }
 }
 export function release (callback) {
-    gulp.series(
+    return gulp.series(
         version,
         commit,
         push,
@@ -256,7 +256,7 @@ export function release (callback) {
                 console.log('RELEASE FINISHED SUCCESSFULLY');
             }
             callback(error);
-        });
+        })(callback);
 }
 
 gulp.task('release', release);
