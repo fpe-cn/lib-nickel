@@ -20,6 +20,10 @@
         list-style: none;
         min-height: 200px;
 
+        @include media-breakpoint-down(md) {
+            min-height: auto;
+        }
+
         .item {
             height: 40px;
 
@@ -69,6 +73,36 @@
             max-width: 135px;
             width: 100%;
             height: auto;
+        }
+    }
+
+    .subfooter {
+        background-color: white;
+        width: 100%;
+        height: 60px;
+
+        .container {
+            height: inherit;
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .bloc-copyright {
+                font-weight: 500;
+                font-size: 14px;
+                align-self: center;
+            }
+
+            .list {
+                min-height: auto;
+                .item {
+                    .link {
+                        line-height: 40px;
+                        font-weight: 500;
+                    }
+                }
+            }
         }
     }
 }
