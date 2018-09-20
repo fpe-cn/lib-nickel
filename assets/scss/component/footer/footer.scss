@@ -4,7 +4,7 @@
     min-height: 300px;
     background-color: $color-grey--light;
     border-top: 1px solid $color-grey;
-    padding: 50px 0;
+    padding: 50px 0 0;
     margin-top: 60px;
 
     @include media-breakpoint-down(lg) {
@@ -80,6 +80,7 @@
         background-color: white;
         width: 100%;
         height: 60px;
+        margin-top: 50px;
 
         .container {
             height: inherit;
