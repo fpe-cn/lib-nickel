@@ -143,6 +143,10 @@
                     font-weight: 400;
                     padding-top: 15px;
                     padding-bottom: 15px;
+
+                    &:hover {
+                        color: $color-compte-nickel;
+                    }
                 }
 
                 .icon {
