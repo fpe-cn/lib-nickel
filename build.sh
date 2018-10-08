@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-echo "Build in '$LAUNCH_BUILD_LIB' mode"
 if [ "$LAUNCH_BUILD_LIB" = "true" ]
 then
+    echo "Launch build lib to start webserver"
     gulp build
 fi
