@@ -1,11 +1,22 @@
 .cn-button {
     height: 50px;
+    line-height: 50px;
+    font-size: 14px;
     width: 280px;
     text-align: center;
     border-radius: 25px;
     border: 0;
     outline: 0;
     box-shadow: 2px 2px 10px 0 $color-grey;
+
+    @include media-breakpoint-up(lg) {
+        height: 60px;
+        line-height: 60px;
+        border-radius: 30px;
+        font-size: 20px;
+    }
+
+    .device-borne & {}
 
     &:focus,
     &:active {
