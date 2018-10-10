@@ -120,7 +120,7 @@
     }
 }
 
-@media (max-width: mdc-layout-grid-breakpoint-min('desktop')) {
+@media (min-width: mdc-layout-grid-breakpoint-min('tablet')) {
     .cn-button {
         height: 60px;
         line-height: 60px;
