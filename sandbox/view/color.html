@@ -12,10 +12,9 @@
 
 <%- include('module/header.html', {active: 'color'}) %>
 
-<div class="container-fluid">
-    <div class="row">
-        <!--Main Content -->
-        <main class="col-md-8 ml-md-auto">
+<div class="mdc-layout-grid max-width">
+    <div class="mdc-layout-grid__inner">
+        <main class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
             <section id="siteweb" class="cf">
                 <div class="lib-title">Site Web</div>
                 <div class="module">
@@ -65,22 +64,6 @@
             </section>
 
         </main>
-        <div class="col-md-2 ml-md-auto sidenav-sticky">
-            <nav class="sidenav">
-                <div class="title-sidenav">Composants</div>
-                <ul class="nav flex-column">
-                    <li class="nav-item active">
-                        <a href="#siteweb" class="nav-link">Site Web</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#base" class="nav-link">Base</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#validation" class="nav-link">Validation</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
     </div>
     </div>
 </div>

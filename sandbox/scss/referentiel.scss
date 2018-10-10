@@ -1,7 +1,10 @@
-@import "../../assets/scss/common/config-bootstrap-grid";
-
-@import "../../node_modules/bootstrap/scss/bootstrap";
-@import "../../node_modules/bootstrap/scss/bootstrap-grid";
+@import "../../assets/scss/common/config-material-grid";
+@import "~@material/layout-grid/mdc-layout-grid";
+@import "~@material/card/mdc-card";
+@import "~@material/tab-bar/mdc-tab-bar";
+@import "~@material/tab-scroller/mdc-tab-scroller";
+@import "~@material/tab-indicator/mdc-tab-indicator";
+@import "~@material/tab/mdc-tab";
 
 $basePathTypography: "../";
 @import "../../assets/scss/common/all";
@@ -9,12 +12,10 @@ $basePathTypography: "../";
 
 @import "layout/layout";
 
-@import "module/header";
+@import "../../assets/scss/component/header/header";
 
 .module {
     position:relative;
-    border:1px solid $color-grey;
-    border-top-width:0;
     padding:50px 0 0;
 
     &:after {

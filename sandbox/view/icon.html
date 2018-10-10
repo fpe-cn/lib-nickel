@@ -36,12 +36,12 @@ var sections = [
 
 <%- include('module/header.html', {active: 'icon'}) %>
 
-<div class="container-fluid">
-    <div class="row">
+<div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
         <!--Main Content -->
-        <main class="col-md-8 ml-md-auto">
-            <div class="alert alert-info" role="alert">
-                Règles de construction des svg pour les fonts :
+        <main class="mdc-layout-grid__cell mdc-layout-grid__cell--span-10">
+            <div class="mdc-card">
+                <h3>Règles de construction des svg pour les fonts :</h3>
                 <ul>
                     <li>La taille de base est 1024x1024</li>
                     <li>Le contenu est bord à bord en hauteur ou en largeur</li>
@@ -54,11 +54,8 @@ var sections = [
                     <li>-circle : le cercle</li>
                 </ul>
             </div>
-
-            <div class="alert alert-info" role="alert">Il est possible de jouer sur la tailler de l'icône avec <b>icon-lg</b> et <b>icon-2x</b> à <b>icon-5x</b></div>
-
-
-                <%
+            <div class="mdc-card">
+            <%
                 sections.forEach(function(section) {
                 %>
                 <section id="<%= section.id %>" class="cf">
@@ -80,12 +77,11 @@ var sections = [
                 </section>
                 <%
                 });
-                %>
-
+                %></div>
         </main>
 
         <!--Nav Bar -->
-        <div class="col-md-2 ml-md-auto sidenav-sticky">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 sidenav-sticky">
             <nav class="sidenav">
                 <div class="title-sidenav">Composants</div>
                 <ul class="nav flex-column">

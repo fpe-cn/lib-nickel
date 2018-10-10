@@ -1,6 +1,7 @@
 .cn-text-default {
   color:$color-grey--dark;
   margin-bottom:20px;
+  font-weight: 300;
 
   b {
     @include font-medium;

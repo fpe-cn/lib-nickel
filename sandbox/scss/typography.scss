@@ -1,15 +1,12 @@
-@import "../../assets/scss/common/config-bootstrap-grid";
-
-@import "../../node_modules/bootstrap/scss/bootstrap";
-@import "../../node_modules/bootstrap/scss/bootstrap-grid";
+@import "../../assets/scss/common/config-material-grid";
+@import "~@material/layout-grid/mdc-layout-grid";
 
 $basePathTypography: "../";
 @import "../../assets/scss/common/all";
-@import "../../assets/scss/component/all";
 
 @import "layout/layout";
 
-@import "module/header";
+@import "../../assets/scss/component/header/header";
 
 .module > div {
     padding:15px 20px;

@@ -58,13 +58,14 @@
                     border-top-width: 0;
                     border-left-width: 0;
                     padding: 20px;
+                    font-weight: 300;
 
                     &:first-child {
                         border-left-width: 1px;
                     }
 
                     b {
-                        @include font-medium;
+                        font-weight: 500;
                     }
 
                     &.orange {
@@ -99,6 +100,7 @@
                     padding: 10px;
                     text-align: center;
                     font-size: 18px;
+                    font-weight: 300;
                     color: $color-grey--dark;
                     border-right: 1px solid $color-grey;
 

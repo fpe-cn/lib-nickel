@@ -1,14 +1,6 @@
-$ = require('jquery')
-global.jQuery = $
-global.Tether = require('tether')
-global.Popper = require('popper.js/dist/umd/popper')
-require('bootstrap')
+// const MDCTabBar = require('@material/tab-bar')
 require('prismjs')
-
-jQuery('#cn-logo-tab a').on('click', function (e) {
-    e.preventDefault()
-    jQuery(this).tab('show')
-})
-
 require('../../assets/js/copyToClipboard').init()
 require('../../assets/js/toggler-menu').init()
+
+// const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));

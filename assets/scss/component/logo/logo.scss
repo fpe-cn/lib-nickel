@@ -14,10 +14,7 @@
         height:70px;
         margin:0 20px;
     }
-    @include media-breakpoint-up(md) {
-        margin:0 20px;
-        height: 60px;
-    }
+
     .device-borne & {
         @include borne;
     }
@@ -31,10 +28,6 @@
             font-size: 9px;
             font-weight: 800;
             letter-spacing: 2px;
-
-            @include media-breakpoint-down(sm) {
-                top: -2px;
-            }
         }
     }
 
@@ -94,11 +87,29 @@
             @mixin borne {
                 line-height:70px;
             }
-            @include media-breakpoint-up(md) {
-                line-height: 60px;
-            }
             .device-borne & {
                 @include borne;
+            }
+        }
+    }
+}
+
+@include mdc-layout-grid-media-query_('tablet') {
+    .logo {
+        margin:0 20px;
+        height: 60px;
+
+        .icon:before {
+            line-height: 60px;
+        }
+    }
+}
+
+@include mdc-layout-grid-media-query_('phone') {
+    .logo {
+        &:before {
+            .theme-lib & {
+                top: -2px;
             }
         }
     }

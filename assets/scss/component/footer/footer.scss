@@ -7,22 +7,9 @@
     padding: 50px 0 0;
     margin-top: 60px;
 
-    @include media-breakpoint-down(lg) {
-        height: auto;
-        padding: 50px 0 0;
-    }
-
-    @include media-breakpoint-down(md) {
-        margin-top: 0;
-    }
-
     .list {
         list-style: none;
         min-height: 200px;
-
-        @include media-breakpoint-down(md) {
-            min-height: auto;
-        }
 
         .item {
             height: 40px;
@@ -33,11 +20,6 @@
                 line-height: 40px;
                 font-size: 14px;
                 color: black;
-
-                @include media-breakpoint-down(md) {
-                    font-size: 13px;
-                    line-height: 20px;
-                }
 
                 &:hover {
                     color: $color-compte-nickel;
@@ -82,7 +64,7 @@
         height: 60px;
         margin-top: 50px;
 
-        .container {
+        .footer-container {
             height: inherit;
             display:flex;
             flex-direction: row;
@@ -103,6 +85,28 @@
                         font-weight: 500;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media (max-width: mdc-layout-grid-breakpoint-min('desktop')) {
+    .footer {
+        height: auto;
+        padding: 50px 0 0;
+    }
+}
+
+@media (max-width: mdc-layout-grid-breakpoint-min('tablet')) {
+    .footer {
+        margin-top: 0;
+
+        .list {
+            min-height: auto;
+
+            .link {
+                font-size: 13px;
+                line-height: 20px;
             }
         }
     }

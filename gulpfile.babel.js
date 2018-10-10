@@ -4,14 +4,15 @@ import uglify from 'gulp-uglify-es';
 import gutil from 'gulp-util';
 import del from 'del';
 import gulpLoadPlugins from "gulp-load-plugins";
-import { externalStyles } from './gulp-tasks/sass'
+import tildeImporter from 'node-sass-tilde-importer';
+import { externalStyles } from './gulp-tasks/sass';
 import browserify from 'browserify';
+import babelify from 'babelify';
 import source from 'vinyl-source-stream';
 import glob from 'glob';
 import eventStream from 'event-stream';
 import watchify from 'watchify';
 import _ from 'lodash';
-import babelify from 'babelify';
 import path from 'path';
 import fs from 'fs';
 import conventionalGithubReleaser from 'conventional-github-releaser';
@@ -101,7 +102,8 @@ export function fonticon () {
 }
 export function styles () {
     return gulp.src(paths.styles.src)
-        .pipe($.sass({includePaths: ['./']}))
+        .pipe($.wait(500))
+        .pipe($.sass({includePaths: ['./', './node_modules'], importer: tildeImporter}).on('err', $.sass.logError))
         .pipe($.base64({
             baseDir: 'assets/scss',
             extensions: ['woff2'],
@@ -113,7 +115,7 @@ export function styles () {
 }
 export function faq () {
     return gulp.src(paths.faq.src)
-        .pipe($.sass({includePaths: ['./']}))
+        .pipe($.sass({includePaths: ['./'], importer: tildeImporter}))
         .pipe($.base64())
         .pipe($.autoprefixer())
         .pipe(gulp.dest(paths.faq.dest))
@@ -136,8 +138,7 @@ const bundleAllJsFile = (done, options) => {
 const bundleJsFile = (file, options) => {
     const customOpts = {
         entries: [file],
-        debug: true,
-        extensions: ['.js', '.es6']
+        debug: true
     };
     const opts = _.assign({}, watchify.args, customOpts);
     let bundler = browserify(opts);
@@ -147,8 +148,9 @@ const bundleJsFile = (file, options) => {
     bundler.on('update', bundle);
     bundler.on('log', gutil.log);
 
-    // https://www.npmjs.com/package/babelify
-    bundler = bundler.transform(babelify, {presets: ["es2015"], extensions: [".es6"]});
+    bundler = bundler.transform(babelify.configure({
+        presets: ["@babel/preset-env"]
+    }));
 
     function bundle() {
         gutil.log('building js file ' + file);

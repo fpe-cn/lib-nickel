@@ -4,21 +4,25 @@
 </button>
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+<div class="mdc-dialog"
+     role="alertdialog"
+     aria-modal="true"
+     aria-labelledby="my-dialog-title"
+     aria-describedby="my-dialog-content">
+    <div class="mdc-dialog__container">
+        <div class="mdc-dialog__surface">
+            <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
+            <h2 class="mdc-dialog__title" id="my-dialog-title"><!--
+     -->Dialog Title<!--
+   --></h2>
+            <div class="mdc-dialog__content" id="my-dialog-content">
+                Dialog body text goes here.
             </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="cn-button cn-button-orange" data-dismiss="modal">J'ai compris</button>
-            </div>
+            <footer class="mdc-dialog__actions">
+                <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="no">No</button>
+                <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="yes">Yes</button>
+            </footer>
         </div>
     </div>
+    <div class="mdc-dialog__scrim"></div>
 </div>

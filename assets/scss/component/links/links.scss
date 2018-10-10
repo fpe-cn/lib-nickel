@@ -1,6 +1,7 @@
 .cn-link-default {
   color:$color-grey--dark;
   text-decoration:underline;
+  font-weight: 300;
 
   &:hover {
     color:$color-compte-nickel;
@@ -10,6 +11,7 @@
 
 .cn-link-inverse {
   color: $color-compte-nickel;
+  font-weight: 300;
 
   &:hover {
     color:$color-grey--dark;
@@ -19,6 +21,7 @@
 
 .cn-link-list {
   color:$color-grey--dark;
+  font-weight: 300;
 
   &:hover {
     color:$color-compte-nickel;
@@ -27,6 +30,7 @@
 
 .cn-link-orange {
   color: $color-compte-nickel;
+  font-weight: 300;
 
   &:hover {
     color: $color-compte-nickel;
@@ -35,6 +39,7 @@
 
 .cn-link-grey {
   color: $color-grey--dark;
+  font-weight: 300;
 
   &:hover {
     color: $color-grey--dark;
@@ -50,7 +55,7 @@
   padding:0 20px;
   color:$color-grey--dark;
   font-size:16px;
-
+  font-weight: 300;
 
   &:hover {
     background-color:$color-grey--dark;
@@ -74,6 +79,7 @@
     padding:0 20px;
     background-color:$color-grey--dark;
     color:white;
+    font-weight: 300;
 
     &:hover {
       background-color:transparent;
@@ -99,7 +105,7 @@
   padding:0 20px;
   color: $color-compte-nickel;
   font-size:16px;
-
+  font-weight: 300;
 
   &:hover {
     background-color:$color-compte-nickel;
@@ -123,6 +129,7 @@
     padding:0 20px;
     background-color:$color-compte-nickel;
     color:white;
+    font-weight: 300;
 
     &:hover {
       background-color:transparent;
