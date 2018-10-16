@@ -106,11 +106,14 @@
   color: $color-compte-nickel;
   font-size:16px;
   font-weight: 300;
+  box-shadow: 2px 2px 10px 0 $color-grey;
+
+  &:active {
+    box-shadow: none;
+  }
 
   &:hover {
-    background-color:$color-compte-nickel;
-    color:white;
-    text-decoration:none;
+    background-color: $color-compte-nickel--dark;
   }
 
   .icon {
