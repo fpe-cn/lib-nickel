@@ -97,37 +97,20 @@
 }
 
 .cn-link-button-orange {
-  display:inline-block;
-  border:1px solid $color-compte-nickel;
-  border-radius:20px;
-  height:40px;
-  line-height:36px;
-  padding:0 20px;
+  background-color:white;
   color: $color-compte-nickel;
-  font-size:16px;
-  font-weight: 300;
-  box-shadow: 2px 2px 10px 0 $color-grey;
 
-  &:active {
-    box-shadow: none;
-  }
-
-  .icon {
-    &:before {
-      vertical-align:text-top;
-      margin-right:10px;
-    }
-  }
-
-  &-inverse {
+  &, &-inverse {
+    border: 1px solid $color-compte-nickel;
     display:inline-block;
-    border:1px solid $color-compte-nickel;
+    width: 220px;
     border-radius:20px;
-    height:40px;
-    line-height:36px;
+    height:50px;
+    line-height:46px;
     padding:0 20px;
-    background-color:$color-compte-nickel;
-    color:white;
+    text-align:center;
+    text-transform: uppercase;
+    font-size:16px;
     font-weight: 300;
     box-shadow: 2px 2px 10px 0 $color-grey;
 
@@ -135,15 +118,34 @@
       box-shadow: none;
     }
 
-      &:hover {
-          background-color: $color-compte-nickel--dark;
-      }
-
     .icon {
       &:before {
         vertical-align:text-top;
         margin-right:10px;
       }
+    }
+  }
+
+  &-inverse {
+    background-color:$color-compte-nickel;
+    color:white;
+
+    &:hover {
+      background-color: $color-compte-nickel--dark;
+    }
+  }
+}
+
+@media (min-width: mdc-layout-grid-breakpoint-min('desktop')) {
+  .cn-link-button-orange {
+    &, &-inverse {
+      height: 60px;
+      line-height: 60px;
+      border-radius: 30px;
+      padding: 0 50px;
+      font-size: 20px;
+      width: auto;
+      min-width: 240px;
     }
   }
 }
