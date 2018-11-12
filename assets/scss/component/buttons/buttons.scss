@@ -1,130 +1,132 @@
 .cn-button {
-    height: 50px;
-    line-height: 50px;
-    font-size: 16px;
-    font-weight: 300;
-    width: 280px;
+    display: inline-block;
+    height: auto;
+    max-height: 70px;
+    padding: 20px 80px;
     text-align: center;
-    border-radius: 25px;
-    border: 0;
-    outline: 0;
-    box-shadow: 2px 2px 10px 0 $color-grey;
-
-    &:focus,
-    &:active {
-        outline: 0;
-    }
-
-    &:active {
-        box-shadow: none;
-    }
-
-    &-default {
-        background-color: $color-grey--dark;
-        color: white;
-    }
-
-    &-orange,
-    &-submit {
+    border-radius: 100px;
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
+    border: none;
+    margin-bottom: 10px;
+    &.orange {
         background-color: $color-compte-nickel;
-        color: white;
-    }
-
-    &-border-grey {
-        border:1px solid $color-grey--dark;
-        color: $color-compte-nickel;
-        box-shadow: none;
-    }
-
-    &-modal-orange {
-        background-color: transparent;
-        box-shadow:none;
-
-        .icon {
+        color: #fff;
+        &:hover {
+            background-color: #fff;
             color: $color-compte-nickel;
+            text-decoration: none;
         }
     }
-
+    &.white {
+        background-color: #fff;
+        color: $color-compte-nickel;
+        &:hover {
+            background-color: $color-compte-nickel;
+            color: #fff;
+            text-decoration: none;
+        }
+    }
     &.icon-right {
         position: relative;
-
         .icon {
             position: absolute;
-            right: 20px;
-
-            &:before {
-                vertical-align: middle;
-            }
-        }
-    }
-
-    &.icon-left {
-        position: relative;
-
-        .icon {
-            position: absolute;
-            left: 20px;
-
-            &:before {
-                vertical-align: middle;
-            }
-        }
-    }
-
-    &.icons {
-        position:relative;
-
-        .icon {
-            position:absolute;
-            left:20px;
-
-            &:before {
-                vertical-align: middle;
-            }
-
-            &-a {
-                position:absolute;
-                right:20px;
-
-                &:after {
-                    vertical-align: middle;
-                }
-            }
-        }
-    }
-
-    &.icon-only {
-        width: auto;
-        padding: 0 20px;
-        box-shadow: none;
-
-        .icon {
-            display: block;
-            font-size: 40px;
-            height: 40px;
-
+            font-size: 30px;
+            right: 30px;
             &:before {
                 vertical-align: text-top;
             }
         }
     }
-
-    &.disabled,
-    &[disabled],
-    &:disabled {
-        cursor: not-allowed;
-        background: $color-grey;
-        border-color: $color-grey;
-        color:white;
-        box-shadow: none;
+    &.icon-left {
+        position: relative;
+        .icon {
+            position: absolute;
+            font-size: 30px;
+            left: 30px;
+            &:before {
+                vertical-align: text-top;
+            }
+        }
+    }
+    &.icon-only {
+        width: auto;
+        padding: 20px;
+        .icon {
+            display: block;
+            font-size: 30px;
+            &:before {
+                vertical-align: top;
+            }
+        }
+    }
+    &.icons {
+        position: relative;
+        .icon {
+            position: absolute;
+            font-size: 30px;
+            left: 30px;
+            &:before {
+                vertical-align: text-top;
+            }
+            &-a {
+                position: absolute;
+                font-size: 30px;
+                right: 30px;
+                &:after {
+                    vertical-align: text-top;
+                }
+            }
+        }
     }
 }
 
-@media (min-width: mdc-layout-grid-breakpoint-min('tablet')) {
+@include mdc-layout-grid-media-query_('phone') {
     .cn-button {
-        height: 60px;
-        line-height: 60px;
-        border-radius: 30px;
-        font-size: 20px;
+        padding: 15px 60px;
+        line-height: 18px;
+        &.icon-right {
+            .icon {
+                font-size: 20px;
+                right: 20px;
+                &:before {
+                    vertical-align: text-top;
+                }
+            }
+        }
+        &.icon-left {
+            .icon {
+                font-size: 20px;
+                left: 20px;
+                &:before {
+                    vertical-align: text-top;
+                }
+            }
+        }
+        &.icon-only {
+            padding: 12px;
+            width: auto;
+            .icon {
+                font-size: 20px;
+                &:before {
+                    vertical-align: middle;
+                }
+            }
+        }
+        &.icons {
+            .icon {
+                font-size: 20px;
+                left: 20px;
+                &:before {
+                    vertical-align: text-top;
+                }
+                &-a {
+                    font-size: 20px;
+                    right: 20px;
+                    &:after {
+                        vertical-align: text-top;
+                    }
+                }
+            }
+        }
     }
 }
