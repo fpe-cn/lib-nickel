@@ -14,9 +14,12 @@ $height-inputs: 60px !default;
             display: block;  
             margin-bottom: 5px;
             color: $color-compte-nickel;
+            font-size: 20px;
+            font-weight: $medium;
         }
         .cn-form-control{
             width: 100%;
+            font-size: 20px;
             height: $height-inputs;
             background-color: #fff;
             padding: 10px 10px;
@@ -39,7 +42,7 @@ $height-inputs: 60px !default;
             }
 
             &::placeholder{
-                color: $color-grey--dark;
+                color: #000;
             }
 
         }
@@ -107,14 +110,14 @@ $height-inputs: 60px !default;
 
         &.cn-textarea {
             .cn-form-control {
-                height: 150px;
-                max-height: 150px;
+                height: 120px;
+                max-height: 120px;
                 resize: none;
             }
             .icon-left,
             .icon-right{
                 .icon {
-                    line-height: 150px;
+                    line-height: 120px;
                 }
             }
         }
@@ -150,7 +153,27 @@ $height-inputs: 60px !default;
         font-weight: $medium;
         width: 100%;
         margin-bottom: 10px;
+        label{
+            padding-left: 10px; 
+        }
         .mdc-radio{
+            .mdc-radio__background {
+                height: 30px;
+                width: 30px;
+                top: 5px;
+                left: 5px;
+            }
+            .mdc-radio__native-control:checked+
+            .mdc-radio__background{
+                .mdc-radio__inner-circle{
+                    width: 20px;
+                    height: 20px;
+                    top: 5px;
+                    left: 5px;
+                    transform: scale(1);
+                }
+            }
+                
             .mdc-radio__native-control:not(:checked)+
             .mdc-radio__background{
                 .mdc-radio__outer-circle{
@@ -159,6 +182,21 @@ $height-inputs: 60px !default;
             }
         }
         .mdc-checkbox{
+            .mdc-checkbox__background {
+                height: 30px;
+                width: 30px;
+                top: 5px;
+                left: 5px;
+                border-radius: 3px;
+                .mdc-checkbox__checkmark{
+                    width: 25px;
+                    height: 20px;
+                    top: 2.5px;
+                    left: 0px;
+                }
+            }
+            // .mdc-checkbox__background {
+            // }
             .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate)~
             .mdc-checkbox__background{
                 border-color: $color-compte-nickel

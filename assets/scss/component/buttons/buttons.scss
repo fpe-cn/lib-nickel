@@ -1,8 +1,7 @@
 .cn-button {
     display: inline-block;
-    height: auto;
-    max-height: 70px;
-    padding: 20px 80px;
+    height: 70px;
+    width: 400px;
     text-align: center;
     border-radius: 100px;
     box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
@@ -33,7 +32,8 @@
             font-size: 30px;
             right: 30px;
             &:before {
-                vertical-align: text-top;
+                line-height: 35px;
+                // vertical-align: text-top;
             }
         }
     }
@@ -44,18 +44,18 @@
             font-size: 30px;
             left: 30px;
             &:before {
-                vertical-align: text-top;
+                line-height: 35px;
             }
         }
     }
     &.icon-only {
-        width: auto;
-        padding: 20px;
+        width: 70px;
         .icon {
             display: block;
             font-size: 30px;
             &:before {
-                vertical-align: top;
+                line-height: 35px;
+                vertical-align: text-bottom;
             }
         }
     }
@@ -66,30 +66,33 @@
             font-size: 30px;
             left: 30px;
             &:before {
-                vertical-align: text-top;
+                line-height: 35px;
             }
             &-a {
                 position: absolute;
                 font-size: 30px;
                 right: 30px;
                 &:after {
-                    vertical-align: text-top;
+                    line-height: 35px;
                 }
             }
         }
     }
 }
+a.cn-button{
+    line-height: 70px;
+}
 
 @include mdc-layout-grid-media-query_('phone') {
     .cn-button {
-        padding: 15px 60px;
-        line-height: 18px;
+        height: 50px;
+        width: 360px;
         &.icon-right {
             .icon {
                 font-size: 20px;
                 right: 20px;
                 &:before {
-                    vertical-align: text-top;
+                    line-height: 20px;
                 }
             }
         }
@@ -98,17 +101,16 @@
                 font-size: 20px;
                 left: 20px;
                 &:before {
-                    vertical-align: text-top;
+                    line-height: 20px;
                 }
             }
         }
         &.icon-only {
-            padding: 12px;
-            width: auto;
+            width: 50px;
             .icon {
                 font-size: 20px;
                 &:before {
-                    vertical-align: middle;
+                    line-height: 20px;
                 }
             }
         }
@@ -117,16 +119,20 @@
                 font-size: 20px;
                 left: 20px;
                 &:before {
-                    vertical-align: text-top;
+                    line-height: 20px;
                 }
                 &-a {
                     font-size: 20px;
                     right: 20px;
                     &:after {
-                        vertical-align: text-top;
+                        line-height: 20px;
                     }
                 }
             }
         }
+    }
+
+    a.cn-button{
+        line-height: 50px;
     }
 }

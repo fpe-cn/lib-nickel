@@ -46,6 +46,11 @@ $basePathTypography: "../";
         }
     }
     pre {
+
+        &[class*="language-"]{
+            max-height: 400px;
+            overflow: auto;
+        }
         font-size: 12px;
     }
     
