@@ -208,7 +208,7 @@ $height-inputs: 60px !default;
 }
 
 @include mdc-layout-grid-media-query_('phone') {
-    $height-inputs-mobile: 40px !default;
+    $height-inputs-mobile: 50px !default;
     .cn-form {
         padding: 20px;
         .cn-form-group{
