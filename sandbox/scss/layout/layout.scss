@@ -1,4 +1,6 @@
 body.theme-lib {
+    font-weight: 300;
+    font-family: "Muller Narrow";
 
     .navbar {
         margin-bottom:0;
@@ -46,28 +48,31 @@ body.theme-lib {
 
     .mdc-card {
         padding: 10px 20px;
+        font-size: 18px;
         line-height: 26px;
         margin-bottom: 20px;
 
         h3 {
-            font-weight: $medium;
+            font-weight: 500;
             margin-bottom: 20px;
         }
 
         section {
             .lib-title {
                 color: $color-compte-nickel;
-                padding: 10px 20px;
-                font-size: 30px;
-                font-weight: $medium;
+                font-weight: 500;
+                padding-bottom: 10px;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                font-size: 20px;
                 border-bottom: 1px solid $color-grey--light;
             }
 
-            // &:first-child {
-            //     .lib-title {
-            //         margin-top: 0;
-            //     }
-            // }
+            &:first-child {
+                .lib-title {
+                    margin-top: 0;
+                }
+            }
         }
     }
 }

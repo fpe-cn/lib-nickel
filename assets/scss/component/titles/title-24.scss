@@ -1,0 +1,12 @@
+.cn-title-24 {
+    color:$color-grey--dark;
+    font-size:28px;
+    font-weight: 500;
+    text-transform:uppercase;
+    margin-bottom:20px;
+
+    &.divider {
+        padding-bottom:20px;
+        border-bottom:1px solid $color-grey;
+    }
+}

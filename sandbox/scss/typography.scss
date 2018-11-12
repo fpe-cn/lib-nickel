@@ -11,6 +11,7 @@ $basePathTypography: "../";
 .module > div {
     padding:15px 20px;
 
-    &.extrabold { font-weight: $bold; }
-    &.medium { font-weight: $medium; }
+    &.extrabold { @include font-bold; }
+    &.light { @include font-light; }
+    &.medium { @include font-medium; }
 }

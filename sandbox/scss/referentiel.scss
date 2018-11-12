@@ -1,59 +1,68 @@
 @import "../../assets/scss/common/config-material-grid";
 @import "~@material/layout-grid/mdc-layout-grid";
-
-$basePathTypography: "../";
-@import "../../assets/scss/common/all";
-
+@import "~@material/card/mdc-card";
 @import "~@material/tab-bar/mdc-tab-bar";
 @import "~@material/tab-scroller/mdc-tab-scroller";
 @import "~@material/tab-indicator/mdc-tab-indicator";
-@import "@material/fab/mdc-fab";
-@import "~@material/card/mdc-card";
 @import "~@material/tab/mdc-tab";
-@import "module/mdc-drawer.scss";
 
+$basePathTypography: "../";
+@import "../../assets/scss/common/all";
 @import "../../assets/scss/component/all";
+
 @import "layout/layout";
+
 @import "../../assets/scss/component/header/header";
 
-.wrapper-menu{
-    display: flex;
-    .module {
-        position: relative;
-        padding: 20px 0;
-        .code-example {
-            padding: 5px 20px;
-            margin-bottom: 20px;
-            .cn-text-default {
-                margin-bottom: 20px;
-            }
-            h1, h2 {
-                padding: 20px 0;
-            }
-        }
-        &>.tab-content {
-            .tab-pane {
-                display: none;
-                &.active {
-                    display: block;
-                }
-            }
-        }
+.module {
+    position:relative;
+    padding:50px 0 0;
+
+    &:after {
+        content:"Exemple";
+        position:absolute;
+        top:15px;
+        left:15px;
+        @include font-medium;
+        font-size:14px;
+        color: $color-grey--dark;
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
-    pre {
-        font-size: 12px;
+
+    .code-example {
+        @include font-medium;
     }
-    
-    #link [class*="cn-link-"],
-    button {
-        display: inline-block;
-        margin: 10px 20px;
+
+    & > .tab-content {
+        padding:0;
+        margin:0;
     }
 }
 
-@media (max-width: 768px) {
-    .wrapper-menu{
-        display: block;
+.nav-tabs .nav-item {
+    margin-left:5px;
+
+    &:first-child {
+        margin-left:20px;
     }
 }
 
+pre {
+    font-size:12px;
+}
+
+#link [class*="cn-link-"],
+button {
+    display:inline-block;
+    margin:10px 20px;
+}
+
+table {
+    margin-bottom:30px;
+}
+
+.size-fix {
+    max-height:400px;
+    overflow:scroll;
+}

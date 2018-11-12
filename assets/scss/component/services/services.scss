@@ -1,85 +1,46 @@
-.cn-service {
-    margin-bottom: 20px;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    .status {
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        margin-bottom: 5px;
-        .chip {
-            position: relative;
-            flex: none;
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
-            border: 1px solid $color-grey;
-            border-radius: 10px;
-            &:after {
-                content: "";
-                position: absolute;
-                top: 4px;
-                left: 4px;
-                width: 10px;
-                height: 10px;
-                border-radius: 5px;
-                background-color: black;
-            }
-            &.danger:after {
-                background-color: $color-red;
-            }
-            &.warning:after {
-                background-color: $color-yellow;
-            }
-            &.success:after {
-                background-color: $color-green;
-            }
+.status-service {
+    height:24px;
+    line-height:24px;
+    margin-bottom:10px;
+    font-weight: 300;
+
+    .chip {
+        position:relative;
+        display:inline-block;
+        vertical-align:top;
+        width:18px;
+        height:18px;
+        margin-top:2px;
+        margin-right:10px;
+
+        border:1px solid $color-grey;
+        border-radius:9px;
+
+        &:after {
+            content:"";
+            position:absolute;
+            top:3px; left:3px;
+            width:10px;
+            height:10px;
+            border-radius:5px;
+            background-color:black;
         }
-        .text {
-            margin: 0 50px 0 10px;
-            .content,
-            .infos {
-                display: block;
-            }
-            .content {
-                font-weight: $medium;
-                margin-bottom: 5px;
-            }
-            .infos {
-                color: $color-grey--dark;
-            }
+
+        &.danger:after {
+            background-color:$color-red;
+        }
+
+        &.warning:after {
+            background-color:$color-yellow;
+        }
+
+        &.success:after {
+            background-color:$color-green;
         }
     }
 
-    .cn-button {
-        margin: 0 auto;
-        padding: 15px 30px;
-        box-shadow: none;
-        border: 1px solid $color-grey;
-    }
-}
-@include mdc-layout-grid-media-query_('tablet'){
-    .cn-service{
-        .status{
-            .text {
-                margin: auto;
-            }
-        }
-        .cn-button{
-            padding: 10px 20px;
-        }
-    }
-}
-@include mdc-layout-grid-media-query_('phone') {
-    .cn-service{
-        .status{
-            .text {
-                margin: auto;
-            }
-        }
-        .cn-button{
-            padding: 10px 20px;
-        }
+    .text {
+        display:inline-block;
+        vertical-align:top;
     }
 }

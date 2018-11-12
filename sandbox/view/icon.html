@@ -36,87 +36,69 @@ var sections = [
 
 <%- include('module/header.html', {active: 'icon'}) %>
 
-<div class="wrapper-menu">
-    <div class="mdc-drawer-app-content">
-        <main class="main-content" id="main-content">
-            <!--Main Content -->
-            <div class="mdc-layout-grid">
-                <div class="mdc-layout-grid__inner">
-                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-                        <div class="mdc-card">
-                            <h3>Règles de construction des svg pour les fonts :</h3>
-                            <ul>
-                                <li>La taille de base est 1024x1024</li>
-                                <li>Le contenu est bord à bord en hauteur ou en largeur</li>
-                            </ul>
-                            La nomenclature :
-                            <ul>
-                                <li>-full : icone pleine</li>
-                                <li>-square : le carré plein avec les bords arrondis</li>
-                                <li>-sign : le cercle plein</li>
-                                <li>-circle : le cercle</li>
-                            </ul>
-                        </div>
-                        <div class="mdc-card">
-                        <%
-                            sections.forEach(function(section) {
+<div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
+        <!--Main Content -->
+        <main class="mdc-layout-grid__cell mdc-layout-grid__cell--span-10">
+            <div class="mdc-card">
+                <h3>Règles de construction des svg pour les fonts :</h3>
+                <ul>
+                    <li>La taille de base est 1024x1024</li>
+                    <li>Le contenu est bord à bord en hauteur ou en largeur</li>
+                </ul>
+                La nomenclature :
+                <ul>
+                    <li>-full : icone pleine</li>
+                    <li>-square : le carré plein avec les bords arrondis</li>
+                    <li>-sign : le cercle plein</li>
+                    <li>-circle : le cercle</li>
+                </ul>
+            </div>
+            <div class="mdc-card">
+            <%
+                sections.forEach(function(section) {
+                %>
+                <section id="<%= section.id %>" class="cf">
+                    <div class="lib-title"><%= section.title %></div>
+                    <div class="module">
+                        <ul class="cn-icons-list">
+                            <%
+                            section.icons.forEach(function(icon) {
                             %>
-                            <section id="<%= section.id %>" class="cf">
-                                <div class="lib-title"><%= section.title %></div>
-                                <div class="module">
-                                    <ul class="cn-icons-list">
-                                        <%
-                                        section.icons.forEach(function(icon) {
-                                        %>
-                                        <li>
-                                            <span class="<%= section.iconClass ? section.iconClass : 'icon' %> icon<%= section.iconPrefix %>-<%=icon%>"></span>
-                                            <span class="icon-class"><%= section.iconClass ? section.iconClass : 'icon' %> icon<%= section.iconPrefix %>-<%=icon%></span>
-                                        </li>
-                                        <%
-                                        });
-                                        %>
-                                    </ul>
-                                </div>
-                            </section>
+                            <li>
+                                <span class="<%= section.iconClass ? section.iconClass : 'icon' %> icon<%= section.iconPrefix %>-<%=icon%>"></span>
+                                <span class="icon-class"><%= section.iconClass ? section.iconClass : 'icon' %> icon<%= section.iconPrefix %>-<%=icon%></span>
+                            </li>
                             <%
                             });
                             %>
-                        </div>
+                        </ul>
                     </div>
-                </div>
-            </div>
-        </main>
-    </div>
-    <!--Nav Bar -->
-    <aside class="mdc-drawer">
-        <div class="mdc-drawer__header">
-            <h1 class="mdc-drawer__title cn-title .lg orange"><i class="icon icon-logo-carotte"></i> Lib Nickel</h1>
-            <h2 class="mdc-drawer__subtitle cn-title .md">Composants</h2>
-        </div>
-        <div class="mdc-drawer__content">
-            <div class="mdc-list">
+                </section>
                 <%
-                sections.forEach(function(section, index) {
-                    if (index === 0) {
-                        %>
-                        <a class="mdc-list-item mdc-list-item--activated" href="#<%= section.id %>" aria-selected="false">
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true"><%= section.title %></i>
-                        </a>
-                        <%
-                    } else {
-                        %>
-                        <a class="mdc-list-item" href="#<%= section.id %>" aria-selected="false">
-                            <i class="material-icons mdc-list-item__graphic" aria-hidden="true"><%= section.title %></i>
-                        </a>
-                        <%
-                    }
                 });
-                %>
-            </div>
-        </div>
-    </aside>
-</div>
+                %></div>
+        </main>
 
+        <!--Nav Bar -->
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 sidenav-sticky">
+            <nav class="sidenav">
+                <div class="title-sidenav">Composants</div>
+                <ul class="nav flex-column">
+                    <%
+                    sections.forEach(function(section) {
+                    %>
+                    <li class="nav-item">
+                        <a href="#<%= section.id %>" class="nav-link"><%= section.title %></a>
+                    </li>
+                    <%
+                    });
+                    %>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
 
 <div class="grid-helper"></div>
 

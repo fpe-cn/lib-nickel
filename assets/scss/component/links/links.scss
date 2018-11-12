@@ -1,79 +1,151 @@
 .cn-link-default {
-    color: #000;
-    text-decoration: underline;
-    font-weight: $medium;
-    &:hover {
-        color: $color-compte-nickel;
-        text-decoration: none;
-    }
+  color:$color-grey--dark;
+  text-decoration:underline;
+  font-weight: 300;
+
+  &:hover {
+    color:$color-compte-nickel;
+    text-decoration: none;
+  }
 }
 
 .cn-link-inverse {
-    color: $color-compte-nickel;
-    font-weight: $medium;
-    &:hover {
-        color: #000;
-        text-decoration: none;
-    }
+  color: $color-compte-nickel;
+  font-weight: 300;
+
+  &:hover {
+    color:$color-grey--dark;
+    text-decoration: none;
+  }
 }
 
 .cn-link-list {
-    color: #000;
-    font-weight: $medium;
-    text-decoration: none;
-    &:hover {
-        color: $color-compte-nickel;
-    }
+  color:$color-grey--dark;
+  font-weight: 300;
+
+  &:hover {
+    color:$color-compte-nickel;
+  }
 }
 
 .cn-link-orange {
+  color: $color-compte-nickel;
+  font-weight: 300;
+
+  &:hover {
     color: $color-compte-nickel;
-    &:hover {
-        color: $color-compte-nickel;
-        text-decoration: underline;
-    }
+  }
 }
 
 .cn-link-grey {
+  color: $color-grey--dark;
+  font-weight: 300;
+
+  &:hover {
     color: $color-grey--dark;
-    font-weight: $medium;
+  }
+}
+
+.cn-link-button-default {
+  display:inline-block;
+  border:1px solid $color-grey--dark;
+  border-radius:20px;
+  height:40px;
+  line-height:36px;
+  padding:0 20px;
+  color:$color-grey--dark;
+  font-size:16px;
+  font-weight: 300;
+
+  &:hover {
+    background-color:$color-grey--dark;
+    color:white;
+    text-decoration:none;
+  }
+
+  .icon {
+    &:before {
+      vertical-align:text-top;
+      margin-right:10px;
+    }
+  }
+
+  &-inverse {
+    display:inline-block;
+    border:1px solid $color-grey--dark;
+    border-radius:20px;
+    height:40px;
+    line-height:36px;
+    padding:0 20px;
+    background-color:$color-grey--dark;
+    color:white;
+    font-weight: 300;
+
     &:hover {
-        color: $color-grey--dark;
-        text-decoration: underline;
+      background-color:transparent;
+      color:$color-grey--dark;
+      text-decoration:none;
     }
-}
 
-.cn-link-default,
-.cn-link-inverse,
-.cn-link-list,
-.cn-link-orange,
-.cn-link-grey {
-    margin-right: 30px;
-    &.icon-right {
-        position: relative;
-        .icon {
-            position: absolute;
-            font-size: 30px;
-            right: -35px;
-            &:before {
-                vertical-align: text-bottom;
-            }
-        }
-    }
-}
-
-@include mdc-layout-grid-media-query_('phone') {
-  .cn-link-default,
-  .cn-link-inverse,
-  .cn-link-list,
-  .cn-link-orange,
-  .cn-link-grey {
-    margin-right: 15px;
-    &.icon-right {
-      .icon {
-        font-size: 15px;
-        right: -20px;
+    .icon {
+      &:before {
+        vertical-align:text-top;
+        margin-right:10px;
       }
+    }
+  }
+}
+
+.cn-link-button-orange {
+  background-color:white;
+  color: $color-compte-nickel;
+
+  &, &-inverse {
+    border: 1px solid $color-compte-nickel;
+    display:inline-block;
+    width: 220px;
+    border-radius:25px;
+    height:50px;
+    line-height:46px;
+    padding:0 20px;
+    text-align:center;
+    text-transform: uppercase;
+    font-size:14px;
+    font-weight: 300;
+    box-shadow: 2px 2px 10px 0 $color-grey;
+
+    &:active {
+      box-shadow: none;
+    }
+
+    .icon {
+      &:before {
+        vertical-align:text-top;
+        margin-right:10px;
+      }
+    }
+  }
+
+  &-inverse {
+    background-color:$color-compte-nickel;
+    color:white;
+
+    &:hover {
+      background-color: $color-compte-nickel--dark;
+    }
+  }
+}
+
+@media (min-width: mdc-layout-grid-breakpoint-min('desktop')) {
+  .cn-link-button-orange {
+    &, &-inverse {
+      height: 60px;
+      line-height: 60px;
+      border-radius: 30px;
+      padding: 0 50px;
+      font-size: 20px;
+      width: auto;
+      min-width: 240px;
     }
   }
 }

@@ -1,2 +1,2 @@
-const Colors = { "CompteNickel": "#Ff5f00", "CompteNickelLight": "#Ffbf99", "CompteNickelDark": "#Ea4e00", "GreyLight": "#F2f2f2", "Grey": "#Bbb", "GreyDark": "#666", "Red": "#C9130a", "RedLight": "#F87a74", "Green": "#08b230", "GreenLight": "#5bf880", "Yellow": "#Fcdb49", "Facebook": "#3b5998", "Twitter": "#55acee", "Linkedin": "#007bb6" }
+const Colors = {"CompteNickel":"#Ff5f00","CompteNickelLight":"#Ffbf99","CompteNickelDark":"#Ea4e00","GreyLight":"#F2f2f2","Grey":"#Bbb","GreyDark":"#666","Red":"#C9130a","RedLight":"#F87a74","Green":"#08b230","GreenLight":"#5bf880","Yellow":"#Fcdb49","Facebook":"#3b5998","Twitter":"#55acee","Linkedin":"#007bb6"}
 export default Colors

@@ -1,12 +1,13 @@
 .cn-text-default {
-  color: #000;
+  color:$color-grey--dark;
+  margin-bottom:20px;
+  font-weight: 300;
 
-  .orange,
-  &.orange {
-    color:$color-compte-nickel;
+  b {
+    @include font-medium;
   }
 
-  &.center{
-    text-align: center;
+  .orange {
+    color:$color-compte-nickel;
   }
 }

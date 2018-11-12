@@ -1,18 +1,29 @@
 .cn-table {
-    table-layout: fixed;
     border-collapse: separate;
     border-spacing: 0;
     border: 1px solid $color-grey;
     border-radius: 7px;
     width: 100%;
+    margin-top: 20px;
+
+    &.w400 {
+        max-width: 400px;
+    }
+
+    &.w600 {
+        max-width: 600px;
+    }
+
+    &.w800 {
+        max-width: 800px;
+    }
 
     thead {
         th {
-            padding: 20px 10px;
+            padding: 15px;
             color: $color-compte-nickel;
-            font-weight: $medium;
+            @include font-medium;
             border-right: 1px solid $color-grey;
-            border-bottom: 1px solid $color-grey;
             text-align: center;
 
             &:last-child {
@@ -21,19 +32,81 @@
         }
     }
 
-    tbody {
-        tr {
-            &:nth-child(even) {
-                background-color: $color-grey--light;
-            }
+    &.head-sign {
+        border-width: 0;
 
-            td {
-                padding: 20px 30px;
-                color: #000;
-                border-right: 1px solid $color-grey;
+        thead {
+            th {
+                background-color: $color-compte-nickel;
+                color: white;
+
+                &:first-child {
+                    border-top-left-radius: 7px;
+                    border-left-width: 0;
+                }
+                &:last-child {
+                    border-top-right-radius: 7px;
+                    border-right-width: 0;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    border: 1px solid $color-grey;
+                    border-top-width: 0;
+                    border-left-width: 0;
+                    padding: 20px;
+                    font-weight: 300;
+
+                    &:first-child {
+                        border-left-width: 1px;
+                    }
+
+                    b {
+                        font-weight: 500;
+                    }
+
+                    &.orange {
+                        color: $color-compte-nickel;
+                    }
+                }
 
                 &:last-child {
-                    border-right-width: 0;
+                    td {
+                        &:first-child {
+                            border-bottom-left-radius: 7px;
+                        }
+                        &:last-child {
+                            border-bottom-right-radius: 7px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    tbody {
+        &.odd-even {
+            tr {
+                padding: 10px 0;
+
+                &:nth-child(odd) {
+                    background-color: $color-grey--light;
+                }
+
+                td {
+                    padding: 10px;
+                    text-align: center;
+                    font-size: 18px;
+                    font-weight: 300;
+                    color: $color-grey--dark;
+                    border-right: 1px solid $color-grey;
+
+                    &:last-child {
+                        border-right-width: 0;
+                    }
                 }
             }
         }
