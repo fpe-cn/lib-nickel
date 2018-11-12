@@ -195,8 +195,6 @@ $height-inputs: 60px !default;
                     left: 0px;
                 }
             }
-            // .mdc-checkbox__background {
-            // }
             .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate)~
             .mdc-checkbox__background{
                 border-color: $color-compte-nickel
@@ -214,7 +212,11 @@ $height-inputs: 60px !default;
     .cn-form {
         padding: 20px;
         .cn-form-group{
+            label {
+                font-size: 18px;
+            }
             .cn-form-control{
+                font-size: 18px;
                 padding: 5px 10px;
                 height: $height-inputs-mobile;
 
@@ -250,6 +252,44 @@ $height-inputs: 60px !default;
                 .icon-right{
                     .icon {
                         line-height: 100px;
+                    }
+                }
+            }
+        }
+
+        .mdc-form-field{
+            label{
+                padding-left: 0; 
+            }
+            .mdc-radio{
+                .mdc-radio__background {
+                    height: 20px;
+                    width: 20px;
+                    top: 10px;
+                    left: 10px;
+                }
+                .mdc-radio__native-control:checked+
+                .mdc-radio__background{
+                    .mdc-radio__inner-circle{
+                        width: 12px;
+                        height: 12px;
+                        top: 0;
+                        left: 0;
+                        transform: scale(0.5);
+                    }
+                }
+            }
+            .mdc-checkbox{
+                .mdc-checkbox__background {
+                    height: 20px;
+                    width: 20px;
+                    top: 10px;
+                    left: 10px;
+                    .mdc-checkbox__checkmark{
+                        width: 15px;
+                        height: 10px;
+                        top: 2.5px;
+                        left: 0px;
                     }
                 }
             }

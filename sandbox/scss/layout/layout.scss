@@ -71,3 +71,11 @@ body.theme-lib {
         }
     }
 }
+
+@media (max-width: 768px) {
+    body.theme-lib{
+        .mdc-card {
+            padding: 10px 5px;
+        }    
+    }
+}

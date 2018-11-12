@@ -54,8 +54,8 @@
 
     .cn-button {
         margin: 0 auto;
-        padding: 15px 30px;
-        line-height: 35px;
+        width: 200px;
+        line-height: 70px;
         box-shadow: none;
         border: 1px solid $color-grey;
     }
@@ -68,21 +68,30 @@
             }
         }
         .cn-button{
-            padding: 10px 20px;
-            line-height: 40px;
+            line-height: 70px;
         }
     }
 }
 @include mdc-layout-grid-media-query_('phone') {
     .cn-service{
         .status{
+            .chip {
+                width: 20px;
+                height: 20px;
+                &:after {
+                    width: 10px;
+                    height: 10px;;
+                    top: 3px;
+                    left: 3px;
+                }
+            }
             .text {
                 margin: auto;
             }
         }
         .cn-button{
-            line-height: 25px;
-            padding: 10px 20px;
+            width: 150px;
+            line-height: 50px;
         }
     }
 }

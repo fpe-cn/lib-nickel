@@ -64,6 +64,17 @@ $basePathTypography: "../";
 @media (max-width: 768px) {
     .wrapper-menu{
         display: block;
+        .module {
+            .code-example{
+                padding: 0;
+            }
+        }
+
+        #link [class*="cn-link-"],
+        button {
+            display: block;
+            margin: 10px 0px;
+        }
     }
 }
 

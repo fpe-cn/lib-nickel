@@ -50,13 +50,11 @@
 .cn-link-grey {
     margin-right: 30px;
     &.icon-right {
-        position: relative;
         .icon {
-            position: absolute;
+            margin: 0 10px;
             font-size: 30px;
-            right: -35px;
             &:before {
-                vertical-align: text-bottom;
+                vertical-align: middle;
             }
         }
     }
@@ -70,10 +68,10 @@
   .cn-link-grey {
     margin-right: 15px;
     &.icon-right {
-      .icon {
-        font-size: 15px;
-        right: -20px;
-      }
+        .icon {
+            margin: 0 5px;
+            font-size: 15px;
+        }
     }
   }
 }
