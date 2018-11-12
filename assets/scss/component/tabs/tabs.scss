@@ -1,55 +1,77 @@
-$height-tabs: 70px !default;
-
-.theme-nickel.nav-tabs {
-    border:0;
-    list-style:none;
-    display:flex;
-
+$height-tabs: 80px !default;
+.theme-nickel.cn-nav-tabs {
+    border: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
     li.item {
-        flex-grow:1;
-        height:$height-tabs;
-
+        flex-grow: 1;
+        height: $height-tabs;
         a {
-            position:relative;
-            display:block;
-            width:100%;
-            height:100%;
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
             line-height: $height-tabs;
-            text-align:center;
-            color:$color-grey--dark;
-            padding:0;
-            border-top:1px solid $color-grey;
-            border-bottom:1px solid $color-grey;
-
+            text-align: center;
+            color: #000;
+            padding: 0;
             span {
-                display:inline-block;
-                vertical-align:middle;
-                line-height:1;
+                display: inline-block;
+                vertical-align: middle;
+                line-height: 1;
             }
-
             &.active {
-                color:white;
-                background-image: linear-gradient($color-compte-nickel, $color-compte-nickel--dark);
-                border-color:$color-compte-nickel--dark;
-
+                color: white;
+                background-color: $color-compte-nickel;
                 &:after {
-                    content:"";
-                    width:0;
-                    height:0;
-                    border-style:solid;
-                    border-width:10px 7.5px 0 7.5px;
-                    border-color:$color-compte-nickel--dark transparent transparent transparent;
-                    position:absolute;
-                    bottom:-10px;
-                    left:50%;
-                    margin-left:-7.5px;
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 15px 10px 0 10px;
+                    border-color: $color-compte-nickel transparent transparent transparent;
+                    position: absolute;
+                    bottom: -15px;
+                    left: 50%;
+                    margin-left: -10px;
                 }
             }
         }
     }
 }
 
-.tab-content {
-    margin-bottom:20px;
-    padding:20px;
+.cn-tab-content {
+    margin-bottom: 20px;
+    padding: 50px;
+    color: $color-grey--dark;
+    .cn-tab-panel {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+}
+
+@include mdc-layout-grid-media-query_('phone') {
+    $height-tabs-mobile: 40px !default;
+    .theme-nickel.cn-nav-tabs {
+        li.item {
+            height: $height-tabs-mobile;
+            a {
+                line-height: $height-tabs-mobile;
+                &.active {
+                    &:after {
+                        border-width: 10px 5px 0 5px;
+                        bottom: -10px;
+                        left: 50%;
+                        margin-left: -5px;
+                    }
+                }
+            }
+        }
+    }
+    .cn-tab-content {
+        padding: 10px;
+    }
 }
