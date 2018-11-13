@@ -30,10 +30,6 @@
             position: absolute;
             font-size: 30px;
             right: 30px;
-            &:before {
-                line-height: 35px;
-                // vertical-align: text-top;
-            }
         }
     }
     &.icon-left {
@@ -42,9 +38,6 @@
             position: absolute;
             font-size: 30px;
             left: 30px;
-            &:before {
-                line-height: 35px;
-            }
         }
     }
     &.icon-only {
@@ -64,22 +57,35 @@
             position: absolute;
             font-size: 30px;
             left: 30px;
-            &:before {
-                line-height: 35px;
-            }
+
             &-a {
                 position: absolute;
                 font-size: 30px;
                 right: 30px;
-                &:after {
-                    line-height: 35px;
-                }
             }
         }
     }
 }
 a.cn-button{
     line-height: 70px;
+    &.icons,
+    &.icon-right,
+    &.icon-left {
+        .icon {
+            &:before {
+                line-height: 70px;
+            }
+        }
+    }
+    &.icons {
+        .icon {
+            &-a {
+                &:after {
+                    line-height: 70px;
+                }
+            }
+        }
+    }
 }
 
 @include mdc-layout-grid-media-query_('phone') {
@@ -90,18 +96,12 @@ a.cn-button{
             .icon {
                 font-size: 20px;
                 right: 20px;
-                &:before {
-                    line-height: 20px;
-                }
             }
         }
         &.icon-left {
             .icon {
                 font-size: 20px;
                 left: 20px;
-                &:before {
-                    line-height: 20px;
-                }
             }
         }
         &.icon-only {
@@ -117,15 +117,9 @@ a.cn-button{
             .icon {
                 font-size: 20px;
                 left: 20px;
-                &:before {
-                    line-height: 20px;
-                }
                 &-a {
                     font-size: 20px;
                     right: 20px;
-                    &:after {
-                        line-height: 20px;
-                    }
                 }
             }
         }
@@ -133,5 +127,23 @@ a.cn-button{
 
     a.cn-button{
         line-height: 50px;
+        &.icons,
+        &.icon-right,
+        &.icon-left {
+            .icon {
+                &:before {
+                    line-height: 50px;
+                }
+            }
+        }
+        &.icons {
+            .icon {
+                &-a {
+                    &:after {
+                        line-height: 50px;
+                    }
+                }
+            }
+        }
     }
 }
