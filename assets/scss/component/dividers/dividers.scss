@@ -1,0 +1,15 @@
+.cn-divider{
+    width: 100%; 
+    height: 20px; 
+    border-bottom: 1px solid $color-grey--dark; 
+    text-align: center;
+    margin-bottom: 20px;
+
+    .cn-text {
+        background-color:#fff; 
+        color: $color-grey--dark;
+        line-height: 40px;
+        padding: 0 10px;
+        text-transform: uppercase;
+    }
+}

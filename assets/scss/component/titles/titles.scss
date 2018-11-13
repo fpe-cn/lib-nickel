@@ -1,0 +1,28 @@
+.cn-title {
+    color: #000;
+    font-weight: $medium;
+    &.lg{
+        font-size:44px;
+    }
+    &.md{
+        font-size:38px;
+    }
+    &.orange {
+        color: $color-compte-nickel;
+    }
+
+    &.center {
+        text-align: center;
+    }
+}
+
+@include mdc-layout-grid-media-query_('phone') {
+    .cn-title {
+        &.lg{
+            font-size:24px;
+        }
+        &.md{
+            font-size:20px;
+        }
+    }
+}

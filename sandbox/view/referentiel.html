@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
@@ -8,582 +9,649 @@
     <link rel="stylesheet" href="../css/referentiel.css">
     <link rel="stylesheet" href="../../../node_modules/prismjs/themes/prism.css">
 </head>
+
 <body class="theme-lib">
 
-<%- include('module/header.html', {active: 'referentiel'}) %>
+    <%- include('module/header.html', {active: 'referentiel'}) %>
 
-<div class="mdc-layout-grid">
-    <div class="mdc-layout-grid__inner">
-        <main class="mdc-layout-grid__cell mdc-layout-grid__cell--span-10">
-            <div class="mdc-card">
-                <section id="logo">
-                    <div class="lib-title">Logo</div>
+    <div class="wrapper-menu">
+        <div class="mdc-drawer-app-content">
+            <main class="main-content" id="main-content">
+                <div class="mdc-layout-grid">
+                    <div class="mdc-layout-grid__inner">
 
-                    <div class="module">
-                        <form class="code-example">
-                            <div class="col-md-12">
-                                <%- include('../../assets/html/logo/logo.html') %>
-                            </div>
-                        </form>
-                        <div class="mdc-tab-bar" role="tablist" id="cn-logo-tab">
-                            <div class="mdc-tab-scroller">
-                                <div class="mdc-tab-scroller__scroll-area">
-                                    <div class="mdc-tab-scroller__scroll-content">
-                                        <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                                              <span class="mdc-tab__content">
-                                                <span class="mdc-tab__text-label">HTML</span>
-                                              </span>
-                                              <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                              </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
-                                        <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                                              <span class="mdc-tab__content">
-                                                <span class="mdc-tab__text-label">CSS</span>
-                                              </span>
-                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                              </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-content">
-                            <div id="cn-logo-html" role="tabpanel" class="tab-pane active size-fix" aria-labelledby="logo-tab-html">
-                                <figure class="highlight">
-                            <pre><code class="language-markup">
+                        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12 ">
+
+                            <div class="mdc-card">
+
+                                <section id="logo">
+                                    <div class="lib-title">Logo</div>
+
+                                    <div class="module">
+                                        <form class="code-example">
+                                            <div>
+                                                <%- include('../../assets/html/logo/logo.html') %>
+                                            </div>
+                                        </form>
+                                        <div class="mdc-tab-bar" role="tablist">
+                                            <div class="mdc-tab-scroller">
+                                                <div class="mdc-tab-scroller__scroll-area">
+                                                    <div class="mdc-tab-scroller__scroll-content">
+                                                        <button class="mdc-tab mdc-tab--active" role="tab"
+                                                            aria-selected="true" tabindex="0" data-section="logo"
+                                                            data-type="html">
+                                                            <span class="mdc-tab__content">
+                                                                <span class="mdc-tab__text-label">HTML</span>
+                                                            </span>
+                                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                            </span>
+                                                            <span class="mdc-tab__ripple"></span>
+                                                        </button>
+                                                        <button data-section="logo" data-type="css" class="mdc-tab"
+                                                            role="tab" aria-selected="false" tabindex="-1">
+                                                            <span class="mdc-tab__content">
+                                                                <span class="mdc-tab__text-label">CSS</span>
+                                                            </span>
+                                                            <span class="mdc-tab-indicator">
+                                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                            </span>
+                                                            <span class="mdc-tab__ripple"></span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content">
+                                            <div data-section="logo" data-type="html" role="tabpanel" class="tab-pane active size-fix"
+                                                aria-labelledby="logo-tab-html">
+                                                <figure class="highlight">
+                                                    <pre>
+                                                                            <code class="language-markup">
 <%= include('../../assets/html/logo/logo.html') %>
-                            </code></pre>
-                                </figure>
-                            </div>
-                            <div id="cn-logo-css" role="tabpanel" class="tab-pane size-fix" aria-labelledby="logo-tab-css">
-                                <figure class="highlight">
-                            <pre><code class="language-css">
+                                                                            </code>
+                                                                        </pre>
+                                                </figure>
+                                            </div>
+                                            <div data-section="logo" data-type="css" role="tabpanel" class="tab-pane size-fix"
+                                                aria-labelledby="logo-tab-css">
+                                                <figure class="highlight">
+                                                    <pre>
+                                                                            <code class="language-css">
 <%= include('../../assets/scss/component/logo/logo.scss') %>
-                            </code></pre>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="title">
-                    <div class="lib-title">Titres</div>
-
-                    <div class="module">
-                        <form class="code-example">
-                            <div class="col-md-12">
-                                <%- include('../../assets/html/titles/title-26.html') %>
-                                <%- include('../../assets/html/titles/title-24.html') %>
-                            </div>
-                        </form>
-                        <div class="mdc-tab-bar" role="tablist">
-                            <div class="mdc-tab-scroller">
-                                <div class="mdc-tab-scroller__scroll-area">
-                                    <div class="mdc-tab-scroller__scroll-content">
-                                        <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                                              <span class="mdc-tab__content">
-                                                <span class="mdc-tab__text-label">HTML</span>
-                                              </span>
-                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                              </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
-                                        <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                                              <span class="mdc-tab__content">
-                                                <span class="mdc-tab__text-label">CSS</span>
-                                              </span>
-                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                              </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
+                                                                            </code>
+                                                                        </pre>
+                                                </figure>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-content">
-                            <div id="cn-titles-html" role="tabpanel" class="tab-pane active size-fix">
-                                <figure class="highlight">
-                            <pre><code class="language-markup">
-<%= include('../../assets/html/titles/title-26.html') %>
-<%= include('../../assets/html/titles/title-24.html') %>
-                            </code></pre>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                                </section>
 
-                <section id="text">
-                    <div class="lib-title">Textes</div>
+                                <section id="title">
+                                    <div class="lib-title">Titres</div>
 
-                    <div class="module">
-                        <form class="code-example">
-                            <div class="col-md-12">
-                                <%- include('../../assets/html/texts/text-default.html') %>
-                                <%- include('../../assets/html/texts/text-small.html') %>
-                                <%- include('../../assets/html/texts/text-divider.html') %>
-                            </div>
-                        </form>
-                        <div class="mdc-tab-bar" role="tablist">
-                            <div class="mdc-tab-scroller">
-                                <div class="mdc-tab-scroller__scroll-area">
-                                    <div class="mdc-tab-scroller__scroll-content">
-                                        <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                                              <span class="mdc-tab__content">
-                                                <span class="mdc-tab__text-label">HTML</span>
-                                              </span>
-                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                              </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
-                                        <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                                              <span class="mdc-tab__content">
-                                                <span class="mdc-tab__text-label">CSS</span>
-                                              </span>
-                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                              </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
+                                    <div class="module">
+                                        <form class="code-example">
+                                            <div>
+<%- include('../../assets/html/titles/titles.html') %>
+                                            </div>
+                                        </form>
+                                        <div class="mdc-tab-bar" role="tablist">
+                                            <div class="mdc-tab-scroller">
+                                                <div class="mdc-tab-scroller__scroll-area">
+                                                    <div class="mdc-tab-scroller__scroll-content">
+                                                        <button class="mdc-tab mdc-tab--active" role="tab"
+                                                            aria-selected="true" tabindex="0" data-section="title"
+                                                            data-type="html">
+                                                            <span class="mdc-tab__content">
+                                                                <span class="mdc-tab__text-label">HTML</span>
+                                                            </span>
+                                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                            </span>
+                                                            <span class="mdc-tab__ripple"></span>
+                                                        </button>
+                                                        <button class="mdc-tab" role="tab" aria-selected="false"
+                                                            tabindex="-1" data-section="title" data-type="css">
+                                                            <span class="mdc-tab__content">
+                                                                <span class="mdc-tab__text-label">CSS</span>
+                                                            </span>
+                                                            <span class="mdc-tab-indicator">
+                                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                            </span>
+                                                            <span class="mdc-tab__ripple"></span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content">
+                                            <div data-section="title" data-type="html" role="tabpanel" class="tab-pane active size-fix">
+                                                <figure class="highlight">
+                                                    <pre><code class="language-markup">
+<%= include('../../assets/html/titles/titles.html') %>
+                                                                        </code></pre>
+                                                </figure>
+                                            </div>
+                                            <div data-section="title" data-type="css" role="tabpanel" class="tab-pane size-fix">
+                                                <figure class="highlight">
+                                                    <pre><code class="language-css">
+<%= include('../../assets/scss/component/titles/titles.scss') %>
+                                                                        </code></pre>
+                                                </figure>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-content">
-                            <div id="cn-texts-html" role="tabpanel" class="tab-pane active size-fix">
-                                <figure class="highlight">
-                            <pre><code class="language-markup">
+                                </section>
+
+                                <section id="text">
+                                    <div class="lib-title">Textes</div>
+
+                                    <div class="module">
+                                        <form class="code-example">
+                                            <div>
+<%- include('../../assets/html/texts/text-default.html') %>
+                                            </div>
+                                        </form>
+                                        <div class="mdc-tab-bar" role="tablist">
+                                            <div class="mdc-tab-scroller">
+                                                <div class="mdc-tab-scroller__scroll-area">
+                                                    <div class="mdc-tab-scroller__scroll-content">
+                                                        <button class="mdc-tab mdc-tab--active" role="tab"
+                                                            aria-selected="true" tabindex="0" data-section="text"
+                                                            data-type="html">
+                                                            <span class="mdc-tab__content">
+                                                                <span class="mdc-tab__text-label">HTML</span>
+                                                            </span>
+                                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                            </span>
+                                                            <span class="mdc-tab__ripple"></span>
+                                                        </button>
+                                                        <button class="mdc-tab" role="tab" aria-selected="false"
+                                                            tabindex="-1" data-section="text" data-type="css">
+                                                            <span class="mdc-tab__content">
+                                                                <span class="mdc-tab__text-label">CSS</span>
+                                                            </span>
+                                                            <span class="mdc-tab-indicator">
+                                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                            </span>
+                                                            <span class="mdc-tab__ripple"></span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content">
+                                            <div data-section="text" data-type="html" role="tabpanel" class="tab-pane active size-fix">
+                                                <figure class="highlight">
+                                                    <pre><code class="language-markup">
 <%= include('../../assets/html/texts/text-default.html') %>
-<%= include('../../assets/html/texts/text-small.html') %>
-<%= include('../../assets/html/texts/text-divider.html') %>
-                            </code></pre>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="link">
-                    <div class="lib-title">Liens</div>
-
-                    <div class="module">
-                        <form class="code-example">
-                            <div class="col-md-12">
-                                <%- include('../../assets/html/links/links.html') %>
-                            </div>
-                        </form>
-                        <div class="mdc-tab-bar" role="tablist">
-                            <div class="mdc-tab-scroller">
-                                <div class="mdc-tab-scroller__scroll-area">
-                                    <div class="mdc-tab-scroller__scroll-content">
-                                        <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                                              <span class="mdc-tab__content">
-                                                <span class="mdc-tab__text-label">HTML</span>
-                                              </span>
-                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                              </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
-                                        <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                                              <span class="mdc-tab__content">
-                                                <span class="mdc-tab__text-label">CSS</span>
-                                              </span>
-                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                              </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
+                                                                        </code></pre>
+                                                </figure>
+                                            </div>
+                                            <div data-section="text" data-type="css" role="tabpanel" class="tab-pane size-fix">
+                                                <figure class="highlight">
+                                                    <pre><code class="language-css">
+<%= include('../../assets/scss/component/texts/text-default.scss') %>
+                                                                        </code></pre>
+                                                </figure>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-content">
-                            <div id="cn-links-html" role="tabpanel" class="tab-pane active size-fix">
-                                <figure class="highlight">
-                            <pre><code class="language-markup">
-<%= include('../../assets/html/links/links.html') %>
-                            </code></pre>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                                </section>
 
-                <section id="button">
-                    <div class="lib-title">Boutons</div>
+                                <section id="table">
+                                    <div class="lib-title">Tableaux</div>
 
-                    <div class="module">
-                        <form class="code-example">
-                            <div class="col-md-12">
-                                <%- include('../../assets/html/buttons/buttons.html') %>
-                            </div>
-                        </form>
-                        <div class="mdc-tab-bar" role="tablist">
-                            <div class="mdc-tab-scroller">
-                                <div class="mdc-tab-scroller__scroll-area">
-                                    <div class="mdc-tab-scroller__scroll-content">
-                                        <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                                              <span class="mdc-tab__content">
-                                                <span class="mdc-tab__text-label">HTML</span>
-                                              </span>
-                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                              </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
-                                        <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                                              <span class="mdc-tab__content">
-                                                <span class="mdc-tab__text-label">CSS</span>
-                                              </span>
-                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                              </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-content">
-                            <div id="cn-buttons-html" role="tabpanel" class="tab-pane active size-fix">
-                                <figure class="highlight">
-                            <pre><code class="language-markup">
-<%= include('../../assets/html/buttons/buttons.html') %>
-                            </code></pre>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section id="table">
-                    <div class="lib-title">Tableaux</div>
-
-                    <div class="module">
-                        <form class="code-example">
-                            <div class="col-md-12">
-                                <%- include('../../assets/html/tables/table-default.html') %>
-                            </div>
-                        </form>
-                        <div class="mdc-tab-bar" role="tablist">
-                            <div class="mdc-tab-scroller">
-                                <div class="mdc-tab-scroller__scroll-area">
-                                    <div class="mdc-tab-scroller__scroll-content">
-                                        <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                                              <span class="mdc-tab__content">
-                                                <span class="mdc-tab__text-label">HTML</span>
-                                              </span>
-                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                              </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
-                                        <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                                              <span class="mdc-tab__content">
-                                                <span class="mdc-tab__text-label">CSS</span>
-                                              </span>
-                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                              </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-content">
-                            <div id="cn-tables-html" role="tabpanel" class="tab-pane active size-fix">
-                                <figure class="highlight">
-                            <pre><code class="language-markup">
+                                    <div class="module">
+                                        <form class="code-example">
+                                            <div>
+<%- include('../../assets/html/tables/table-default.html') %>
+                                            </div>
+                                        </form>
+                                        <div class="mdc-tab-bar" role="tablist">
+                                            <div class="mdc-tab-scroller">
+                                                <div class="mdc-tab-scroller__scroll-area">
+                                                    <div class="mdc-tab-scroller__scroll-content">
+                                                        <button class="mdc-tab mdc-tab--active" role="tab"
+                                                            aria-selected="true" tabindex="0" data-section="table"
+                                                            data-type="html">
+                                                            <span class="mdc-tab__content">
+                                                                <span class="mdc-tab__text-label">HTML</span>
+                                                            </span>
+                                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                            </span>
+                                                            <span class="mdc-tab__ripple"></span>
+                                                        </button>
+                                                        <button class="mdc-tab" role="tab" aria-selected="false"
+                                                            tabindex="0" data-section="table" data-type="css">
+                                                            <span class="mdc-tab__content">
+                                                                <span class="mdc-tab__text-label">CSS</span>
+                                                            </span>
+                                                            <span class="mdc-tab-indicator">
+                                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                            </span>
+                                                            <span class="mdc-tab__ripple"></span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content">
+                                            <div data-section="table" data-type="html" role="tabpanel" class="tab-pane active size-fix">
+                                                <figure class="highlight">
+                                                    <pre><code class="language-markup">
 <%= include('../../assets/html/tables/table-default.html') %>
-                            </code></pre>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="content">
-                    <div class="lib-title">Contenus</div>
-
-                    <div class="module">
-                        <form class="code-example">
-                            <div class="col-md-12">
-                                <%- include('../../assets/html/contents/contents.html') %>
-                            </div>
-                        </form>
-                        <div class="mdc-tab-bar" role="tablist">
-                            <div class="mdc-tab-scroller">
-                                <div class="mdc-tab-scroller__scroll-area">
-                                    <div class="mdc-tab-scroller__scroll-content">
-                                        <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                                              <span class="mdc-tab__content">
-                                                <span class="mdc-tab__text-label">HTML</span>
-                                              </span>
-                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                              </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
-                                        <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                                              <span class="mdc-tab__content">
-                                                <span class="mdc-tab__text-label">CSS</span>
-                                              </span>
-                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                              </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
+                                                                        </code></pre>
+                                                </figure>
+                                            </div>
+                                            <div data-section="table" data-type="css" role="tabpanel" class="tab-pane size-fix">
+                                                <figure class="highlight">
+                                                    <pre><code class="language-css">
+<%= include('../../assets/scss/component/tables/table-default.scss') %>
+                                                                        </code></pre>
+                                                </figure>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-content">
-                            <div id="cn-contents-html" role="tabpanel" class="tab-pane active size-fix">
-                                <figure class="highlight">
-                            <pre><code class="language-markup">
-<%= include('../../assets/html/contents/contents.html') %>
-                            </code></pre>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="form">
-                    <div class="lib-title">Eléments de formulaire</div>
+                                </section>
 
-                    <div class="module">
-                        <div class="code-example">
-                            <div class="col-md-12">
-                                <%- include('../../assets/html/forms/form.html') %>
-                            </div>
-                        </div>
-                        <div class="mdc-tab-bar" role="tablist">
-                            <div class="mdc-tab-scroller">
-                                <div class="mdc-tab-scroller__scroll-area">
-                                    <div class="mdc-tab-scroller__scroll-content">
-                                        <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                                              <span class="mdc-tab__content">
-                                                <span class="mdc-tab__text-label">HTML</span>
-                                              </span>
-                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                              </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
-                                        <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                                              <span class="mdc-tab__content">
-                                                <span class="mdc-tab__text-label">CSS</span>
-                                              </span>
-                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                              </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
+                                <section id="link">
+                                    <div class="lib-title">Liens</div>
+
+                                    <div class="module">
+                                        <form class="code-example">
+                                            <div>
+<%- include('../../assets/html/links/links.html') %>
+                                            </div>
+                                        </form>
+                                        <div class="mdc-tab-bar" role="tablist">
+                                            <div class="mdc-tab-scroller">
+                                                <div class="mdc-tab-scroller__scroll-area">
+                                                    <div class="mdc-tab-scroller__scroll-content">
+                                                        <button class="mdc-tab mdc-tab--active" role="tab"
+                                                            aria-selected="true" tabindex="0" data-section="link"
+                                                            data-type="html">
+                                                            <span class="mdc-tab__content">
+                                                                <span class="mdc-tab__text-label">HTML</span>
+                                                            </span>
+                                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                            </span>
+                                                            <span class="mdc-tab__ripple"></span>
+                                                        </button>
+                                                        <button class="mdc-tab" role="tab" aria-selected="false"
+                                                            tabindex="-1" data-section="link" data-type="css">
+                                                            <span class="mdc-tab__content">
+                                                                <span class="mdc-tab__text-label">CSS</span>
+                                                            </span>
+                                                            <span class="mdc-tab-indicator">
+                                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                            </span>
+                                                            <span class="mdc-tab__ripple"></span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content">
+                                            <div data-section="link" data-type="html" role="tabpanel" class="tab-pane active size-fix">
+                                                <figure class="highlight">
+                                                    <pre><code class="language-markup">
+<%= include('../../assets/html/links/links.html') %>
+                                                                        </code></pre>
+                                                </figure>
+                                            </div>
+                                            <div data-section="link" data-type="css" role="tabpanel" class="tab-pane size-fix">
+                                                <figure class="highlight">
+                                                    <pre><code class="language-css">
+<%= include('../../assets/scss/component/links/links.scss') %>
+                                                                        </code></pre>
+                                                </figure>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-content">
-                            <div id="cn-forms-html" role="tabpanel" class="tab-pane active size-fix">
-                                <figure class="highlight">
-                            <pre><code class="language-markup">
+                                </section>
+
+                                <section id="button">
+                                    <div class="lib-title">Boutons</div>
+
+                                    <div class="module">
+                                        <form class="code-example">
+                                            <div>
+<%- include('../../assets/html/buttons/buttons-example.html') %>
+                                            </div>
+                                        </form>
+                                        <div class="mdc-tab-bar" role="tablist">
+                                            <div class="mdc-tab-scroller">
+                                                <div class="mdc-tab-scroller__scroll-area">
+                                                    <div class="mdc-tab-scroller__scroll-content">
+                                                        <button class="mdc-tab mdc-tab--active" role="tab"
+                                                            aria-selected="true" tabindex="0" data-section="button"
+                                                            data-type="html">
+                                                            <span class="mdc-tab__content">
+                                                                <span class="mdc-tab__text-label">HTML</span>
+                                                            </span>
+                                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                            </span>
+                                                            <span class="mdc-tab__ripple"></span>
+                                                        </button>
+                                                        <button class="mdc-tab" role="tab" aria-selected="false"
+                                                            tabindex="0" data-section="button" data-type="css">
+                                                            <span class="mdc-tab__content">
+                                                                <span class="mdc-tab__text-label">CSS</span>
+                                                            </span>
+                                                            <span class="mdc-tab-indicator">
+                                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                            </span>
+                                                            <span class="mdc-tab__ripple"></span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content">
+                                            <div data-section="button" data-type="html" role="tabpanel" class="tab-pane active size-fix">
+                                                <figure class="highlight">
+                                                    <pre><code class="language-markup">
+<%= include('../../assets/html/buttons/buttons-example.html') %>
+<%= include('../../assets/html/buttons/buttons.html') %>
+                                                                        </code></pre>
+                                                </figure>
+                                            </div>
+                                            <div data-section="button" data-type="css" role="tabpanel" class="tab-pane size-fix">
+                                                <figure class="highlight">
+                                                    <pre><code class="language-css">
+<%= include('../../assets/scss/component/buttons/buttons.scss') %>
+                                                                        </code></pre>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section id="form">
+                                    <div class="lib-title">Formulaires</div>
+
+                                    <div class="module">
+                                        <div class="code-example">
+                                            <div>
+<%- include('../../assets/html/forms/form.html') %>
+                                            </div>
+                                        </div>
+                                        <div class="mdc-tab-bar" role="tablist">
+                                            <div class="mdc-tab-scroller">
+                                                <div class="mdc-tab-scroller__scroll-area">
+                                                    <div class="mdc-tab-scroller__scroll-content">
+                                                        <button class="mdc-tab mdc-tab--active" role="tab"
+                                                            aria-selected="true" tabindex="0" data-section="form"
+                                                            data-type="html">
+                                                            <span class="mdc-tab__content">
+                                                                <span class="mdc-tab__text-label">HTML</span>
+                                                            </span>
+                                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                            </span>
+                                                            <span class="mdc-tab__ripple"></span>
+                                                        </button>
+                                                        <button class="mdc-tab" role="tab" aria-selected="false"
+                                                            tabindex="0" data-section="form" data-type="css">
+                                                            <span class="mdc-tab__content">
+                                                                <span class="mdc-tab__text-label">CSS</span>
+                                                            </span>
+                                                            <span class="mdc-tab-indicator">
+                                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                            </span>
+                                                            <span class="mdc-tab__ripple"></span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content">
+                                            <div data-section="form" data-type="html" role="tabpanel" class="tab-pane active size-fix">
+                                                <figure class="highlight">
+                                                    <pre><code class="language-markup">
 <%= include('../../assets/html/forms/form.html') %>
-                            </code></pre>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="service">
-                    <div class="lib-title">Etat des services</div>
-
-                    <div class="module">
-                        <form class="code-example">
-                            <div class="col-md-12">
-                                <%- include('../../assets/html/services/services.html') %>
-                            </div>
-                        </form>
-                        <div class="mdc-tab-bar" role="tablist">
-                            <div class="mdc-tab-scroller">
-                                <div class="mdc-tab-scroller__scroll-area">
-                                    <div class="mdc-tab-scroller__scroll-content">
-                                        <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                                              <span class="mdc-tab__content">
-                                                <span class="mdc-tab__text-label">HTML</span>
-                                              </span>
-                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                              </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
-                                        <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                                              <span class="mdc-tab__content">
-                                                <span class="mdc-tab__text-label">CSS</span>
-                                              </span>
-                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                              </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
+                                                                        </code></pre>
+                                                </figure>
+                                            </div>
+                                            <div data-section="form" data-type="css" role="tabpanel" class="tab-pane size-fix">
+                                                <figure class="highlight">
+                                                    <pre><code class="language-css">
+<%= include('../../assets/scss/component/forms/form.scss') %>
+                                                                        </code></pre>
+                                                </figure>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-content">
-                            <div id="cn-services-html" role="tabpanel" class="tab-pane active size-fix">
-                                <figure class="highlight">
-                            <pre><code class="language-markup">
+                                </section>
+
+                                <section id="service">
+                                    <div class="lib-title">Etat des services</div>
+
+                                    <div class="module">
+                                        <form class="code-example">
+                                            <div>
+<%- include('../../assets/html/services/services.html') %>
+                                            </div>
+                                        </form>
+                                        <div class="mdc-tab-bar" role="tablist">
+                                            <div class="mdc-tab-scroller">
+                                                <div class="mdc-tab-scroller__scroll-area">
+                                                    <div class="mdc-tab-scroller__scroll-content">
+                                                        <button class="mdc-tab mdc-tab--active" role="tab"
+                                                            aria-selected="true" tabindex="0" data-section="service"
+                                                            data-type="html">
+                                                            <span class="mdc-tab__content">
+                                                                <span class="mdc-tab__text-label">HTML</span>
+                                                            </span>
+                                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                            </span>
+                                                            <span class="mdc-tab__ripple"></span>
+                                                        </button>
+                                                        <button class="mdc-tab" role="tab" aria-selected="false"
+                                                            tabindex="-1" data-section="service" data-type="css">
+                                                            <span class="mdc-tab__content">
+                                                                <span class="mdc-tab__text-label">CSS</span>
+                                                            </span>
+                                                            <span class="mdc-tab-indicator">
+                                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                            </span>
+                                                            <span class="mdc-tab__ripple"></span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content">
+                                            <div data-section="service" data-type="html" role="tabpanel" class="tab-pane active size-fix">
+                                                <figure class="highlight">
+                                                    <pre><code class="language-markup">
 <%= include('../../assets/html/services/services.html') %>
-                            </code></pre>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="tabs">
-                    <div class="lib-title">Onglets</div>
-
-                    <div class="module">
-                        <form class="code-example">
-                            <div class="col-md-12">
-                                <%- include('../../assets/html/tabs/tabs.html') %>
-                            </div>
-                        </form>
-                        <div class="mdc-tab-bar" role="tablist">
-                            <div class="mdc-tab-scroller">
-                                <div class="mdc-tab-scroller__scroll-area">
-                                    <div class="mdc-tab-scroller__scroll-content">
-                                        <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                                              <span class="mdc-tab__content">
-                                                <span class="mdc-tab__text-label">HTML</span>
-                                              </span>
-                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                              </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
-                                        <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                                              <span class="mdc-tab__content">
-                                                <span class="mdc-tab__text-label">CSS</span>
-                                              </span>
-                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                              </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
+                                                                        </code></pre>
+                                                </figure>
+                                            </div>
+                                            <div data-section="service" data-type="css" role="tabpanel" class="tab-pane size-fix">
+                                                <figure class="highlight">
+                                                    <pre><code class="language-css">
+<%= include('../../assets/scss/component/services/services.scss') %>
+                                                                        </code></pre>
+                                                </figure>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-content">
-                            <div id="cn-tabs-html" role="tabpanel" class="tab-pane active size-fix">
-                                <figure class="highlight">
-                            <pre><code class="language-markup">
+                                </section>
+
+                                <section id="divider">
+                                    <div class="lib-title">Séparateurs</div>
+
+                                    <div class="module">
+                                        <form class="code-example">
+                                            <div>
+<%- include('../../assets/html/dividers/dividers.html') %>
+                                            </div>
+                                        </form>
+                                        <div class="mdc-tab-bar" role="tablist">
+                                            <div class="mdc-tab-scroller">
+                                                <div class="mdc-tab-scroller__scroll-area">
+                                                    <div class="mdc-tab-scroller__scroll-content">
+                                                        <button class="mdc-tab mdc-tab--active" role="tab"
+                                                            aria-selected="true" tabindex="0" data-section="divider"
+                                                            data-type="html">
+                                                            <span class="mdc-tab__content">
+                                                                <span class="mdc-tab__text-label">HTML</span>
+                                                            </span>
+                                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                            </span>
+                                                            <span class="mdc-tab__ripple"></span>
+                                                        </button>
+                                                        <button class="mdc-tab" role="tab" aria-selected="false"
+                                                            tabindex="-1" data-section="divider" data-type="css">
+                                                            <span class="mdc-tab__content">
+                                                                <span class="mdc-tab__text-label">CSS</span>
+                                                            </span>
+                                                            <span class="mdc-tab-indicator">
+                                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                            </span>
+                                                            <span class="mdc-tab__ripple"></span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content">
+                                            <div data-section="divider" data-type="html" role="tabpanel" class="tab-pane active size-fix">
+                                                <figure class="highlight">
+                                                    <pre><code class="language-markup">
+<%= include('../../assets/html/dividers/dividers.html') %>
+                                                                        </code></pre>
+                                                </figure>
+                                            </div>
+                                            <div data-section="divider" data-type="css" role="tabpanel" class="tab-pane size-fix">
+                                                <figure class="highlight">
+                                                    <pre><code class="language-css">
+<%= include('../../assets/scss/component/dividers/dividers.scss') %>
+                                                                        </code></pre>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <section id="tabs">
+                                    <div class="lib-title">Onglets</div>
+
+                                    <div class="module">
+                                        <form class="code-example">
+                                            <div>
+<%- include('../../assets/html/tabs/tabs.html') %>
+                                            </div>
+                                        </form>
+                                        <div class="mdc-tab-bar" role="tablist">
+                                            <div class="mdc-tab-scroller">
+                                                <div class="mdc-tab-scroller__scroll-area">
+                                                    <div class="mdc-tab-scroller__scroll-content">
+                                                        <button class="mdc-tab mdc-tab--active" role="tab"
+                                                            aria-selected="true" tabindex="0" data-section="tabs"
+                                                            data-type="html">
+                                                            <span class="mdc-tab__content">
+                                                                <span class="mdc-tab__text-label">HTML</span>
+                                                            </span>
+                                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                            </span>
+                                                            <span class="mdc-tab__ripple"></span>
+                                                        </button>
+                                                        <button class="mdc-tab" role="tab" aria-selected="false"
+                                                            tabindex="-1" data-section="tabs" data-type="css">
+                                                            <span class="mdc-tab__content">
+                                                                <span class="mdc-tab__text-label">CSS</span>
+                                                            </span>
+                                                            <span class="mdc-tab-indicator">
+                                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                            </span>
+                                                            <span class="mdc-tab__ripple"></span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content">
+                                            <div data-section="tabs" data-type="html" role="tabpanel" class="tab-pane active size-fix">
+                                                <figure class="highlight">
+                                                    <pre><code class="language-markup">
 <%= include('../../assets/html/tabs/tabs.html') %>
-                            </code></pre>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section id="modals">
-                    <div class="lib-title">Modals</div>
-
-                    <div class="module">
-                        <form class="code-example">
-                            <div class="col-md-12">
-                                <%- include('../../assets/html/modals/modal-button.html') %>
-                            </div>
-                        </form>
-                        <div class="mdc-tab-bar" role="tablist">
-                            <div class="mdc-tab-scroller">
-                                <div class="mdc-tab-scroller__scroll-area">
-                                    <div class="mdc-tab-scroller__scroll-content">
-                                        <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                                              <span class="mdc-tab__content">
-                                                <span class="mdc-tab__text-label">HTML</span>
-                                              </span>
-                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                              </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
-                                        <button class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
-                                              <span class="mdc-tab__content">
-                                                <span class="mdc-tab__text-label">CSS</span>
-                                              </span>
-                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
-                                              </span>
-                                            <span class="mdc-tab__ripple"></span>
-                                        </button>
+                                                                        </code></pre>
+                                                </figure>
+                                            </div>
+                                            <div data-section="tabs" data-type="css" role="tabpanel" class="tab-pane size-fix">
+                                                <figure class="highlight">
+                                                    <pre><code class="language-css">
+<%= include('../../assets/scss/component/tabs/tabs.scss') %>
+                                                                        </code></pre>
+                                                </figure>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-content">
-                            <div id="cn-modals-html" role="tabpanel" class="tab-pane active size-fix">
-                                <figure class="highlight">
-                            <pre><code class="language-markup">
-<%= include('../../assets/html/modals/modal-button.html') %>
-                            </code></pre>
-                                </figure>
+                                </section>
                             </div>
                         </div>
                     </div>
-                </section>
-            </div>
-        </main>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2 sidenav-sticky">
-            <nav class="sidenav">
-                <div class="title-sidenav">Composants</div>
-                <ul class="nav flex-column">
-                    <li class="nav-item active">
-                        <a href="#title" class="nav-link">Titres</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#text" class="nav-link">Textes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#link" class="nav-link">Liens</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#button" class="nav-link">Boutons</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#table" class="nav-link">Tableaux</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#content" class="nav-link">Contenus</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#form" class="nav-link">Eléments de formulaire</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#service" class="nav-link">Etat des services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#tabs" class="nav-link">Onglets</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#modals" class="nav-link">Modals</a>
-                    </li>
-                </ul>
-            </nav>
+                </div>
+            </main>
         </div>
+        <aside class="mdc-drawer">
+            <div class="mdc-drawer__header">
+                <h1 class="mdc-drawer__title cn-title .lg orange"><i class="icon icon-logo-carotte"></i> Lib Nickel</h1>
+                <h2 class="mdc-drawer__subtitle cn-title .md">Composants</h2>
+            </div>
+            <div class="mdc-drawer__content">
+                <div class="mdc-list">
+                    <a class="mdc-list-item mdc-list-item--activated" href="#logo" aria-selected="false">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">Logo</i>
+                    </a>
+                    <a class="mdc-list-item" href="#title" aria-selected="false">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">Titres</i>
+                    </a>
+                    <a class="mdc-list-item" href="#text" aria-selected="false">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">Textes</i>
+                    </a>
+                    <a class="mdc-list-item" href="#table" aria-selected="false">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">Tableaux</i>
+                    </a>
+                    <a class="mdc-list-item" href="#link" aria-selected="false">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">Liens</i>
+                    </a>
+                    <a class="mdc-list-item" href="#button" aria-selected="false">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">Boutons</i>
+                    </a>
+                    <a class="mdc-list-item" href="#form" aria-selected="false">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">Formulaires</i>
+                    </a>
+                    <a class="mdc-list-item" href="#service" aria-selected="false">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">Etat des services</i>
+                    </a>
+                    <a class="mdc-list-item" href="#divider" aria-selected="false">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">Séparateurs</i>
+                    </a>
+                    <a class="mdc-list-item" href="#tabs" aria-selected="false">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">Onglets</i>
+                    </a>
+                </div>
+            </div>
+        </aside>
     </div>
-</div>
 
-<div class="grid-helper"></div>
+    <div class="grid-helper"></div>
 
-<script src="../js/default.js"></script>
+    <script src="../js/default.js"></script>
+    <script src="../js/referentiel.js" type="text/javascript"></script>
 </body>
+
 </html>

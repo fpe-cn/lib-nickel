@@ -2,6 +2,8 @@
 @import "~@material/layout-grid/mdc-layout-grid.scss";
 @import "~@material/card/mdc-card.scss";
 
+@import "module/mdc-drawer.scss";
+
 $basePathTypography: "../";
 @import "../../assets/scss/common/all";
 
@@ -9,71 +11,81 @@ $basePathTypography: "../";
 
 @import "../../assets/scss/component/header/header";
 
+
 /* Icons */
-.cn-icons-list {
-    padding-left: 0;
-    list-style: none;
-
-    li {
-        float: left;
-        width: 20%;
-        height: 115px;
-        padding: 10px;
-        font-size: 14px;
-        line-height: 1.4;
-        text-align: center;
-        background-color: #e6e6e6;
-        border:1px solid white;
-
-        &:hover {
-            color: white;
-            background-color: $color-compte-nickel;
-
-            .icon:before {
-                color:white;
+.wrapper-menu {
+    display: flex;
+    .cn-icons-list {
+        padding-left: 0;
+        list-style: none;
+    
+        li {
+            float: left;
+            width: 20%;
+            height: 115px;
+            padding: 10px;
+            font-size: 14px;
+            line-height: 1.4;
+            text-align: center;
+            background-color: #e6e6e6;
+            border:1px solid white;
+    
+            &:hover {
+                color: white;
+                background-color: $color-compte-nickel;
+    
+                .icon:before {
+                    color:white;
+                }
+            }
+    
+            &.item-lg {
+                width: 25%;
+            }
+    
+            .icon, .icon-amp {
+                display: inline-block;
+                margin-top: 5px;
+                margin-bottom: 10px;
+                font-size: 45px;
+                line-height: 30px;
+                color: $color-grey--dark;
+            }
+    
+            .icon-class {
+                display: block;
+                text-align: center;
+                word-wrap: break-word;
+                font-size: 14px;
             }
         }
-
-        &.item-lg {
-            width: 25%;
-        }
-
-        .icon, .icon-amp {
-            display: inline-block;
-            margin-top: 5px;
-            margin-bottom: 10px;
-            font-size: 45px;
-            line-height: 30px;
-            color: $color-grey--dark;
-        }
-
-        .icon-class {
-            display: block;
-            text-align: center;
-            word-wrap: break-word;
-            font-size: 14px;
-        }
     }
-}
-
-svg {
-    height: 30px;
-}
-
-.alert {
-    margin-top: 30px;
-    margin-bottom: 0;
+    
+    svg {
+        height: 30px;
+    }
+    
+    .alert {
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
 }
 
 @media (min-width: 768px) {
-    .cn-icons {
-        margin-right: 0;
-        margin-left: 0;
-
-        .cn-icons-list li {
-            width: 12.5%;
-            font-size: 12px;
+    .wrapper-menu{
+        .cn-icons {
+            margin-right: 0;
+            margin-left: 0;
+    
+            .cn-icons-list li {
+                width: 12.5%;
+                font-size: 12px;
+            }
         }
     }
-
+}
+@media (max-width: 768px) {
+    .wrapper-menu{
+        display: block;
+    }
 }
