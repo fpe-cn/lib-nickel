@@ -12,7 +12,7 @@ $height-inputs-tablet : 80px !default;
     .cn-form-group{
         margin-bottom: 10px;
         label{
-            display: block;  
+            display: block;
             margin-bottom: 5px;
             color: $color-compte-nickel;
             font-size: 20px;
@@ -58,7 +58,7 @@ $height-inputs-tablet : 80px !default;
             }
 
         }
-        
+
         .cn-input-group{
             position: relative;
             &.icon-left,
@@ -138,10 +138,6 @@ $height-inputs-tablet : 80px !default;
             .icon-right{
                 .icon {
                     line-height: 120px;
-
-                    .device-borne &{
-                        line-height: 120px;
-                    }
                 }
             }
         }
@@ -197,7 +193,7 @@ $height-inputs-tablet : 80px !default;
                     transform: scale(1);
                 }
             }
-                
+
             .mdc-radio__native-control:not(:checked)+
             .mdc-radio__background{
                 .mdc-radio__outer-circle{
@@ -283,7 +279,7 @@ $height-inputs-tablet : 80px !default;
 
         .mdc-form-field{
             label{
-                padding-left: 0; 
+                padding-left: 0;
             }
             .mdc-radio{
                 .mdc-radio__background {
