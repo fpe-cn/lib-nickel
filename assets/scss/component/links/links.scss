@@ -58,6 +58,14 @@
             }
         }
     }
+
+    .device-borne &{
+        font-size: 26px;
+        //font-weight: 300;
+        //font-style: normal;
+        //font-stretch: normal;
+        //line-height: 1.38;
+    }
 }
 
 @include mdc-layout-grid-media-query_('phone') {

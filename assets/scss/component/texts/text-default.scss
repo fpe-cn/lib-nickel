@@ -1,6 +1,10 @@
 .cn-text-default {
   color: #000;
 
+  .device-borne & {
+    font-size: 26px;
+  }
+
   .orange,
   &.orange {
     color:$color-compte-nickel;
