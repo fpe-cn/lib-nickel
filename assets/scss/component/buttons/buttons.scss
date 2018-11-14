@@ -94,18 +94,12 @@
             .icon {
                 font-size: 20px;
                 right: 20px;
-                &:before {
-                    line-height: 20px;
-                }
             }
         }
         &.icon-left {
             .icon {
                 font-size: 20px;
                 left: 20px;
-                &:before {
-                    line-height: 20px;
-                }
             }
         }
         &.icon-only {
@@ -121,21 +115,11 @@
             .icon {
                 font-size: 20px;
                 left: 20px;
-                &:before {
-                    line-height: 20px;
-                }
                 &-a {
                     font-size: 20px;
                     right: 20px;
-                    &:after {
-                        line-height: 20px;
-                    }
                 }
             }
         }
-    }
-
-    a.cn-button{
-        line-height: 50px;
     }
 }
