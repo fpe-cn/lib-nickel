@@ -58,6 +58,10 @@
             }
         }
     }
+
+    .device-borne &{
+        font-size: 26px;
+    }
 }
 
 @include mdc-layout-grid-media-query_('phone') {

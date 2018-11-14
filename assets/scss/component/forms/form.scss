@@ -3,6 +3,7 @@
 @import "~@material/radio/mdc-radio";
 @import "~@material/switch/mdc-switch";
 $height-inputs: 60px !default;
+$height-inputs-tablet : 80px !default;
 .cn-form {
     width: 100%;
     background-color: $color-grey--light;
@@ -11,11 +12,16 @@ $height-inputs: 60px !default;
     .cn-form-group{
         margin-bottom: 10px;
         label{
-            display: block;  
+            display: block;
             margin-bottom: 5px;
             color: $color-compte-nickel;
             font-size: 20px;
             font-weight: $medium;
+
+            .device-borne & {
+                font-size: 28px;
+                margin-bottom: 15px;
+            }
         }
         .cn-form-control{
             width: 100%;
@@ -45,8 +51,14 @@ $height-inputs: 60px !default;
                 color: #000;
             }
 
+            .device-borne & {
+                height: $height-inputs-tablet;
+                font-size: 28px;
+                padding: 20px 20px;
+            }
+
         }
-        
+
         .cn-input-group{
             position: relative;
             &.icon-left,
@@ -63,6 +75,14 @@ $height-inputs: 60px !default;
                         color: #fff;
                         font-size: 25px;
                         vertical-align: text-bottom;
+                    }
+                    .device-borne &{
+                        width : $height-inputs-tablet;
+                        line-height: $height-inputs-tablet;
+
+                        &:before {
+                            font-size: 30px;
+                        }
                     }
                 }
             }
@@ -154,7 +174,7 @@ $height-inputs: 60px !default;
         width: 100%;
         margin-bottom: 10px;
         label{
-            padding-left: 10px; 
+            padding-left: 10px;
         }
         .mdc-radio{
             .mdc-radio__background {
@@ -173,7 +193,7 @@ $height-inputs: 60px !default;
                     transform: scale(1);
                 }
             }
-                
+
             .mdc-radio__native-control:not(:checked)+
             .mdc-radio__background{
                 .mdc-radio__outer-circle{
@@ -259,7 +279,7 @@ $height-inputs: 60px !default;
 
         .mdc-form-field{
             label{
-                padding-left: 0; 
+                padding-left: 0;
             }
             .mdc-radio{
                 .mdc-radio__background {

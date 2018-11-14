@@ -14,6 +14,10 @@
     &.center {
         text-align: center;
     }
+
+    .device-borne & {
+        font-size: 36px;
+    }
 }
 
 @include mdc-layout-grid-media-query_('phone') {
