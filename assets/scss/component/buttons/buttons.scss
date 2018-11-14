@@ -1,6 +1,7 @@
 .cn-button {
     display: inline-block;
     height: 70px;
+    line-height: 70px;
     width: 400px;
     text-align: center;
     border-radius: 100px;
@@ -11,6 +12,7 @@
         width:100%;
         max-width: 600px;
         height: 80px;
+        line-height: 80px;
         font-size: 36px;
     }
 
@@ -39,8 +41,7 @@
             font-size: 30px;
             right: 30px;
             &:before {
-                line-height: 35px;
-                // vertical-align: text-top;
+                vertical-align: text-bottom;
             }
         }
     }
@@ -51,7 +52,7 @@
             font-size: 30px;
             left: 30px;
             &:before {
-                line-height: 35px;
+                vertical-align: text-bottom;
             }
         }
     }
@@ -61,7 +62,6 @@
             display: block;
             font-size: 30px;
             &:before {
-                line-height: 35px;
                 vertical-align: text-bottom;
             }
         }
@@ -73,26 +73,17 @@
             font-size: 30px;
             left: 30px;
             &:before {
-                line-height: 35px;
+                vertical-align: text-bottom;
             }
             &-a {
                 position: absolute;
                 font-size: 30px;
                 right: 30px;
                 &:after {
-                    line-height: 35px;
+                    vertical-align: text-bottom;
                 }
             }
         }
-    }
-}
-a.cn-button{
-    line-height: 70px;
-
-    .device-borne &{
-        //width: 200px;
-        height: 80px;
-        font-size: 26px;
     }
 }
 
