@@ -1,54 +1,39 @@
-.cn-link-default {
+.cn-link {
     color: #000;
     text-decoration: underline;
     font-weight: $medium;
-    &:hover {
-        color: $color-compte-nickel;
-        text-decoration: none;
-    }
-}
-
-.cn-link-inverse {
-    color: $color-compte-nickel;
-    font-weight: $medium;
-    &:hover {
-        color: #000;
-        text-decoration: none;
-    }
-}
-
-.cn-link-list {
-    color: #000;
-    font-weight: $medium;
-    text-decoration: none;
-    &:hover {
-        color: $color-compte-nickel;
-    }
-}
-
-.cn-link-orange {
-    color: $color-compte-nickel;
-    &:hover {
-        color: $color-compte-nickel;
-        text-decoration: underline;
-    }
-}
-
-.cn-link-grey {
-    color: $color-grey--dark;
-    font-weight: $medium;
-    &:hover {
-        color: $color-grey--dark;
-        text-decoration: underline;
-    }
-}
-
-.cn-link-default,
-.cn-link-inverse,
-.cn-link-list,
-.cn-link-orange,
-.cn-link-grey {
     margin-right: 30px;
+    &:hover {
+        color: $color-compte-nickel;
+        text-decoration: none;
+    }
+
+    &.inverse {
+        color: $color-compte-nickel;
+        &:hover {
+            color: #000;
+        }
+    }
+
+    &.list {
+        text-decoration: none;
+    }
+
+    &.orange {
+        color: $color-compte-nickel;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &.grey {
+        color: $color-grey--dark;
+        &:hover {
+            color: $color-grey--dark;
+            text-decoration: underline;
+        }
+    }
+
     &.icon-right {
         .icon {
             margin: 0 10px;
@@ -65,17 +50,13 @@
 }
 
 @include mdc-layout-grid-media-query_('phone') {
-  .cn-link-default,
-  .cn-link-inverse,
-  .cn-link-list,
-  .cn-link-orange,
-  .cn-link-grey {
-    margin-right: 15px;
-    &.icon-right {
-        .icon {
-            margin: 0 5px;
-            font-size: 15px;
+    .cn-link{
+        margin-right: 15px;
+        &.icon-right {
+            .icon {
+                margin: 0 5px;
+                font-size: 15px;
+            }
         }
     }
-  }
 }
