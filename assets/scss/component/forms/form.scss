@@ -9,6 +9,10 @@ $height-inputs-tablet : 80px !default;
     background-color: $color-grey--light;
     margin: 10px;
     padding: 40px;
+
+    &.white{
+        background-color: #fff;
+    }
     .cn-form-group{
         margin-bottom: 10px;
         label{
@@ -19,7 +23,7 @@ $height-inputs-tablet : 80px !default;
             font-weight: $medium;
 
             .device-borne & {
-                font-size: 28px;
+                font-size: 30px;
                 margin-bottom: 15px;
             }
         }
