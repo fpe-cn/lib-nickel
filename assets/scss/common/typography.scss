@@ -34,7 +34,7 @@ sans-serif;
 $medium: 500;
 $bold: 800;
 
-body {
+html, body {
     @include font;
 }
 
