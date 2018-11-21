@@ -89,6 +89,7 @@
 @include mdc-layout-grid-media-query_('phone') {
     .cn-button {
         height: 50px;
+        line-height: 50px;
         width: 280px;
         &.icon-right {
             .icon {
