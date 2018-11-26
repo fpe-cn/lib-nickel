@@ -10,13 +10,19 @@
         color: black;
     }
 
-    @mixin borne {
-        height:70px;
-        margin:0 20px;
-    }
-
     .device-borne & {
-        @include borne;
+        position: relative;
+        height: 70px;
+        width: 250px;
+        margin: 0;
+
+        span {
+            position: absolute;
+            bottom: -5px;
+            left: 80px;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
     }
 
     &:before {
@@ -61,22 +67,16 @@
             color:$color-compte-nickel;
             font-size:36px;
 
-            @mixin borne {
-                font-size:30px;
-            }
             .device-borne & {
-                @include borne;
+                font-size: 70px;
             }
         }
 
         &-logo-nickel {
             font-size:84px;
 
-            @mixin borne {
-                font-size:70px;
-            }
             .device-borne & {
-                @include borne;
+                font-size: 160px;
             }
         }
 
