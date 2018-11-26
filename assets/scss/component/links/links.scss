@@ -3,6 +3,9 @@
     text-decoration: underline;
     font-weight: $medium;
     margin-right: 30px;
+    border: 0;
+    background-color: transparent;
+
     &:hover {
         color: $color-compte-nickel;
         text-decoration: none;
