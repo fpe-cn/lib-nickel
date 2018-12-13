@@ -25,28 +25,10 @@
         }
     }
 
-    &:before {
-        .theme-lib & {
-            content: 'LiB';
-            position:absolute;
-            top: 8px;
-            left: 36px;
-            font-size: 9px;
-            font-weight: 800;
-            letter-spacing: 2px;
-        }
-    }
-
     &.big {
         height:170px;
         overflow:hidden;
         justify-content: center;
-
-        &:before {
-            .theme-lib & {
-                content: "";
-            }
-        }
 
         .icon {
             &-logo-carotte {
@@ -73,11 +55,18 @@
         }
 
         &-logo-nickel {
-            font-size:84px;
+            font-size:90px;
 
             .device-borne & {
                 font-size: 160px;
             }
+        }
+
+        &-slogan-nickel {
+            font-size: 70px;
+            position:absolute;
+            bottom:-17px;
+            left: 43px;
         }
 
         &:before {
@@ -101,16 +90,6 @@
 
         .icon:before {
             line-height: 60px;
-        }
-    }
-}
-
-@include mdc-layout-grid-media-query_('phone') {
-    .logo {
-        &:before {
-            .theme-lib & {
-                top: -2px;
-            }
         }
     }
 }

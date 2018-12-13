@@ -1,4 +1,4 @@
-let $ = require('../../assets/js/dom');
+let $ = require('./dom');
 
 module.exports.init = () => {
     $('[data-toggle="tab"]').forEach( tab => {

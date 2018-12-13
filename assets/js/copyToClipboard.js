@@ -1,4 +1,4 @@
-let $ = require('./dom');
+const $ = require('./dom');
 
 module.exports.init = function () {
     $('[data-role="copy-to-clipboard"]').on('click', (e) => {

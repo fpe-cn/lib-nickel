@@ -1,10 +1,20 @@
+@mixin button-orange-style {
+    display: inline-block;
+    text-align: center;
+    border-radius: 35px;
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
+    border: none;
+    background-color: $color-compte-nickel;
+    color: #fff;
+}
+
 .cn-button {
     display: inline-block;
     height: 70px;
     line-height: 70px;
     width: 400px;
     text-align: center;
-    border-radius: 100px;
+    border-radius: 35px;
     box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
     border: none;
     margin-bottom: 10px;

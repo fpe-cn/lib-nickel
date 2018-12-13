@@ -1,9 +1,19 @@
 @import "../logo/logo";
 @import "../titles/bloc-title";
+@import "../buttons/buttons";
+
+body {
+    position: relative;
+    padding-top: 80px;
+}
 
 .header {
+    position:fixed;
+    z-index: 100;
+    top: 0;
     width: 100%;
     background-color: white;
+    box-shadow: 0 0 10px 0 $color-grey;
 
     .wrapper-nav {
         max-width: 1200px;
@@ -14,6 +24,21 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+
+        .create-account-link {
+            display: none;
+            border-radius: 100px;
+            background-color: $color-compte-nickel;
+            box-shadow: 0 2px 14px 0 rgba(0,0,0,0.2);
+            height:42px;
+            line-height: 42px;
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+            white-space: nowrap;
+            max-width: 142px;
+            margin: 2px 0 0 10px;
+        }
 
         .toggler {
             display:inline-block;
@@ -45,6 +70,7 @@
 
         .nav {
             display:flex;
+            align-items: center;
 
             &.show {
                 height: calc(100vh - 60px);
@@ -52,21 +78,27 @@
             }
 
             &-item {
-                padding:0 20px;
+                padding:0 14px;
 
                 &:last-child {
                     .nav-link {
-                        padding-left: 40px;
-                        padding-right: 40px;
-                        border-radius: 100px;
-                        border: 1px solid $color-grey--dark;
-                        box-shadow: 0 0 1px 0px $color-grey--dark inset, 0 0 1px 0px $color-grey--dark;
+                        @include button-orange-style;
+                        width: 200px;
+                        height: 54px;
+                        line-height: 54px;
+                        padding: 0;
+
+                        &:hover {
+                            background-color: $color-compte-nickel--dark;
+                            color: white;
+                            text-decoration: none;
+                        }
                     }
                 }
 
                 .nav-link {
                     color: $color-grey--dark;
-                    font-size: 16px;
+                    font-size: 18px;
                     font-weight: 400;
                     padding-top: 15px;
                     padding-bottom: 15px;

@@ -1,9 +1,16 @@
-<header class="header">
+<header class="header" data-role="main-nav">
     <nav class="wrapper-nav">
-        <a href="https://compte-nickel.fr" rel="home" class="logo">
-            <i class="icon icon-logo-carotte"></i>
-            <i class="icon icon-logo-nickel"></i>
-        </a>
+        <div>
+            <a href="https://compte-nickel.fr" rel="home" class="logo" data-role="princ">
+                <i class="icon icon-logo-carotte"></i>
+                <i class="icon icon-logo-nickel"></i>
+                <i class="icon icon-slogan-nickel"></i>
+            </a>
+
+            <a href="https://souscription.compte-nickel.fr" class="cn-button orange create-account-link" data-role="second">
+                Ouvrir un compte
+            </a>
+        </div>
 
         <button class="toggler" type="button" data-role="toggler-main-nav">
             <span class="icon-a icon-arrow-bottom-light-a">Menu</span>
@@ -47,4 +54,3 @@
         </ul>
     </nav>
 </header>
-<%- include('../../../assets/html/titles/bloc-title.html') %>
