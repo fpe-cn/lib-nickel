@@ -21,12 +21,12 @@ sans-serif;
 @mixin font {
     font-family: Muller Narrow;
     font-style: normal;
-    font-size: 22px;
+    font-size: 18px;
     line-height: 26px;
     font-weight: 300;
 
     @include mdc-layout-grid-media-query_('phone') {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 18px;
     }
 }

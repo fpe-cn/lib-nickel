@@ -28,7 +28,7 @@ module.exports.init = function () {
         window.addEventListener('scroll', e => {
             scroll = window.scrollY
 
-            if (scroll >= 400) {
+            if (scroll >= 300) {
                 $('[data-role="princ"]').css({'display': 'none'})
                 $('[data-role="second"]').css({'display': 'block'})
             } else {

@@ -2,10 +2,13 @@
     color: #000;
     font-weight: $medium;
     &.lg{
-        font-size:44px;
+        font-size:36px;
     }
     &.md{
-        font-size:38px;
+        font-size:32px;
+    }
+    &.sm {
+        font-size: 26px;
     }
     &.orange {
         color: $color-compte-nickel;

@@ -53,11 +53,8 @@
     }
 
     .cn-button {
-        margin: 0 auto;
-        width: 200px;
-        line-height: 70px;
-        box-shadow: none;
-        border: 1px solid $color-grey;
+        width: auto;
+        padding: 0 30px;
     }
 }
 @include mdc-layout-grid-media-query_('tablet'){
@@ -66,9 +63,6 @@
             .text {
                 margin: auto;
             }
-        }
-        .cn-button{
-            line-height: 70px;
         }
     }
 }
@@ -88,10 +82,6 @@
             .text {
                 margin: auto;
             }
-        }
-        .cn-button{
-            width: 150px;
-            line-height: 50px;
         }
     }
 }

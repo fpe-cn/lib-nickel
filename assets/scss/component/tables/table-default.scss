@@ -2,8 +2,6 @@
     table-layout: fixed;
     border-collapse: separate;
     border-spacing: 0;
-    border: 1px solid $color-grey;
-    border-radius: 7px;
     width: 100%;
 
     thead {
@@ -12,28 +10,75 @@
             color: $color-compte-nickel;
             font-weight: $medium;
             border-right: 1px solid $color-grey;
+            border-top: 1px solid $color-grey;
             border-bottom: 1px solid $color-grey;
             text-align: center;
 
+            &:first-child {
+                border-top-left-radius: 10px;
+                border-left: 1px solid $color-grey;
+            }
+
             &:last-child {
-                border-right-width: 0;
+                border-top-right-radius: 10px;
+            }
+        }
+
+        &.bg-orange {
+            th {
+                color: white;
+                background-color: $color-compte-nickel;
+                border-color: $color-compte-nickel;
+                border-right: 1px solid white;
+                font-size: 30px;
+                padding: 26px 10px;
+
+                &:last-child {
+                    border-right-color: $color-compte-nickel;
+                }
             }
         }
     }
 
     tbody {
-        tr {
-            &:nth-child(even) {
-                background-color: $color-grey--light;
-            }
+        &.odd-even {
+            tr {
+                &:nth-child(even) {
+                    background-color: $color-grey--light;
+                }
 
-            td {
-                padding: 20px 30px;
-                color: #000;
-                border-right: 1px solid $color-grey;
+                td {
+                    border-bottom: 0;
+                }
 
                 &:last-child {
-                    border-right-width: 0;
+                    td {
+                        border-bottom: 1px solid $color-grey;
+                    }
+                }
+            }
+        }
+        tr {
+            td {
+                padding: 18px;
+                color: #000;
+                border-bottom: 1px solid $color-grey;
+                border-right: 1px solid $color-grey;
+
+                &:first-child {
+                    border-left: 1px solid $color-grey;
+                }
+            }
+
+            &:last-child {
+                td {
+                    &:first-child {
+                        border-bottom-left-radius: 10px;
+                    }
+
+                    &:last-child {
+                        border-bottom-right-radius: 10px;
+                    }
                 }
             }
         }

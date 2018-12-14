@@ -8,14 +8,17 @@
     color: #fff;
 }
 
+$icon-size-only: 24px;
+$icon-size: 16px;
+$height-button: 54px;
+
 .cn-button {
     display: inline-block;
-    height: 70px;
-    line-height: 70px;
-    width: 400px;
+    height: $height-button;
+    line-height: $height-button;
+    width: 300px;
     text-align: center;
     border-radius: 35px;
-    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
     border: none;
     margin-bottom: 10px;
 
@@ -29,18 +32,21 @@
     }
 
     &.orange {
+        box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
         background-color: $color-compte-nickel;
         color: #fff;
         &:hover {
             background-color: $color-compte-nickel--dark;
             text-decoration: none;
+            box-shadow: none;
         }
     }
-    &.white {
+    &.border-grey {
         background-color: #fff;
-        color: $color-compte-nickel;
+        color: $color-grey--dark;
+        border: 1px solid $color-grey--dark;
         &:hover {
-            background-color: $color-compte-nickel;
+            background-color: $color-grey--dark;
             color: #fff;
             text-decoration: none;
         }
@@ -49,8 +55,8 @@
         position: relative;
         .icon {
             position: absolute;
-            font-size: 30px;
-            right: 30px;
+            font-size: $icon-size;
+            right: 24px;
             &:before {
                 vertical-align: text-bottom;
             }
@@ -60,18 +66,18 @@
         position: relative;
         .icon {
             position: absolute;
-            font-size: 30px;
-            left: 30px;
+            font-size: $icon-size;
+            left: 24px;
             &:before {
                 vertical-align: text-bottom;
             }
         }
     }
     &.icon-only {
-        width: 70px;
+        width: $height-button;
         .icon {
             display: block;
-            font-size: 30px;
+            font-size: $icon-size-only;
             &:before {
                 vertical-align: text-bottom;
             }
@@ -81,14 +87,14 @@
         position: relative;
         .icon {
             position: absolute;
-            font-size: 30px;
+            font-size: $icon-size;
             left: 30px;
             &:before {
                 vertical-align: text-bottom;
             }
             &-a {
                 position: absolute;
-                font-size: 30px;
+                font-size: $icon-size;
                 right: 30px;
                 &:after {
                     vertical-align: text-bottom;

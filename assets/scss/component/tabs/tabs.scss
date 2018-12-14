@@ -1,4 +1,4 @@
-$height-tabs: 80px !default;
+$height-tabs: 65px !default;
 .cn-nav-tabs {
     border: 0;
     list-style: none;
@@ -7,6 +7,13 @@ $height-tabs: 80px !default;
     li.item {
         flex-grow: 1;
         height: $height-tabs;
+
+        &:last-child {
+            a {
+                border-right: 0;
+            }
+        }
+
         a {
             position: relative;
             display: block;
@@ -16,14 +23,20 @@ $height-tabs: 80px !default;
             text-align: center;
             color: #000;
             padding: 0;
+            border-right: 1px solid $color-grey--dark;
+
             span {
                 display: inline-block;
                 vertical-align: middle;
+                font-size: 20px;
+                font-weight: 500;
                 line-height: 1;
             }
             &.active {
                 color: white;
                 background-color: $color-compte-nickel;
+                border-right: 0;
+
                 &:after {
                     content: "";
                     width: 0;
