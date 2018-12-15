@@ -1,0 +1,39 @@
+.breadcrumbs {
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    align-items: center;
+    line-height: 24px;
+    margin: 0 0 30px;
+
+    &-item {
+        &__link {
+            font-size: 14px;
+            line-height: 24px;
+            color: $color-compte-nickel;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &:last-child {
+            .breadcrumbs-item__link {
+                color: black;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .icon-arrow-right-light {
+        margin: 0 8px;
+
+        &:before {
+            font-size: 10px;
+            vertical-align: baseline;
+        }
+    }
+}

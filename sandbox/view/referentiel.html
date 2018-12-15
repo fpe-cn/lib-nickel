@@ -721,6 +721,64 @@
                                         </div>
                                     </div>
                                 </section>
+
+                                <section id="breadcrumbs">
+                                    <div class="lib-title">Fil d'ariane</div>
+
+                                    <div class="module">
+                                        <form class="code-example">
+                                            <div>
+                                                <%- include('../../assets/html/breadcrumbs/breadcrumbs.html') %>
+                                            </div>
+                                        </form>
+                                        <div class="mdc-tab-bar" role="tablist">
+                                            <div class="mdc-tab-scroller">
+                                                <div class="mdc-tab-scroller__scroll-area">
+                                                    <div class="mdc-tab-scroller__scroll-content">
+                                                        <button class="mdc-tab mdc-tab--active" role="tab"
+                                                                aria-selected="true" tabindex="0" data-section="breadcrumbs"
+                                                                data-type="html">
+                                                            <span class="mdc-tab__content">
+                                                                <span class="mdc-tab__text-label">HTML</span>
+                                                            </span>
+                                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                            </span>
+                                                            <span class="mdc-tab__ripple"></span>
+                                                        </button>
+                                                        <button class="mdc-tab" role="tab" aria-selected="false"
+                                                                tabindex="-1" data-section="breadcrumbs" data-type="css">
+                                                            <span class="mdc-tab__content">
+                                                                <span class="mdc-tab__text-label">CSS</span>
+                                                            </span>
+                                                            <span class="mdc-tab-indicator">
+                                                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                                                            </span>
+                                                            <span class="mdc-tab__ripple"></span>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-content">
+                                            <div data-section="breadcrumbs" data-type="html" role="tabpanel" class="tab-pane active size-fix">
+                                                <figure class="highlight">
+                                                    <pre><code class="language-markup">
+<%= include('../../assets/html/breadcrumbs/breadcrumbs.html') %>
+                                                                        </code></pre>
+                                                </figure>
+                                            </div>
+                                            <div data-section="frames" data-type="css" role="tabpanel" class="tab-pane size-fix">
+                                                <figure class="highlight">
+                                                    <pre><code class="language-css">
+<%= include('../../assets/scss/component/frames/frame.scss') %>
+<%= include('../../assets/scss/component/frames/frame-border.scss') %>
+                                                                        </code></pre>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
                             </div>
                         </div>
                     </div>
@@ -769,6 +827,9 @@
                     </a>
                     <a class="mdc-list-item" href="#frames" aria-selected="false">
                         <i class="material-icons mdc-list-item__graphic" aria-hidden="true">Encadrés</i>
+                    </a>
+                    <a class="mdc-list-item" href="#breadcrumbs" aria-selected="false">
+                        <i class="material-icons mdc-list-item__graphic" aria-hidden="true">Fil d'ariane</i>
                     </a>
                 </div>
             </div>
