@@ -49,6 +49,10 @@ $height-inputs-tablet : 80px !default;
 
             &.error{
                 color: $color-red;
+
+                &.border-grey{
+                    border-color: $color-red;
+                }
             }
 
             &::placeholder{
