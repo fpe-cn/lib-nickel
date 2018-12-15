@@ -10,6 +10,8 @@
 
     &.black {
         color: black;
+        text-decoration: underline;
+
         &:hover {
             color: $color-compte-nickel;
             text-decoration: none;

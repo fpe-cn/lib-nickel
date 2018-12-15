@@ -58,8 +58,8 @@
     }
 }
 @include mdc-layout-grid-media-query_('tablet'){
-    .cn-service{
-        .status{
+    .cn-service {
+        .status {
             .text {
                 margin: auto;
             }
@@ -67,8 +67,8 @@
     }
 }
 @include mdc-layout-grid-media-query_('phone') {
-    .cn-service{
-        .status{
+    .cn-service {
+        .status {
             .chip {
                 width: 20px;
                 height: 20px;

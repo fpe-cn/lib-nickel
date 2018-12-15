@@ -1,0 +1,46 @@
+.wrapper-list-with-title {
+    position:relative;
+    max-width: 556px;
+    margin-top: 20px;
+
+    .title {
+        width: 80%;
+        height: 50px;
+        line-height: 50px;
+        position: absolute;
+        left: 10%;
+        top:-25px;
+        border: 1px solid $color-grey;
+        border-radius: 25px;
+        text-align: center;
+        background-color: white;
+        z-index: 2;
+
+        font-size: 26px;
+        font-weight: $medium;
+        color: $color-compte-nickel;
+    }
+
+    .cn-list {
+        width: 100%;
+        border: 1px solid $color-grey;
+        border-radius: 10px;
+        padding: 44px 20px 25px;
+
+        &__item {
+            padding: 9px 0;
+
+            .cn-link {
+                width: 100%;
+                display:flex;
+                justify-content: space-between;
+
+                &:hover {
+                    .icon {
+                        color: $color-compte-nickel;
+                    }
+                }
+            }
+        }
+    }
+}

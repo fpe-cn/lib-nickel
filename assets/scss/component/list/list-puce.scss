@@ -1,0 +1,84 @@
+.cn-list {
+
+    &.puce {
+        .cn-list__item {
+            position:relative;
+            padding-left: 18px;
+            margin-top: 18px;
+
+            &:before {
+                content: "";
+                display:block;
+                width: 10px;
+                height: 3px;
+                background-color: $color-compte-nickel;
+                border-radius: 5px;
+
+                position:absolute;
+                top: 12px; left: 0;
+            }
+
+            .cn-list {
+                &__item {
+                    &:before {
+                        background-color: $color-grey--dark;
+                    }
+
+                    .cn-list {
+                        &__item {
+                            &:before {
+                                background-color: $color-grey;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.number {
+            counter-reset: item;
+
+            .cn-list__item {
+                position:relative;
+                padding-left: 34px;
+
+                &:before {
+                    content: counter(item) "";
+                    counter-increment: item;
+                    display:block;
+                    width: 25px;
+                    height: 25px;
+                    line-height: 25px;
+                    text-align: center;
+                    font-size: 14px;
+                    font-weight: $medium;
+                    background-color: $color-compte-nickel;
+                    color :white;
+                    border-radius: 16px;
+
+                    position:absolute;
+                    top: 0; left: 0;
+                }
+
+                .cn-list {
+                    counter-reset: item;
+                    &__item {
+                        &:before {
+                            background-color: $color-grey--dark;
+                        }
+
+                        .cn-list {
+                            counter-reset: item;
+                            &__item {
+                                &:before {
+                                    background-color: $color-grey;
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

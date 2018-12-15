@@ -24,9 +24,7 @@ $basePathTypography: "../";
         .code-example {
             padding: 5px 20px;
             margin-bottom: 20px;
-            .cn-text-default {
-                margin-bottom: 20px;
-            }
+
             h1, h2 {
                 padding: 20px 0;
             }
@@ -34,6 +32,10 @@ $basePathTypography: "../";
             .cn-divider {
                 margin-top: 20px;
                 margin-bottom: 40px;
+            }
+
+            .frame {
+                margin-bottom: 20px;
             }
         }
         &>.tab-content {
@@ -53,7 +55,7 @@ $basePathTypography: "../";
         }
         font-size: 12px;
     }
-    
+
     #link [class*="cn-link-"],
     button {
         display: inline-block;

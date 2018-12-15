@@ -1,0 +1,53 @@
+.frame {
+    border-radius: 10px;
+    padding: 10px 10px 14px;
+
+    &.with-icon {
+        padding-left: 38px;
+        position:relative;
+
+        .icon {
+            position:absolute;
+            top:12px; left: 10px;
+        }
+    }
+
+    &.orange {
+        background-color: $color-compte-nickel;
+
+        .cn-text-default,
+        .icon {
+            color: white;
+        }
+    }
+
+    &.grey {
+        background-color: $color-grey;
+
+        .cn-text-default {
+            color: black;
+        }
+
+        .icon {
+            color: $color-compte-nickel;
+        }
+    }
+
+    &.red {
+        background-color: $color-red;
+
+        .cn-text-default,
+        .icon {
+            color: white;
+        }
+    }
+
+    &.green {
+        background-color: $color-green;
+
+        .cn-text-default,
+        .icon {
+            color: white;
+        }
+    }
+}
