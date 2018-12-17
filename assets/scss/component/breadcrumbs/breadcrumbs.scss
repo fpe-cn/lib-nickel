@@ -8,8 +8,8 @@
 
     &-item {
         &__link {
-            font-size: 14px;
-            line-height: 24px;
+            font-size: 12px;
+            line-height: 18px;
             color: $color-compte-nickel;
 
             &:hover {
@@ -32,8 +32,27 @@
         margin: 0 8px;
 
         &:before {
-            font-size: 10px;
+            font-size: 8px;
             vertical-align: baseline;
+        }
+    }
+}
+
+@media (min-width: mdc-layout-grid-breakpoint-min('tablet')) {
+    .breadcrumbs {
+        &-item {
+            &__link {
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+
+        .icon-arrow-right-light {
+            margin: 0 8px;
+
+            &:before {
+                font-size: 10px;
+            }
         }
     }
 }

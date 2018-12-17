@@ -4,7 +4,7 @@
     padding: 20px;
 
     .title {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: $medium;
         color: $color-compte-nickel;
         margin-bottom: 10px;
@@ -17,5 +17,11 @@ a.frame-border {
     &:hover {
         border-color: $color-compte-nickel;
         box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media (min-width: mdc-layout-grid-breakpoint-min('tablet')) {
+    .title {
+        font-size: 20px;
     }
 }

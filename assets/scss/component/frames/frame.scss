@@ -1,6 +1,6 @@
 .frame {
     border-radius: 10px;
-    padding: 10px 10px 14px;
+    padding: 10px;
 
     &.with-icon {
         padding-left: 38px;
@@ -49,5 +49,11 @@
         .icon {
             color: white;
         }
+    }
+}
+
+@media (min-width: mdc-layout-grid-breakpoint-min('tablet')) {
+    .frame {
+        padding: 10px 10px 14px;
     }
 }

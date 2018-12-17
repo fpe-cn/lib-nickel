@@ -30,8 +30,8 @@
                 background-color: $color-compte-nickel;
                 border-color: $color-compte-nickel;
                 border-right: 1px solid white;
-                font-size: 30px;
-                padding: 26px 10px;
+                font-size: 20px;
+                padding: 20px 10px;
 
                 &:last-child {
                     border-right-color: $color-compte-nickel;
@@ -60,7 +60,7 @@
         }
         tr {
             td {
-                padding: 18px;
+                padding: 10px;
                 color: #000;
                 border-bottom: 1px solid $color-grey;
                 border-right: 1px solid $color-grey;
@@ -79,6 +79,27 @@
                     &:last-child {
                         border-bottom-right-radius: 10px;
                     }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: mdc-layout-grid-breakpoint-min('tablet')) {
+    .cn-table {
+        thead {
+            &.bg-orange {
+                th {
+                    font-size: 30px;
+
+                }
+            }
+        }
+        tbody {
+            tr {
+                td {
+                    font-size: 18px;
+                    padding: 26px 10px;
                 }
             }
         }

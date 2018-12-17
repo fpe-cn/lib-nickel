@@ -25,11 +25,14 @@
 
 @include mdc-layout-grid-media-query_('phone') {
     .cn-title {
-        &.lg{
-            font-size:24px;
+        &.lg {
+            font-size:30px;
         }
-        &.md{
-            font-size:20px;
+        &.md {
+            font-size:26px;
+        }
+        &.sm {
+            font-size: 20px;
         }
     }
 }
