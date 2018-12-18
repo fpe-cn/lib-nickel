@@ -1,13 +1,3 @@
-@import "group";
-@import "input-text";
-@import "input-with-icon";
-@import "label";
-@import "mdc-form-field";
-@import "select";
-@import "textarea";
-
-$height-inputs: 60px !default;
-$height-inputs-tablet : 80px !default;
 .cn-form {
     width: 100%;
     background-color: $color-grey--light;
@@ -20,7 +10,6 @@ $height-inputs-tablet : 80px !default;
 }
 
 @include mdc-layout-grid-media-query_('phone') {
-    $height-inputs-mobile: 50px !default;
     .cn-form {
         padding: 20px;
     }
