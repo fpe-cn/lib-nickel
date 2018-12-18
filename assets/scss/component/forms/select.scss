@@ -1,0 +1,29 @@
+.cn-form {
+    .cn-form-group {
+        &.cn-select{
+            .cn-form-control{
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                -o-appearance: none;
+
+                &.valid {
+                    color: $color-green;
+                }
+            }
+
+            .cn-input-group{
+                .icon {
+                    background-color: transparent;
+                    &:before{
+                        color: $color-grey--dark;
+                    }
+                    &.orange{
+                        &:before{
+                            color: $color-compte-nickel;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

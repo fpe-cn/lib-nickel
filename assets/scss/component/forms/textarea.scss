@@ -1,0 +1,36 @@
+.cn-form {
+    .cn-form-group {
+        &.cn-textarea {
+            .cn-form-control {
+                height: 120px;
+                max-height: 120px;
+                resize: none;
+            }
+            .icon-left,
+            .icon-right{
+                .icon {
+                    line-height: 120px;
+                }
+            }
+        }
+    }
+}
+
+@include mdc-layout-grid-media-query_('phone') {
+    .cn-form {
+        .cn-form-group {
+            &.cn-textarea {
+                .cn-form-control {
+                    height: 100px;
+                    max-height: 100px;
+                }
+                .icon-left,
+                .icon-right{
+                    .icon {
+                        line-height: 100px;
+                    }
+                }
+            }
+        }
+    }
+}

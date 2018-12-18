@@ -1,0 +1,106 @@
+$height-inputs: 60px !default;
+$height-inputs-tablet : 80px !default;
+
+.cn-form {
+    .cn-form-group{
+        .cn-input-group {
+            position: relative;
+            &.icon-left,
+            &.icon-right{
+                .icon {
+                    position: absolute;
+                    background-color: $color-compte-nickel;
+                    top: 0;
+                    width: $height-inputs;
+                    height: 100%;
+                    line-height: $height-inputs;
+                    text-align: center;
+                    &:before {
+                        color: #fff;
+                        font-size: 25px;
+                        vertical-align: text-bottom;
+                    }
+                    .device-borne &{
+                        width : $height-inputs-tablet;
+                        line-height: $height-inputs-tablet;
+
+                        &:before {
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+            &.icon-right {
+                .cn-form-control{
+                    padding-right: $height-inputs + 10px;
+                }
+                .icon {
+                    right: 0;
+                    border-radius: 0 10px 10px 0;
+                }
+            }
+            &.icon-left {
+                .cn-form-control{
+                    padding-left: $height-inputs + 10px;
+                }
+                .icon {
+                    left: 0;
+                    border-radius: 10px 0 0 10px;
+                }
+            }
+
+            &.cn-date {
+                .cn-form-control {
+                    &::-webkit-inner-spin-button,
+                    &::-webkit-calendar-picker-indicator {
+                        display: none;
+                        -webkit-appearance: none;
+                    }
+                    &.active,
+                    &:focus,
+                    &:active {
+                        border: none;
+                    }
+                }
+                &.active,
+                &:focus,
+                &:active {
+                    .icon {
+                        background-color: $color-grey--dark;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mdc-layout-grid-media-query_('phone') {
+    $height-inputs-mobile: 50px !default;
+
+    .cn-form {
+        .cn-form-group {
+            .cn-input-group {
+                &.icon-left,
+                &.icon-right {
+                    .icon {
+                        width: $height-inputs-mobile;
+                        line-height: $height-inputs-mobile;
+                        &:before {
+                            font-size: 15px;
+                        }
+                    }
+                }
+                &.icon-right {
+                    .cn-form-control {
+                        padding-right: $height-inputs-mobile + 5px;
+                    }
+                }
+                &.icon-left {
+                    .cn-form-control {
+                        padding-left: $height-inputs-mobile + 5px;
+                    }
+                }
+            }
+        }
+    }
+}

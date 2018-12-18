@@ -1,0 +1,59 @@
+$height-inputs: 60px !default;
+$height-inputs-tablet : 80px !default;
+
+.cn-form {
+    .cn-form-group {
+        .cn-form-control {
+            width: 100%;
+            font-size: 20px;
+            height: $height-inputs;
+            background-color: #fff;
+            padding: 10px 10px;
+            color: #000;
+            border: none;
+            border-radius: 10px;
+
+            &.border-grey{
+                border: 1px solid $color-grey--dark;
+            }
+
+            &.active,
+            &:focus,
+            &:active {
+                border: 1px solid $color-compte-nickel;
+            }
+
+            &.error{
+                color: $color-red;
+
+                &.border-grey{
+                    border-color: $color-red;
+                }
+            }
+
+            &::placeholder{
+                color: #000;
+            }
+
+            .device-borne & {
+                height: $height-inputs-tablet;
+                font-size: 28px;
+                padding: 20px 20px;
+            }
+
+        }
+    }
+}
+
+@include mdc-layout-grid-media-query_('phone') {
+    $height-inputs-mobile: 50px !default;
+    .cn-form {
+        .cn-form-group {
+            .cn-form-control {
+                font-size: 18px;
+                padding: 5px 10px;
+                height: $height-inputs-mobile;
+            }
+        }
+    }
+}

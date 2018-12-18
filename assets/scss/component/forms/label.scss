@@ -1,0 +1,26 @@
+.cn-form {
+    .cn-form-group{
+        label{
+            display: block;
+            margin-bottom: 5px;
+            color: $color-compte-nickel;
+            font-size: 20px;
+            font-weight: $medium;
+
+            .device-borne & {
+                font-size: 30px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+@include mdc-layout-grid-media-query_('phone') {
+    .cn-form {
+        .cn-form-group {
+            label {
+                font-size: 18px;
+            }
+        }
+    }
+}
