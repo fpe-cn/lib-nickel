@@ -88,8 +88,20 @@
         margin:0 20px;
         height: 60px;
 
-        .icon:before {
-            line-height: 60px;
+        .icon {
+            &:before {
+                line-height: 60px;
+            }
+        }
+    }
+}
+
+@include mdc-layout-grid-media-query_('phone') {
+    .logo {
+        .icon {
+            &-slogan-nickel {
+                display: none;
+            }
         }
     }
 }
