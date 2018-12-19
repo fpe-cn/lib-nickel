@@ -29,11 +29,11 @@ module.exports.init = function () {
             scroll = window.scrollY
 
             if (scroll >= 300) {
-                $('[data-role="princ"]').css({'display': 'none'})
-                $('[data-role="second"]').css({'display': 'block'})
+                $('[data-role="princ"]').css({'display': 'none', 'opacity': 0})
+                $('[data-role="second"]').css({'display': 'block', 'opacity': 1})
             } else {
-                $('[data-role="princ"]').css({'display': 'block'})
-                $('[data-role="second"]').css({'display': 'none'})
+                $('[data-role="princ"]').css({'display': 'block', 'opacity': 1})
+                $('[data-role="second"]').css({'display': 'none', 'opacity': 0})
             }
         })
     }
