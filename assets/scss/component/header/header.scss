@@ -165,7 +165,8 @@ body {
 
                         .nav-link {
                             justify-content: center;
-                            border-color: white;
+                            border:1px solid white;
+                            box-shadow: none;
                             margin:0 auto 30px;
                             width: 220px;
                         }
