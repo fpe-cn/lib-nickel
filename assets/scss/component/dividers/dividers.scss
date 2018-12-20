@@ -3,7 +3,7 @@
     height: 20px;
     border-bottom: 1px solid $color-grey;
     text-align: center;
-    margin: 0 0 20px;
+    margin: 20px 0;
 
     .cn-text {
         background-color:#fff;
@@ -16,6 +16,6 @@
 
 @media (min-width: mdc-layout-grid-breakpoint-min('tablet')) {
     .cn-divider {
-        margin: 20px 0 40px;
+        margin: 40px 0;
     }
 }
