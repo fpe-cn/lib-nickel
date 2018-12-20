@@ -1,6 +1,6 @@
 {
   "name": "lib-nickel",
-  "version": "4.0.4",
+  "version": "4.2.15",
   "private": false,
   "browserify": {
     "transform": [
