@@ -13,11 +13,10 @@
 
         .item {
             height: 40px;
+            display:flex;
+            align-items: center;
 
             .link {
-                display: block;
-                height: inherit;
-                line-height: 40px;
                 font-size: 14px;
                 color: black;
 
