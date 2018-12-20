@@ -14,11 +14,11 @@ module.exports.init = function () {
         if (toggle.hasClass('show')) {
             toggler.removeClass('open');
             toggle.removeClass('show');
-            $('body').css('position', 'static');
+            // $('body').css('position', 'static');
         } else {
             toggler.addClass('open');
             toggle.addClass('show');
-            $('body').css('position', 'fixed');
+            // $('body').css('position', 'fixed');
         }
         return false;
     });
