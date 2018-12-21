@@ -10,9 +10,9 @@
                 content: "";
                 display:block;
                 width: 10px;
-                height: 3px;
+                height: 4px;
                 background-color: $color-compte-nickel;
-                border-radius: 5px;
+                border-radius: 10px;
 
                 position:absolute;
                 top: 12px; left: 0;
@@ -71,7 +71,7 @@
                             counter-reset: item;
                             &__item {
                                 &:before {
-                                    background-color: $color-grey;
+                                    background-color: $color-grey--light;
                                     color: black;
                                 }
                             }
