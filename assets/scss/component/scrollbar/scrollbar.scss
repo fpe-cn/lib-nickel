@@ -1,0 +1,13 @@
+@mixin scrollbar-theme {
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+    &::-webkit-scrollbar-track {
+        border-radius: 2px;
+        background-color: $color-grey--light;
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: $color-compte-nickel;
+        border-radius: 2px;
+    }
+}
