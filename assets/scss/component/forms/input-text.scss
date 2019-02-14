@@ -31,8 +31,8 @@ $height-inputs-tablet : 80px !default;
                 }
             }
 
-            &::placeholder{
-                color: #000;
+            &::placeholder {
+                color: $color-grey;
             }
 
             .device-borne & {
