@@ -14,7 +14,7 @@
     }
 }
 
-@media (min-width: mdc-layout-grid-breakpoint-min('tablet')) {
+@media (min-width: #{map-get($mdc-layout-grid-breakpoints, tablet)}) {
     .cn-divider {
         margin: 40px 0;
     }

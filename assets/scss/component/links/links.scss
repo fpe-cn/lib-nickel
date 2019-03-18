@@ -33,7 +33,7 @@
     }
 }
 
-@include mdc-layout-grid-media-query_('phone') {
+@media (max-width: #{map-get($mdc-layout-grid-breakpoints, largephone)}) {
     .cn-link{
         margin-right: 15px;
         &.icon-right {

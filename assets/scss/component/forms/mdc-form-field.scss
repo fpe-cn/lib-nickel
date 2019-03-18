@@ -63,7 +63,7 @@
     }
 }
 
-@include mdc-layout-grid-media-query_('phone') {
+@media (max-width: #{map-get($mdc-layout-grid-breakpoints, largephone)}) {
     .cn-form {
         .mdc-form-field {
             label{

@@ -20,7 +20,7 @@ a.frame-border {
     }
 }
 
-@media (min-width: mdc-layout-grid-breakpoint-min('tablet')) {
+@media (min-width: #{map-get($mdc-layout-grid-breakpoints, tablet)}) {
     .title {
         font-size: 20px;
     }

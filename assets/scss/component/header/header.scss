@@ -130,7 +130,7 @@ body {
     }
 }
 
-@media (min-width: mdc-layout-grid-breakpoint-min('desktop')) {
+@media (min-width: #{map-get($mdc-layout-grid-breakpoints, desktop)}) {
     .header {
         .wrapper-nav {
             height: 80px;
@@ -142,7 +142,7 @@ body {
     }
 }
 
-@media (max-width: mdc-layout-grid-breakpoint-min('desktop')) {
+@media (max-width: #{map-get($mdc-layout-grid-breakpoints, desktop)}) {
     .header {
         .wrapper-nav {
             .nav {

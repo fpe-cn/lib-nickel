@@ -102,7 +102,7 @@ $height-button: 54px;
     }
 }
 
-@include mdc-layout-grid-media-query_('phone') {
+@media (max-width: #{map-get($mdc-layout-grid-breakpoints, largephone)}) {
     .cn-button {
         height: 50px;
         width: 280px;

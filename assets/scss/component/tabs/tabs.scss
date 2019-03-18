@@ -66,7 +66,7 @@ $height-tabs: 65px !default;
     }
 }
 
-@include mdc-layout-grid-media-query_('phone') {
+@media (max-width: #{map-get($mdc-layout-grid-breakpoints, largephone)}) {
     $height-tabs-mobile: 40px !default;
     .theme-nickel.cn-nav-tabs {
         li.item {

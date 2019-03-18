@@ -193,8 +193,7 @@ export function build(done) {
     return gulp.series(gulp.series(clean), fonticon, 'compile')(done);
 }
 export function work(done) {
-    return gulp.series(tests,
-        fonticon,
+    return gulp.series(fonticon,
         gulp.parallel(font, styles, externalStyles, scripts, html, imgSandbox),
         gulp.parallel(server, watch)
     )(done)

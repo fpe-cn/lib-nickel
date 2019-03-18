@@ -27,7 +27,7 @@
     }
 }
 
-@include mdc-layout-grid-media-query_('phone') {
+@media (max-width: #{map-get($mdc-layout-grid-breakpoints, largephone)}) {
     .cn-title {
         &.lg {
             font-size:30px;

@@ -14,7 +14,7 @@
     }
 }
 
-@include mdc-layout-grid-media-query_('tablet') {
+@media (min-width: #{map-get($mdc-layout-grid-breakpoints, largephone)}) and (max-width: #{map-get($mdc-layout-grid-breakpoints, desktop)}) {
     .subheader {
         .header-title {
             padding: 30px 0;

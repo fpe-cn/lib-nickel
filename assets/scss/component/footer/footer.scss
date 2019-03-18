@@ -30,18 +30,6 @@
                         margin-right: 10px;
                         font-size: 20px;
                     }
-
-                    /* &.icon-facebook-circle {
-                        color: $color-facebook;
-                    }
-
-                    &.icon-twitter-circle {
-                        color: $color-twitter;
-                    }
-
-                    &.icon-linkedin-circle {
-                        color: $color-linkedin;
-                    }*/
                 }
             }
         }
@@ -89,13 +77,13 @@
     }
 }
 
-@media (min-width: mdc-layout-grid-breakpoint-min('desktop')) {
+@media (min-width: #{map-get($mdc-layout-grid-breakpoints, desktop)}) {
     .footer {
         height: auto;
     }
 }
 
-@media (max-width: mdc-layout-grid-breakpoint-min('tablet')) {
+@media (max-width: #{map-get($mdc-layout-grid-breakpoints, tablet)}) {
     .footer {
         margin-top: 0;
 

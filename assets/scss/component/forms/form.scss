@@ -9,7 +9,7 @@
     }
 }
 
-@include mdc-layout-grid-media-query_('phone') {
+@media (max-width: #{map-get($mdc-layout-grid-breakpoints, largephone)}) {
     .cn-form {
         padding: 20px;
     }
