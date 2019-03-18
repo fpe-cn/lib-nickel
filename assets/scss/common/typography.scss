@@ -25,7 +25,7 @@ sans-serif;
     line-height: 26px;
     font-weight: 300;
 
-    @include mdc-layout-grid-media-query_('phone') {
+    @media (max-width: #{map-get($mdc-layout-grid-breakpoints, largephone)}) {
         font-size: 16px;
         line-height: 18px;
     }
