@@ -44,9 +44,14 @@ $height-button: 54px;
         color: $color-grey--dark;
         border: 1px solid $color-grey--dark;
         &:hover {
-            background-color: $color-grey--dark;
-            color: #fff;
+            border-color: $color-compte-nickel;
+            color: $color-compte-nickel;
             text-decoration: none;
+        }
+        &:active, &:focus {
+            border-color: $color-compte-nickel;
+            background-color: $color-compte-nickel;
+            color: white;
         }
     }
     &.icon-right {
@@ -99,6 +104,11 @@ $height-button: 54px;
                 }
             }
         }
+    }
+    &:disabled, &:disabled:hover {
+        background-color: $color-grey;
+        color: white;
+        border: 1px solid $color-grey;
     }
 }
 
