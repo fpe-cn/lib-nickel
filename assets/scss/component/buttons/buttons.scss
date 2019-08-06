@@ -9,17 +9,40 @@
 }
 
 $icon-size-only: 24px;
-$icon-size: 16px;
+$icon-size: 18px;
 $height-button: 54px;
 
 .cn-button {
+    position: relative;
     display: inline-block;
     height: $height-button;
-    width: 300px;
+    width: auto;
+    padding: 0 20px;
     text-align: center;
     border-radius: 35px;
     border: none;
     margin-bottom: 10px;
+
+    &.no-style {
+        background-color: transparent;
+        border: 0;
+    }
+
+    &.next {
+        display: block;
+        margin: 0px auto;
+    }
+
+    .cn-pender {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 35px;
+
+        circle {
+            stroke: $color-compte-nickel;
+        }
+    }
 
     .device-borne & {
         width:100%;
@@ -33,10 +56,15 @@ $height-button: 54px;
         box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.1);
         background-color: $color-compte-nickel;
         color: #fff;
+
         &:hover {
             background-color: $color-compte-nickel--dark;
             text-decoration: none;
             box-shadow: none;
+        }
+
+        .cn-pender circle {
+            stroke: white;
         }
     }
     &.border-grey {
@@ -55,29 +83,33 @@ $height-button: 54px;
         }
     }
     &.icon-right {
-        position: relative;
         .icon {
-            position: absolute;
+            display: inline-block;
+            margin-left: 10px;
             font-size: $icon-size;
-            right: 24px;
+            height: $icon-size;
+
             &:before {
-                vertical-align: text-bottom;
+                vertical-align: middle;
             }
         }
     }
     &.icon-left {
-        position: relative;
         .icon {
-            position: absolute;
+            display: inline-block;
+            margin-right: 10px;
             font-size: $icon-size;
-            left: 24px;
+            height: $icon-size;
+
             &:before {
-                vertical-align: text-bottom;
+                vertical-align: middle;
             }
         }
     }
     &.icon-only {
         width: $height-button;
+        padding: 0;
+
         .icon {
             display: block;
             font-size: $icon-size-only;
@@ -109,6 +141,7 @@ $height-button: 54px;
         background-color: $color-grey;
         color: white;
         border: 1px solid $color-grey;
+        box-shadow: none;
     }
 }
 

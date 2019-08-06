@@ -2,6 +2,7 @@
     color: $color-compte-nickel;
     border: 0;
     background-color: transparent;
+    margin-right: 0;
 
     &:hover {
         color: $color-compte-nickel;
@@ -26,6 +27,14 @@
                 vertical-align: middle;
             }
         }
+    }
+
+    &.left {
+        text-align: left;
+    }
+
+    &.right {
+        text-align: right;
     }
 
     .device-borne &{
