@@ -26,6 +26,9 @@ $height-button: 54px;
     &.no-style {
         background-color: transparent;
         border: 0;
+        height: auto;
+        margin-bottom: 0;
+        padding: 0;
     }
 
     &.next {
