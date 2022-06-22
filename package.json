@@ -80,7 +80,7 @@
     "watchify": "^3.7.0"
   },
   "dependencies": {
-    "jsdom": "^11.5.1",
+    "jsdom": "^16.5.0",
     "lodash": "^4.13.1",
     "promise": "^8.0.1",
     "babelify": "^8.0.0",
