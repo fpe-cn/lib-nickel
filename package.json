@@ -64,7 +64,7 @@
     "gulp.spritesmith": "^6.2.1",
     "jest": "^21.2.1",
     "jquery": "^3.2.1",
-    "lodash": "^4.15.0",
+    "lodash": "^4.17.21",
     "mocha": "^4.0.1",
     "popper.js": "^1.12.5",
     "prismjs": "^1.8.1",
@@ -81,7 +81,7 @@
   },
   "dependencies": {
     "jsdom": "^11.5.1",
-    "lodash": "^4.13.1",
+    "lodash": "^4.17.21",
     "promise": "^8.0.1",
     "babelify": "^8.0.0",
     "include-media": "^1.4.8"
